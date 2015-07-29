@@ -4,11 +4,11 @@
 #### Installation
 To set up a local staging version of this site, follow these steps:
 *  Download Drupal v7.38 and unzip to where you want the site to live.
-*  Delete...
+*  Delete the "sites" directory. We got it covered.
 *  In that directory, run `git init .` to create a repo in the current directory.
 *  Run `git remote add origin <https or ssh url>` to track this repo as origin.
 *  Run `git pull origin master` to get the latest changes.
-*  ...
+*  In "sites/default", duplicate default.settings.php to settings.php. This file should be good to go.
 *  Run a simple web server in the directory using `php -S localhost:80`. If it give you a permission issue, you might need to run it as sudo.
 *  Viola! You can now make edits as normal and track your changes locally.
 
