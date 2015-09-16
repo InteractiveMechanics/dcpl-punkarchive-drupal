@@ -1,0 +1,186 @@
+#spaces-landing-page {
+
+	body {
+		background: $white;
+	}
+
+	h2 {
+		color: #222;
+		font-weight: 100;
+		font-size: 44px;
+		margin-left: 40px;
+		margin-top: 50px;
+	}
+
+	h4 {
+		color: $black;
+		margin-left: 40px;
+		font-weight: 100;
+		line-height: 1.6;
+	}
+
+	.jumbotron {
+		background: $white;
+		margin-bottom: 0;
+		padding-bottom: 4em;
+	}
+
+	.subnav {
+		border-bottom: 1px solid $light_grey;
+		
+		ul {
+			text-align: center;
+				li {
+					display: inline-block;
+					font-size: 16px;
+					margin-left: 1em;
+					margin-right: 1em;
+					transition: color 0.25s ease-in-out;
+					a {
+						color: $grey;
+						&:link {
+							color: $grey;
+						}
+						&:hover {
+							color: $black;
+							text-decoration: none;
+						}
+					}
+				}
+			}
+
+		}
+
+	#active-page {
+		color: $accent_color;
+		position: relative;
+		&:after {
+			content: url(../images/filled-star-green.svg);
+			position: absolute;
+			width: 20px;
+			bottom: -27px;
+			margin-left: auto;
+			margin-right: auto;
+			left: 0;
+			right: 0;
+
+		}
+	}
+
+	section {
+		background: $white;
+		padding-bottom: 6.5em;
+	}
+
+
+table {
+	margin: 10px 30px;
+	td, a {
+	font-family: $p_font_stack;
+	color: $black;
+	font-size: 20px;
+	font-weight: 300;
+	}
+	a {
+		font-weight: 600;
+		&:link {
+			color: #222;
+		}
+		&:hover {
+			color: #222;
+		}
+	}
+
+}
+
+.table>tbody>tr>td {
+	padding: 70px 5px 70px;
+}
+
+.table>tbody>tr>.table_letter {
+		font-family: "flood-std",sans-serif;
+		font-size: 6em;
+		font-weight: 100;
+		padding: 20px 10px;
+		transform: rotate(3deg);
+	}
+
+.table_letter_border {
+	padding-left: 5px;
+	border-top: 1px solid $light_grey;
+	border-left: 1px solid $light_grey;
+}	
+
+p {
+	text-align: center;
+	small {
+		color: $soft_black;
+	}
+	a {
+	color: #222;
+	font-weight: 700;
+}
+}
+
+.map-wrapper {
+	position: relative;
+}
+
+#map {
+	height: 600px;
+}
+
+.marker-star {
+	content: url(../images/filled-star.svg);
+	width: 5px;
+	position: absolute;
+	bottom: 0;
+
+
+}
+
+#legend {
+	position: absolute;
+	bottom: 35px;
+	left: 35px;
+	z-index: 999;
+	width: 135px;
+	height: 110px;
+	background: $white;
+	box-shadow: 0 0 10px rgba(120, 120, 120, 0.5);
+	ul {
+		margin-top: 15px !important;
+		padding-left: 15px !important;
+	}
+	svg {
+		width: 15px;
+	}
+	#venue_marker {
+		fill: $accent_color;
+	}
+	#record_store_marker {
+		fill: $blue;
+	}
+	#studios_marker {
+		fill: $yellow;
+	}
+	#houses_marker {
+		fill: $pink;
+	}
+
+
+	>ul>li {
+		list-style-type: none;
+		color: $black;
+		font-family: $open_sans_font_stack;
+		font-weight: 700;
+	}
+}
+
+.copyright small{
+	font-size: 12px;
+	font-style: initial;
+}
+
+}
+

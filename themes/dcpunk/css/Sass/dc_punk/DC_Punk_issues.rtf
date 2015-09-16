@@ -1,0 +1,38 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 LucidaSansUnicode;}
+{\colortbl;\red255\green255\blue255;\red59\green0\blue164;\red41\green0\blue130;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 \
+Issues:\
+Grunge mask over logo\
+marker strokes after stars\
+Aktiv-Grotesk not loading? \
+\
+\
+Components that could be pulled out of individual pages because they repeat\
+\
+#active-page \{\
+		color: $accent_color;\
+		position: relative;\
+		&:after \{\
+			content: url(../images/filled-star-green.svg);\
+			position: absolute;\
+			width: 20px;\
+			bottom: -27px;\
+			margin-left: auto;\
+			margin-right: auto;\
+			left: 0;\
+			right: 0;\
+\
+		\}\
+	\}\
+\
+#active-page is on 
+\f1 \cf2 _culture_punk.scss
+\f0 \cf0  and 
+\f1 \cf3 _spaces_punk.scss
+\f0 \cf0 \
+\
+}

@@ -1,0 +1,137 @@
+#culture-detailcomments-page {
+	main {
+		background: $white;
+	}
+
+	h2 {
+		margin-top: 0;
+		//margin-left: 10px;
+		padding-top: 80px;
+		padding-bottom: 15px;
+		font-weight: 100;
+		font-size: 36px;
+		color: #222;
+	}
+
+	h4 {
+		color: $black;
+		font-size: 20px;
+		font-weight: 100;
+		line-height: 1.6;
+		//margin-left: 20px;
+		margin-right: 20px;
+	}
+
+
+	.grid {
+		padding-top: 2em;
+		padding-bottom: 4em;
+	}
+
+	.culture-detail-tags {
+		border-top: 1px solid $black;
+		padding-top: 1em;
+
+
+		ul {
+			margin-left: -40px;
+			li  {
+			display: inline-block;
+			margin-right: 40px;
+				p {
+				color: #222;
+				display: inline-block;
+					a {
+						color: #222;
+						font-size: 14px;
+						font-weight: 500;
+						margin-right: 10px;
+					}
+				}
+			.tag-type {
+				color: $black;
+				font-size: 14px;
+				margin-right: 10px;
+			}
+		}
+
+
+		}
+	}
+
+	#comments {
+		background: $black;
+
+		#comments-container {
+			margin-top: 4em;
+			margin-bottom: 5em;
+			background: $white;
+			border: 2px solid #ccc;
+			padding-bottom: 30px; 
+		}
+
+		.comments-header {
+			padding-top: 30px;
+			padding-bottom: 40px;
+
+			h3, h5 {
+				text-align: center;
+				color: #222;
+			}
+
+			h5 {
+				text-transform: uppercase;
+				font-size: 16px;
+			}
+			h3 {
+				font-weight: 100;
+			}
+		}
+
+		
+		.comments-header-border {
+			border-bottom: 1px solid #ccc;
+			margin-left: -15px;
+			margin-right: -15px;
+		}
+
+		.comments-body {
+			padding-bottom: 30px;
+			img {
+				margin: 40px 10px 10px 10px;
+			}
+
+			h5 {
+				font-size: 16px;
+				color: #222;
+				font-weight: 600;
+				margin-top: 40px;
+				margin-left: 10px;
+			}
+
+			p {
+				color: #222;
+				font-size: 14px;
+				line-height: 1.6;
+				margin-left: 10px;
+			}
+
+			textarea {
+				margin: 40px 10px 10px 10px;
+			}
+
+			.comment-detail {
+				padding-bottom: 30px;
+				
+			}
+
+			.testing {
+				padding-top: 15px;
+				border-bottom: 1px solid #ccc;
+			}
+		}
+
+	}
+
+
+}

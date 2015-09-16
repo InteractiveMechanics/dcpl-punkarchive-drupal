@@ -1,0 +1,291 @@
+
+// PARTIALS
+
+@import "variables_punk";
+@import "timeline_punk";
+@import "grid_punk";
+@import "culture_punk";
+@import "cultureDetailComments_punk";
+@import "spaces_punk";
+@import "venueDetail_punk";
+@import "audioplayer_punk";
+@import "contribute_punk";
+@import "about_punk";
+@import "search_punk";
+
+
+// TYPOGRAPHY
+
+body {
+	color: $white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $heading-font-stack;
+}
+
+
+p {
+	font-family: $p_font_stack;
+	font-size: 18px;
+	line-height: 2;
+	font-weight: 100;
+}
+
+a {
+	color: $accent_color;
+	&:link {
+		color: $accent_color;
+	}
+	&:hover {
+		color: $accent_color;
+	}
+	&:active {
+		color: $accent_color;
+	}
+	&:focus {
+		color: $accent_color;
+	}
+
+}
+
+
+// NAVBAR
+
+.navbar {
+	margin-bottom: 0;
+	border-radius: 0;
+}
+
+.navbar-brand {
+	font-family: $display_font_stack;
+	color: $white !important;
+	text-transform: uppercase;
+	font-size: 36px;
+	font-weight: 700;
+	transform: rotate(-2deg);
+	margin-left: 0px !important;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.navbar-inverse {
+	border-color: $black;
+	max-height: 65px;
+	.navbar-nav>li>a {
+		color: $grey;
+		font-family: $open_sans_font_stack;
+		font-weight: 700;
+	}
+}
+
+.navbar-nav {
+	margin-left: 4em;
+	text-transform: uppercase;
+	li {
+		margin-top: 5px;
+	}
+
+	li>a {
+		&:link {
+			color: $grey;
+		}
+
+		&:hover {
+		position: relative;
+			&:after {
+				content: "";
+				border-bottom: 2px solid $accent_color;
+				position: absolute;
+				width: 72%;
+				left: 15px;
+				margin-left: 1px;
+				bottom: 7px;
+			}
+		}
+		&:visited {
+			color: $grey;
+		}
+
+	}
+
+		svg, #magnifying-glass {
+			fill: $grey;
+			width: 16px;
+			transition: fill 0.25s ease-in-out;
+			&:link {
+				fill: $grey;
+			}
+			&:hover {
+				fill: $soft_black;
+			}
+			
+		}
+
+		#search-link {
+			&:hover {
+				&:after {
+					border-bottom: 2px solid transparent;
+				}
+			}
+		}
+
+	}
+
+
+
+// BUTTONS
+
+.btn {
+	border-radius: 0;
+	border: 4px solid $accent_color;
+	color: $accent_color;
+	background: transparent;
+
+}
+
+.btn-primary {
+	border-color: #f1f2f2;
+	&:link {
+		background-color: transparent;
+		border-color: $accent_color;
+		color: $accent_color;
+	}
+	&:hover {
+		background-color: $accent_color;
+		border-color: $accent_color;
+		color: $black;
+	}
+	&:active {
+		background-color: $accent_color;
+		border-color: $accent_color;
+		color: $black;
+		box-shadow: none;
+	}
+	&:focus {
+		background-color: $accent_color;
+		border-color: $accent_color;
+		color: $black;
+		outline: 5px auto $accent_color;
+	}
+	&:active:focus {
+		background-color: $accent_color;
+		border-color: $accent_color;
+		color: $black;
+		outline: 5px auto $accent_color;
+	}
+	&:visited {
+		background-color: $accent_color;
+		border-color: $accent_color;
+	}
+}
+
+.btn-group-lg>.btn, .btn-lg {
+	text-transform: uppercase;
+	font-family: $display_font_stack;
+	font-size: 24px;
+	padding: 12px 24px;
+	margin-right: .7em;
+}
+
+
+// LAYOUT
+
+.jumbotron {
+	background: 
+	linear-gradient(
+      		rgba(0, 0, 0, 0.7),
+      		rgba(0, 0, 0, 0.7)
+    	),
+	url(../images/publishreq-9.jpg); 
+	p {
+		color: $white;
+		font-family: $display_font_stack;
+		text-transform: uppercase;
+		font-size: 4.5em;
+		font-weight: 700;
+		line-height: 1.5;
+	}
+	padding-top: 8em;
+	padding-bottom: 8em;
+}
+
+main {
+	background: $soft_black;
+}
+
+
+article {
+	padding-top: 5em;
+	padding-bottom: 8em;
+	p {
+		margin-top: 30px;
+	}
+	a {
+		font-weight: 700;
+		text-decoration: underline;
+	}
+}
+
+// FOOTER
+
+footer {
+	background: $black;
+}
+
+.divider {
+	border-bottom: 1px solid  $soft_black;
+}
+
+.footer-nav {
+	margin-left: 10%;
+	li {
+	display: inline-block;
+	margin: 20px 15px 10px 15px;
+	text-transform: uppercase;
+	font-size: 12px;
+	}
+	li>a {
+		color: $grey;
+		font-family: $open_sans_font_stack;
+		font-weight: 700;
+	}
+}
+
+#logo {
+	opacity: 0.7;
+	transition: opacity 0.25s ease-in-out;
+	&:hover {
+		opacity: 1.0;
+	}
+}
+
+.address-block {
+	margin-top: 2em;
+	margin-bottom: 0;
+	text-align: center;
+	font-size: 16px;
+	a {
+		color: $white;
+		font-weight: 500;
+	}
+}
+
+.copyright  {
+	margin-bottom: 0;
+	small {
+		font-size: 50%;
+		color: $grey;
+		font-weight: 700;
+	}
+}
+
+
+.address-block li {
+	display: inline-block;
+	margin: 0px 5px;
+	&:nth-of-type(1) {
+		margin-left: -30px;
+	}
+
+}

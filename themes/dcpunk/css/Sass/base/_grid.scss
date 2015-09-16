@@ -1,0 +1,69 @@
+
+	.grid {
+		margin-left: 70px;
+		margin-right: 70px;
+	}
+
+
+
+	.grid-item {
+		width: 225px;
+	  	height: 225px;
+	  	position: relative;
+	  	float: left;
+		background: $white;
+		border: 2px solid #333;
+		border-color: hsla(0, 0, 0, 0.5);
+		margin: 15px;
+		.lyrics {
+			position: absolute;
+			bottom: 30px;
+			left: 15%;
+			p {
+				color: #333;
+				font-weight: 100;
+				font-size: 28px;
+				&:nth-of-type(even) {
+					padding-left: 35px;
+				}
+			}
+		}
+
+		.year {
+			position: absolute;
+			bottom: 15px;
+			left: 40%;
+			p {
+				font-size: 18px;
+				color: #333;
+				font-weight: 600;
+			}
+		}
+
+		.caption {
+			position: absolute;
+			top: 15px;
+			right: 45%;
+			left: 5%;
+			p {
+				color: #333;
+				font-size: 24px;
+				font-weight: 100;
+				line-height: 1.4;
+			}
+		}
+	}
+
+	.grid-item--rectangle {
+		width: 480px;
+	}
+
+	.grid-item--lg-square {
+		width: 480px;
+		height: 480px;
+	}
+
+	.grid-item--portrait-rectangle {
+		width: 225px;
+		height: 480px;	
+	}
