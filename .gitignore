@@ -1,17 +1,17 @@
 .sass-cache
 *.css.map
 
-includes/
-misc/
-modules/
-profiles/
-scripts/
-themes/bartik/
-themes/engines/
-themes/garland/
-themes/seven/
-themes/stark/
-sites/default/settings.php
+/includes/
+/misc/
+/modules/
+/profiles/
+/scripts/
+/themes/bartik/
+/themes/engines/
+/themes/garland/
+/themes/seven/
+/themes/stark/
+/sites/default/settings.php
 
 /.htaccess
 /authorize.php
