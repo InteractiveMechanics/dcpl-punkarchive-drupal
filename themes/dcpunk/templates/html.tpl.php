@@ -88,14 +88,13 @@
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 <body class="<?php print $classes; ?>">
-    <?php include('includes/header.php'); ?>    
+    <?php include($directory . '/includes/header.php'); ?>
 
     <main>
         <?php print $page_top; ?>
         <?php print $page; ?>
-        <?php print $page_bottom; ?>
     </main>
 		
-    <?php include('includes/footer.php'); ?>
+    <?php include($directory . '/includes/footer.php'); ?>
 </body>
 </html>
