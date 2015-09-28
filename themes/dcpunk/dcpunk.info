@@ -8,6 +8,7 @@ core = 7.x
 screenshot  = images/screenshot.png
 
 stylesheets[all][] = css/main.css
+stylesheets[all][] = css/dcpunk.css
 
 regions[header]         = Header
 regions[navigation]     = Navigation bar

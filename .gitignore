@@ -12,6 +12,9 @@
 /themes/seven/
 /themes/stark/
 /sites/default/settings.php
+/sites/README.txt
+/sites/all/modules/
+/sites/default/uploads/
 
 /.htaccess
 /authorize.php

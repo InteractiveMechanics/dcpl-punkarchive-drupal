@@ -1,10 +1,11 @@
 body {
-  color: #f1f2f2; }
+  color: #fff; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Courier New", Courier, "Lucinda Sans Typewriter", monospace; }
 
 p {
+  font-family: "aktiv-grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
   line-height: 2;
   font-weight: 100; }
@@ -21,13 +22,15 @@ a {
     color: #acd156; }
 
 .jumbotron {
-  background: #231f20;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/publishreq-9.jpg);
   padding-top: 8em;
   padding-bottom: 8em; }
   .jumbotron p {
-    color: #f1f2f2;
+    color: #fff;
+    font-family: "tablet-gothic-condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
-    font-size: 3.5em;
+    font-size: 4.5em;
+    font-weight: 700;
     line-height: 1.5; }
 
 main {
@@ -51,15 +54,21 @@ article {
 .grid {
   margin-left: 70px;
   margin-right: 70px; }
+  .grid img {
+    width: 105%; }
+  .grid .zoomed-in-150 {
+    width: 150%; }
+  .grid .zoomed-in-175 {
+    width: 175%;
+    margin-left: -80px; }
 
 .grid-item {
   width: 225px;
   height: 225px;
   position: relative;
+  overflow: hidden;
   float: left;
-  background: #f1f2f2;
-  border: 2px solid #333;
-  border-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid transparent;
   margin: 15px; }
   .grid-item .lyrics {
     position: absolute;
@@ -73,22 +82,26 @@ article {
         padding-left: 35px; }
   .grid-item .year {
     position: absolute;
-    bottom: 15px;
-    left: 40%; }
+    top: 25px;
+    left: 5%; }
     .grid-item .year p {
       font-size: 18px;
-      color: #333;
+      color: #fff;
       font-weight: 600; }
   .grid-item .caption {
     position: absolute;
-    top: 15px;
-    right: 45%;
+    top: 65px;
+    right: 20%;
     left: 5%; }
     .grid-item .caption p {
-      color: #333;
-      font-size: 24px;
+      font-family: "Courier New", Courier, "Lucinda Sans Typewriter", monospace;
+      color: #fff;
+      font-size: 28px;
       font-weight: 100;
       line-height: 1.4; }
+
+.grid-item--poster {
+  height: 325px; }
 
 .grid-item--rectangle {
   width: 480px; }
@@ -97,7 +110,7 @@ article {
   width: 480px;
   height: 480px; }
 
-.grid-item--portrait-rectangle {
+.grid-item--horizontal {
   width: 225px;
   height: 480px; }
 
@@ -138,8 +151,9 @@ article {
 
 .btn-group-lg > .btn, .btn-lg {
   text-transform: uppercase;
-  font-size: 18px;
-  padding: 9px 18px;
+  font-family: "tablet-gothic-condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  padding: 12px 24px;
   margin-right: .7em; }
 
 .navbar {
@@ -147,9 +161,12 @@ article {
   border-radius: 0; }
 
 .navbar-brand {
-  color: #f1f2f2 !important;
+  font-family: "tablet-gothic-condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #fff !important;
   text-transform: uppercase;
   font-size: 36px;
+  font-weight: 700;
+  transform: rotate(-2deg);
   margin-left: 0px !important;
   margin-top: 10px;
   margin-bottom: 10px; }
@@ -181,13 +198,13 @@ article {
       bottom: 7px; }
   .navbar-nav li > a:visited {
     color: #585956; }
-  .navbar-nav svg {
+  .navbar-nav svg, .navbar-nav #magnifying-glass {
     fill: #585956;
     width: 16px;
     transition: fill 0.25s ease-in-out; }
-    .navbar-nav svg:link {
+    .navbar-nav svg:link, .navbar-nav #magnifying-glass:link {
       fill: #585956; }
-    .navbar-nav svg:hover {
+    .navbar-nav svg:hover, .navbar-nav #magnifying-glass:hover {
       fill: #323133; }
   .navbar-nav #search-link:hover:after {
     border-bottom: 2px solid transparent; }
@@ -207,6 +224,7 @@ footer {
     font-size: 12px; }
   .footer-nav li > a {
     color: #585956;
+    font-family: "open-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700; }
 
 #logo {
@@ -221,13 +239,13 @@ footer {
   text-align: center;
   font-size: 16px; }
   .address-block a {
-    color: #f1f2f2;
+    color: #fff;
     font-weight: 500; }
 
 .copyright {
-  font-size: 16px;
   margin-bottom: 0; }
   .copyright small {
+    font-size: 50%;
     color: #585956;
     font-weight: 700; }
 
@@ -290,26 +308,6 @@ footer {
   color: #222; }
 
 #timeline-page {
-  	/*
-  	.star-group-underline {
-  		width: 75px;
-  		height: 5px;
-  		margin-top: 10px;
-  		border-radius: 10px;
-  		background: $white;
-  	}
-  
-  	#underline_1 {
-  		position: absolute;
-  		bottom: -10px;
-  		left: 45%;
-  	}
-  
-  	#underline_2 {
-  		position: absolute;
-  		bottom: -20px;
-  		left: 45%;
-  	}*/
   /* popovers */
   /* end popover styles */ }
   #timeline-page * {
@@ -317,6 +315,7 @@ footer {
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
   #timeline-page h2 {
+    font-family: "tablet-gothic-condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
     font-size: 4.5em;
     text-transform: uppercase;
@@ -334,10 +333,24 @@ footer {
   #timeline-page .star-group {
     margin-top: 30px;
     position: relative; }
+  #timeline-page .star-group-underline {
+    width: 75px;
+    height: 5px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background: #fff; }
+  #timeline-page #underline_1 {
+    position: absolute;
+    bottom: -10px;
+    left: 45%; }
+  #timeline-page #underline_2 {
+    position: absolute;
+    bottom: -20px;
+    left: 45%; }
   #timeline-page svg {
     display: inline-block;
     width: 25px;
-    fill: #f1f2f2; }
+    fill: #fff; }
   #timeline-page .jumbotron {
     text-align: center;
     margin-bottom: 0;
@@ -349,6 +362,15 @@ footer {
     padding-bottom: 7%; }
     #timeline-page section:nth-of-type(odd) {
       background: #404040; }
+    #timeline-page section h2 {
+      font-family: "Courier New", Courier, "Lucinda Sans Typewriter", monospace;
+      font-weight: 300;
+      letter-spacing: -5px; }
+    #timeline-page section h4 {
+      font-family: "open-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 700; }
+    #timeline-page section p {
+      font-weight: 100; }
   #timeline-page html, #timeline-page body {
     height: 100%; }
   #timeline-page section {
@@ -388,7 +410,7 @@ footer {
     background-image: -moz-linear-gradient(center top, #FFFFFF, #EEEEEE);
     background-repeat: repeat-x; }
   #timeline-page #dotNav li:hover {
-    background: none repeat scroll 0 0 #EEEEEE; }
+    background: none repeat scroll 0 0 #acd156; }
   #timeline-page #dotNav a {
     outline: 0;
     vertical-align: top;
@@ -419,20 +441,23 @@ footer {
     font-weight: 500; }
 
 #culture-landing-page body {
-  background: #f1f2f2; }
+  background: #fff; }
 #culture-landing-page h2 {
-  color: #222;
-  font-weight: 100;
+  font-family: "tablet-gothic-condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #231f20;
+  font-weight: 700;
   font-size: 44px;
+  text-transform: uppercase;
   margin-left: 40px;
   margin-top: 50px; }
-#culture-landing-page h4 {
-  color: #231f20;
+#culture-landing-page .jumbotron h4 {
+  color: #585956;
+  font-family: "aktiv-grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin-left: 40px;
   font-weight: 100;
   line-height: 1.6; }
 #culture-landing-page .jumbotron {
-  background: #f1f2f2;
+  background: #fff;
   margin-bottom: 0;
   padding-bottom: 4em; }
 #culture-landing-page .subnav {
@@ -446,51 +471,64 @@ footer {
       margin-right: 1em;
       transition: color 0.25s ease-in-out; }
       #culture-landing-page .subnav ul li a {
-        color: #231f20; }
+        color: #585956; }
         #culture-landing-page .subnav ul li a:link {
-          color: #231f20; }
+          color: #585956; }
         #culture-landing-page .subnav ul li a:hover {
-          color: #000;
+          color: #231f20;
           text-decoration: none; }
 #culture-landing-page #active-page {
-  color: #000; }
+  color: #acd156;
+  position: relative; }
+  #culture-landing-page #active-page:after {
+    content: url(../images/filled-star-green.svg);
+    position: absolute;
+    width: 20px;
+    bottom: -27px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0; }
 #culture-landing-page section {
-  background: #f1f2f2;
+  background: #fff;
   padding-bottom: 6.5em; }
 #culture-landing-page .grid {
-  background: #f1f2f2; }
+  background: #fff; }
 
 #culture-detailcomments-page main {
-  background: #f1f2f2; }
+  background: #fff; }
 #culture-detailcomments-page h2 {
   margin-top: 0;
-  padding-top: 80px;
-  padding-bottom: 15px;
-  font-weight: 100;
-  font-size: 36px;
-  color: #222; }
-#culture-detailcomments-page h4 {
+  font-family: "tablet-gothic-condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #231f20;
-  font-size: 20px;
+  font-weight: 700;
+  font-size: 44px;
+  text-transform: uppercase;
+  margin-right: -90px;
+  padding-top: 80px;
+  padding-bottom: 15px; }
+#culture-detailcomments-page main h4 {
+  color: #585956;
+  font-family: "aktiv-grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 100;
-  line-height: 1.6;
-  margin-right: 20px; }
+  line-height: 1.6; }
 #culture-detailcomments-page .grid {
   padding-top: 2em;
-  padding-bottom: 4em; }
+  padding-bottom: 2em; }
 #culture-detailcomments-page .culture-detail-tags {
-  border-top: 1px solid #231f20;
-  padding-top: 1em; }
+  border-top: 1px solid #dedede;
+  padding-top: 1em;
+  padding-bottom: 8em; }
   #culture-detailcomments-page .culture-detail-tags ul {
     margin-left: -40px; }
     #culture-detailcomments-page .culture-detail-tags ul li {
       display: inline-block;
       margin-right: 40px; }
       #culture-detailcomments-page .culture-detail-tags ul li p {
-        color: #222;
+        color: #231f20;
         display: inline-block; }
         #culture-detailcomments-page .culture-detail-tags ul li p a {
-          color: #222;
+          color: #acd156;
           font-size: 14px;
           font-weight: 500;
           margin-right: 10px; }
@@ -499,26 +537,39 @@ footer {
         font-size: 14px;
         margin-right: 10px; }
 #culture-detailcomments-page #comments {
-  background: #231f20; }
+  background: #e4e1ce; }
   #culture-detailcomments-page #comments #comments-container {
-    margin-top: 4em;
+    margin-top: -3.7em;
     margin-bottom: 5em;
-    background: #f1f2f2;
-    border: 2px solid #ccc;
-    padding-bottom: 30px; }
+    background: #fff;
+    border: 5px solid rgba(170, 170, 170, 0.3);
+    padding-bottom: 30px;
+    background-clip: padding-box;
+    -webkit-background-clip: padding;
+    -moz-background-clip: padding; }
   #culture-detailcomments-page #comments .comments-header {
     padding-top: 30px;
     padding-bottom: 40px; }
     #culture-detailcomments-page #comments .comments-header h3, #culture-detailcomments-page #comments .comments-header h5 {
       text-align: center;
-      color: #222; }
+      color: #231f20; }
     #culture-detailcomments-page #comments .comments-header h5 {
+      display: inline-block;
       text-transform: uppercase;
-      font-size: 16px; }
+      font-size: 18px;
+      font-family: "tablet-gothic-condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 700; }
     #culture-detailcomments-page #comments .comments-header h3 {
       font-weight: 100; }
+    #culture-detailcomments-page #comments .comments-header svg {
+      display: inline-block;
+      width: 30px;
+      padding-left: 8px;
+      padding-right: 8px; }
+      #culture-detailcomments-page #comments .comments-header svg:nth-of-type(1) {
+        margin-left: 33%; }
   #culture-detailcomments-page #comments .comments-header-border {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 2px solid #dedede;
     margin-left: -15px;
     margin-right: -15px; }
   #culture-detailcomments-page #comments .comments-body {
@@ -526,13 +577,15 @@ footer {
     #culture-detailcomments-page #comments .comments-body img {
       margin: 40px 10px 10px 10px; }
     #culture-detailcomments-page #comments .comments-body h5 {
+      font-family: "aktiv-grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: #231f20;
       font-size: 16px;
-      color: #222;
       font-weight: 600;
       margin-top: 40px;
       margin-left: 10px; }
     #culture-detailcomments-page #comments .comments-body p {
-      color: #222;
+      font-family: "aktiv-grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: #231f20;
       font-size: 14px;
       line-height: 1.6;
       margin-left: 10px; }
@@ -545,7 +598,7 @@ footer {
       border-bottom: 1px solid #ccc; }
 
 #spaces-landing-page body {
-  background: #f1f2f2; }
+  background: #fff; }
 #spaces-landing-page h2 {
   color: #222;
   font-weight: 100;
@@ -558,7 +611,7 @@ footer {
   font-weight: 100;
   line-height: 1.6; }
 #spaces-landing-page .jumbotron {
-  background: #f1f2f2;
+  background: #fff;
   margin-bottom: 0;
   padding-bottom: 4em; }
 #spaces-landing-page .subnav {
@@ -572,21 +625,32 @@ footer {
       margin-right: 1em;
       transition: color 0.25s ease-in-out; }
       #spaces-landing-page .subnav ul li a {
-        color: #231f20; }
+        color: #585956; }
         #spaces-landing-page .subnav ul li a:link {
-          color: #231f20; }
+          color: #585956; }
         #spaces-landing-page .subnav ul li a:hover {
-          color: #000;
+          color: #231f20;
           text-decoration: none; }
 #spaces-landing-page #active-page {
-  color: #000; }
+  color: #acd156;
+  position: relative; }
+  #spaces-landing-page #active-page:after {
+    content: url(../images/filled-star-green.svg);
+    position: absolute;
+    width: 20px;
+    bottom: -27px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0; }
 #spaces-landing-page section {
-  background: #f1f2f2;
+  background: #fff;
   padding-bottom: 6.5em; }
 #spaces-landing-page table {
   margin: 10px 30px; }
   #spaces-landing-page table td, #spaces-landing-page table a {
-    color: #222;
+    font-family: "aktiv-grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #231f20;
     font-size: 20px;
     font-weight: 300; }
   #spaces-landing-page table a {
@@ -596,34 +660,91 @@ footer {
     #spaces-landing-page table a:hover {
       color: #222; }
 #spaces-landing-page .table > tbody > tr > td {
-  padding: 40px 5px; }
+  padding: 70px 5px 70px; }
 #spaces-landing-page .table > tbody > tr > .table_letter {
-  font-size: 48px;
+  font-family: "flood-std",sans-serif;
+  font-size: 6em;
   font-weight: 100;
-  padding: 20px 10px; }
+  padding: 20px 10px;
+  transform: rotate(3deg); }
+#spaces-landing-page .table_letter_border {
+  padding-left: 5px;
+  border-top: 1px solid #dedede;
+  border-left: 1px solid #dedede; }
 #spaces-landing-page p {
   text-align: center; }
   #spaces-landing-page p small {
-    color: #231f20;
-    font-style: italic; }
+    color: #323133; }
   #spaces-landing-page p a {
     color: #222;
     font-weight: 700; }
+#spaces-landing-page .map-wrapper {
+  position: relative; }
 #spaces-landing-page #map {
   height: 600px; }
+#spaces-landing-page .marker-star {
+  content: url(../images/filled-star.svg);
+  width: 5px;
+  position: absolute;
+  bottom: 0; }
+#spaces-landing-page #legend {
+  position: absolute;
+  bottom: 35px;
+  left: 35px;
+  z-index: 999;
+  width: 135px;
+  height: 110px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(120, 120, 120, 0.5); }
+  #spaces-landing-page #legend ul {
+    margin-top: 15px !important;
+    padding-left: 15px !important; }
+  #spaces-landing-page #legend svg {
+    width: 15px; }
+  #spaces-landing-page #legend #venue_marker {
+    fill: #acd156; }
+  #spaces-landing-page #legend #record_store_marker {
+    fill: #26a9e0; }
+  #spaces-landing-page #legend #studios_marker {
+    fill: #edbe39; }
+  #spaces-landing-page #legend #houses_marker {
+    fill: #ee2a76; }
+  #spaces-landing-page #legend > ul > li {
+    list-style-type: none;
+    color: #231f20;
+    font-family: "open-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700; }
+#spaces-landing-page .copyright small {
+  font-size: 12px;
+  font-style: initial; }
 
 #venue-detail-page main {
-  background: #f1f2f2; }
+  background: #fff; }
   #venue-detail-page main h1, #venue-detail-page main h2, #venue-detail-page main h3, #venue-detail-page main h4, #venue-detail-page main h5, #venue-detail-page main h6, #venue-detail-page main p {
-    color: #222; }
+    color: #231f20; }
+  #venue-detail-page main h1 {
+    font-family: "tablet-gothic-condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 44px;
+    text-transform: uppercase; }
+  #venue-detail-page main h4 {
+    font-family: "open-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #acd156;
+    padding-top: 40px;
+    padding-bottom: 0; }
   #venue-detail-page main article {
     padding-bottom: none; }
     #venue-detail-page main article p {
       line-height: 1.6; }
+      #venue-detail-page main article p:nth-of-type(1) {
+        margin-top: 5px; }
   #venue-detail-page main .image-placeholder {
     height: 300px;
     width: 300px;
-    background: #231f20;
+    background: #585956;
     margin: 10px 10px 30px 10px; }
   #venue-detail-page main #map {
     margin: 10px;
@@ -632,7 +753,7 @@ footer {
   #venue-detail-page main .map-container {
     position: relative; }
   #venue-detail-page main aside {
-    color: #222; }
+    color: #231f20; }
     #venue-detail-page main aside h4 {
       text-transform: uppercase;
       font-size: 14px;
@@ -640,19 +761,20 @@ footer {
     #venue-detail-page main aside ul {
       list-style-type: disc; }
       #venue-detail-page main aside ul li {
-        color: #222; }
+        color: #231f20; }
       #venue-detail-page main aside ul a {
-        color: #222; }
+        color: #acd156; }
   #venue-detail-page main .grid-section {
-    background: #231f20;
+    background: #e4e1ce;
     margin-top: 5em;
     padding-top: 3em;
     padding-bottom: 6em; }
 #venue-detail-page .btn {
   text-transform: uppercase; }
 #venue-detail-page #modal-button {
-  color: #231f20;
-  background: #222;
+  color: #fff;
+  opacity: 0.7;
+  background: #231f20;
   position: absolute;
   bottom: 50px;
   left: 20px;
@@ -664,7 +786,7 @@ footer {
   #venue-detail-page .modal .modal-dialog {
     width: 850px; }
   #venue-detail-page .modal .modal-content {
-    background-color: #f1f2f2;
+    background-color: #fff;
     width: 850px; }
   #venue-detail-page .modal .modal-header {
     border-bottom: none;
@@ -678,8 +800,8 @@ footer {
     font-weight: 100;
     text-shadow: none;
     opacity: 1.0;
-    background-color: #f1f2f2;
-    color: #222 !important;
+    background-color: #fff;
+    color: #231f20 !important;
     height: 30px;
     width: 30px;
     z-index: 1000;
@@ -718,7 +840,7 @@ footer {
     height: 50px; }
   #contribute-page main #inputEmail, #contribute-page main #contribution-type, #contribute-page main #description {
     border: 1px solid transparent;
-    background-color: #f1f2f2;
+    background-color: #fff;
     box-shadow: none; }
   #contribute-page main .form-control {
     height: 50px; }
@@ -743,7 +865,7 @@ footer {
     border-radius: 0;
     border: 2px solid transparent;
     color: #231f20;
-    background: #f1f2f2;
+    background: #fff;
     font-size: 18px;
     font-weight: 300; }
   #contribute-page main .btn .dropdown-toggle .btn-default:focus {
@@ -757,14 +879,14 @@ footer {
   #contribute-page main .dropdown-menu > li > a {
     font-weight: 300; }
     #contribute-page main .dropdown-menu > li > a:focus {
-      outline-color: #f1f2f2; }
+      outline-color: #fff; }
   #contribute-page main .dropdown-menu li .selected:focus {
     outline-color: transparent; }
   #contribute-page main .bootstrap-select .dropdown-toggle:focus {
-    outline-color: #f1f2f2 !important; }
+    outline-color: #fff !important; }
 
 #about-page main {
-  background: #f1f2f2;
+  background: #fff;
   color: #222; }
 #about-page p {
   line-height: 1.6;
@@ -805,12 +927,12 @@ footer {
   height: 50px;
   border: 1px solid transparent;
   box-shadow: none;
-  background: #f1f2f2;
+  background: #fff;
   font-size: 20px;
   font-weight: 100;
   padding-left: 20px; }
 #search-page .btn {
-  background: #f1f2f2;
+  background: #fff;
   height: 50px;
   border: 1px solid transparent; }
 #search-page button {
@@ -823,4 +945,4 @@ footer {
   margin-left: 50%;
   color: #231f20; }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=dcpunk.css.map */

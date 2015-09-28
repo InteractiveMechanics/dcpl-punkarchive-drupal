@@ -1,0 +1,52 @@
+// FOOTER
+
+footer {
+	background: $black;
+}
+
+.divider {
+	border-bottom: 1px solid  $soft_black;
+}
+
+.footer-nav {
+	margin-left: 10%;
+	li {
+	display: inline-block;
+	margin: 20px 15px 10px 15px;
+	text-transform: uppercase;
+	font-size: 12px;
+	}
+	li>a {
+		color: $grey;
+		//font-family: $open_sans_font_stack;
+		font-weight: 700;
+	}
+}
+
+#logo {
+	opacity: 0.7;
+	transition: opacity 0.25s ease-in-out;
+	&:hover {
+		opacity: 1.0;
+	}
+}
+
+.address-block {
+	margin-top: 2em;
+	margin-bottom: 0;
+	text-align: center;
+	font-size: 16px;
+	a {
+		color: $white;
+		font-weight: 500;
+	}
+}
+
+.copyright {
+	font-size: 16px;
+	margin-bottom: 0;
+	small {
+		color: $grey;
+		font-weight: 700;
+	}
+}
