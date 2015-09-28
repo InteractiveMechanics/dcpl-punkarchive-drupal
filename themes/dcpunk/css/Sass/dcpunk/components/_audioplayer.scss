@@ -1,0 +1,27 @@
+#audioplayer {
+	background-color: $soft_black;
+    transition: $transition;
+
+    &:hover {
+        background-color: lighten($soft_black, 10%);
+    }
+
+	h6 {
+        font-size: 12px;
+        font-family: $p_font_stack;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 7px 0 0 15px;
+        width: 200px;
+        color: $grey;
+	}
+
+	h2 {
+        font-weight: 100;
+        font-family: $display_font_stack;
+        text-transform: uppercase;
+        margin: 0 0 0 15px;
+        width: 200px;
+        color: white;
+	}
+}

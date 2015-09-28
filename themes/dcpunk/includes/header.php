@@ -20,7 +20,11 @@
     	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     	      	<ul class="nav navbar-nav">
                     <?php foreach($main_menu as $menu): ?>
-						<li><a href="<?php print $base_path . drupal_get_path_alias($menu['link_path']) ?>"><?php print $menu['link_title'] ?></a></li>
+                        <?php 
+                            $title = menu_get_active_title();
+                            if ($title == $menu['link_title']) { $active = true; } else { $active = false; }
+                        ?>
+						<li <?php if($active){ echo "class='active'"; } ?>><a href="<?php print $base_path . drupal_get_path_alias($menu['link_path']) ?>"><?php print $menu['link_title'] ?></a></li>
 					<?php endforeach; ?>
     				<li>
                         <a href="<?php print $base_path . drupal_get_path_alias('search') ?>" id="search-link">

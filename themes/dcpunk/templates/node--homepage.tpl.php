@@ -95,13 +95,13 @@
 		</p>
 	</div> <!-- END CONTAINER -->
 </div> <!-- END JUMBOTRON -->
-<article>
+<section>
     <div class="container">
     	<div class="row">
-    		<div class="col-sm-8 col-sm-offset-2">
+    		<div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
     			<h2><?php print $node->field_intro_title['und'][0]['value'];?></h2>
     			<p><?php print $node->field_intro_body['und'][0]['value'];?></p>
     		</div>
     	</div> <!-- END ROW -->
     </div> <!-- END CONTAINER -->
-</article>
+</section>

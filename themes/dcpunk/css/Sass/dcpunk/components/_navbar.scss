@@ -25,8 +25,10 @@ header {
                     bottom: 10px;
                     opacity: 0;
                     transition: $transition;
-    			}        
+    			}
         		&:hover {
+                    background: transparent;
+
         			&:after {
         				border-bottom: none;
                         background: url(../images/accent-underline.svg) no-repeat center center;
@@ -39,6 +41,23 @@ header {
         			}
         		}
         	}
+
+            &.active > a {
+                background: transparent !important;
+                color: white !important;
+                bottom: 10px;
+                
+                &:after {
+    				border-bottom: none;
+                    background: url(../images/accent-underline.svg) no-repeat center center;
+                    background-size: contain;
+                    height: 5px;
+                    left: 0;
+                    width: 100%;
+                    bottom: 20px;
+                    opacity: 1;
+    			}
+            }
         }
         svg {
 			fill: $grey;

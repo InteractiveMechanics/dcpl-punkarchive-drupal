@@ -1,14 +1,37 @@
 body {
-  color: #ffffff; }
+  color: #000000; }
+  body.front {
+    color: #ffffff; }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Courier New", Courier, "Lucinda Sans Typewriter", monospace; }
+h1 {
+  font-family: "tablet-gothic-compressed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 54px;
+  margin: 10px 0 20px; }
+
+h2 {
+  font-family: "Courier New", Courier, "Lucinda Sans Typewriter", monospace;
+  margin: 10px 0 20px; }
+
+h3 {
+  font-family: "Courier New", Courier, "Lucinda Sans Typewriter", monospace;
+  line-height: 1.4; }
+
+h4 {
+  font-family: "tablet-gothic-compressed", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+h5 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+h6 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 p {
-  font-family: "aktiv-grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
-  line-height: 2;
-  font-weight: 100; }
+  line-height: 2.1;
+  font-weight: 300;
+  margin-top: 10px;
+  margin-bottom: 30px; }
 
 a {
   color: #acd156; }
@@ -18,14 +41,18 @@ a {
 .jumbotron {
   height: 600px;
   padding-top: 120px;
-  overflow: hidden !important; }
+  overflow: hidden !important;
+  color: #ffffff; }
   .jumbotron h1 {
     color: #ffffff;
-    font-family: "tablet-gothic-compressed", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     font-size: 72px;
     font-weight: 700;
-    line-height: 1.4; }
+    line-height: 1.2;
+    margin-bottom: 30px; }
+    body.front .jumbotron h1 {
+      font-size: 96px;
+      margin-bottom: 50px; }
   .jumbotron .container {
     position: relative;
     z-index: 2; }
@@ -44,14 +71,9 @@ main {
   body.front main {
     background: #323133; }
 
-article {
-  padding-top: 5em;
-  padding-bottom: 8em; }
-  article p {
-    margin-top: 30px; }
-  article a {
-    font-weight: 700;
-    text-decoration: underline; }
+article,
+section {
+  padding: 80px 0; }
 
 .grid {
   margin-left: 70px;
@@ -118,15 +140,16 @@ article {
 
 .btn {
   border-radius: 0;
-  border: 4px solid #acd156;
+  border: 2px solid #acd156;
   color: #acd156;
   background: transparent;
   font-family: "tablet-gothic-compressed", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 18px; }
+  font-size: 18px;
+  transition: 0.5s all; }
 
 .btn-primary {
   border-color: #f1f2f2; }
-  .btn-primary:link, .btn-primary:hover, .btn-primary:active, .btn-primary:focus, .btn-primary:active:focus, .btn-primary:visited {
+  .btn-primary:hover, .btn-primary:active, .btn-primary:focus, .btn-primary:active:focus {
     background-color: #acd156;
     border-color: #acd156;
     color: #000000;
@@ -136,7 +159,8 @@ article {
 .btn-lg {
   text-transform: uppercase;
   font-size: 24px;
-  padding: 9px 18px; }
+  padding: 12px 28px 16px;
+  border: 3px solid #acd156; }
 
 header .navbar-brand {
   font-family: "tablet-gothic-compressed", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -150,7 +174,7 @@ header .navbar-brand {
   margin-bottom: 10px; }
 header .navbar-nav li > a {
   color: #BBBCBE;
-  font-family: "aktiv-grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
   transition: 0.5s all; }
   header .navbar-nav li > a:after {
@@ -158,7 +182,22 @@ header .navbar-nav li > a {
     bottom: 10px;
     opacity: 0;
     transition: 0.5s all; }
-  header .navbar-nav li > a:hover:after {
+  header .navbar-nav li > a:hover {
+    background: transparent; }
+    header .navbar-nav li > a:hover:after {
+      border-bottom: none;
+      background: url(../images/accent-underline.svg) no-repeat center center;
+      background-size: contain;
+      height: 5px;
+      left: 0;
+      width: 100%;
+      bottom: 20px;
+      opacity: 1; }
+header .navbar-nav li.active > a {
+  background: transparent !important;
+  color: white !important;
+  bottom: 10px; }
+  header .navbar-nav li.active > a:after {
     border-bottom: none;
     background: url(../images/accent-underline.svg) no-repeat center center;
     background-size: contain;
@@ -188,138 +227,30 @@ footer {
     line-height: 1;
     padding: 20px 0 26px; }
 
-#timeline-page {
-  /* popovers */
-  /* end popover styles */ }
-  #timeline-page * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box; }
-  #timeline-page h2 {
-    font-family: "tablet-gothic-compressed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+#audioplayer {
+  background-color: #323133;
+  transition: 0.5s all; }
+  #audioplayer:hover {
+    background-color: #4c4a4d; }
+  #audioplayer h6 {
+    font-size: 12px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
-    font-size: 4.5em;
     text-transform: uppercase;
-    margin-bottom: 10px;
-    text-align: center; }
-  #timeline-page h4 {
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 2;
-    text-align: center; }
-  #timeline-page p {
-    font-size: 24px;
+    margin: 7px 0 0 15px;
+    width: 200px;
+    color: #BBBCBE; }
+  #audioplayer h2 {
     font-weight: 100;
-    line-height: 1.5; }
-  #timeline-page .star-group {
-    margin-top: 30px;
-    position: relative; }
-  #timeline-page .star-group-underline {
-    width: 75px;
-    height: 5px;
-    margin-top: 10px;
-    border-radius: 10px;
-    background: #ffffff; }
-  #timeline-page #underline_1 {
-    position: absolute;
-    bottom: -10px;
-    left: 45%; }
-  #timeline-page #underline_2 {
-    position: absolute;
-    bottom: -20px;
-    left: 45%; }
-  #timeline-page svg {
-    display: inline-block;
-    width: 25px;
-    fill: #ffffff; }
-  #timeline-page .jumbotron {
-    text-align: center;
-    margin-bottom: 0;
-    z-index: 1050; }
-    #timeline-page .jumbotron h2 {
-      margin-bottom: 30px; }
-  #timeline-page section {
-    padding-top: 5%;
-    padding-bottom: 7%; }
-    #timeline-page section:nth-of-type(odd) {
-      background: #404040; }
-    #timeline-page section h2 {
-      font-family: "Courier New", Courier, "Lucinda Sans Typewriter", monospace;
-      font-weight: 300;
-      letter-spacing: -5px; }
-    #timeline-page section h4 {
-      font-family: "aktiv-grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-weight: 700; }
-    #timeline-page section p {
-      font-weight: 100; }
-  #timeline-page html, #timeline-page body {
-    height: 100%; }
-  #timeline-page section {
-    min-height: 100%; }
-  #timeline-page .affix-top {
-    top: 100%;
-    right: 0;
-    position: absolute;
-    z-index: 2; }
-  #timeline-page .affix {
-    top: 50%;
-    right: 0;
-    z-index: 2; }
-  #timeline-page #mainContainer {
-    height: 100%; }
-  #timeline-page #dotNav {
-    z-index: 5;
-    left: 1%;
-    padding: 7px;
-    padding-top: 12px;
-    display: none; }
-  #timeline-page #dotNav ul {
-    list-style: none;
-    margin: 0; }
-  #timeline-page #dotNav li {
-    position: relative;
-    background: none repeat scroll 0 0 #cccccc;
-    border: 1px solid #aaaaaa;
-    border-radius: 15px 15px 15px 15px;
-    cursor: pointer;
-    height: 12px;
-    margin: 10px 10px 0px 0px;
-    width: 12px;
-    vertical-align: bottom; }
-  #timeline-page #dotNav li.active {
-    background-color: #ffffff;
-    background-image: -moz-linear-gradient(center top, #FFFFFF, #EEEEEE);
-    background-repeat: repeat-x; }
-  #timeline-page #dotNav li:hover {
-    background: none repeat scroll 0 0 #acd156; }
-  #timeline-page #dotNav a {
-    outline: 0;
-    vertical-align: top;
-    margin: 0px 0px 0px 25px;
-    position: relative;
-    top: -5px; }
-  #timeline-page .popover {
-    border-radius: 0;
-    background: #000;
-    left: 15px;
-    transition: opacity 0.5s ease-in-out; }
-  #timeline-page .popover.right .arrow:after {
-    border-right-color: #000; }
-  #timeline-page .popover.right {
-    margin-left: 20px; }
-  #timeline-page .popover-title {
-    background: #000;
-    color: #999;
-    border: none;
-    font-weight: 100;
-    font-size: 18px;
-    padding: 8px 14px 0px 14px; }
-  #timeline-page .popover-content {
-    background: #000;
-    font-size: 11px;
-    margin-top: 0;
-    padding-top: 0px;
-    font-weight: 500; }
+    font-family: "tablet-gothic-compressed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    margin: 0 0 0 15px;
+    width: 200px;
+    color: white; }
+
+#timeline-page .jumbotron {
+  background: #000000 url(../images/timeline-background.jpg) no-repeat center center;
+  background-size: cover; }
 
 #culture-landing-page body {
   background: #ffffff; }
@@ -333,7 +264,7 @@ footer {
   margin-top: 50px; }
 #culture-landing-page .jumbotron h4 {
   color: #BBBCBE;
-  font-family: "aktiv-grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin-left: 40px;
   font-weight: 100;
   line-height: 1.6; }
@@ -390,7 +321,7 @@ footer {
   padding-bottom: 15px; }
 #culture-detailcomments-page main h4 {
   color: #BBBCBE;
-  font-family: "aktiv-grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 100;
   line-height: 1.6; }
 #culture-detailcomments-page .grid {
@@ -458,14 +389,14 @@ footer {
     #culture-detailcomments-page #comments .comments-body img {
       margin: 40px 10px 10px 10px; }
     #culture-detailcomments-page #comments .comments-body h5 {
-      font-family: "aktiv-grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       color: #000000;
       font-size: 16px;
       font-weight: 600;
       margin-top: 40px;
       margin-left: 10px; }
     #culture-detailcomments-page #comments .comments-body p {
-      font-family: "aktiv-grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       color: #000000;
       font-size: 14px;
       line-height: 1.6;
@@ -530,7 +461,7 @@ footer {
 #spaces-landing-page table {
   margin: 10px 30px; }
   #spaces-landing-page table td, #spaces-landing-page table a {
-    font-family: "aktiv-grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #000000;
     font-size: 20px;
     font-weight: 300; }
@@ -593,7 +524,7 @@ footer {
   #spaces-landing-page #legend > ul > li {
     list-style-type: none;
     color: #000000;
-    font-family: "aktiv-grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700; }
 #spaces-landing-page .copyright small {
   font-size: 12px;
@@ -609,7 +540,7 @@ footer {
     font-size: 44px;
     text-transform: uppercase; }
   #venue-detail-page main h4 {
-    font-family: "aktiv-grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
     font-size: 18px;
     text-transform: uppercase;
@@ -699,86 +630,6 @@ footer {
   #venue-detail-page .modal .modal-header > #close {
     color: red;
     background: #000000; }
-
-#contribute-page main {
-  background: #fff;
-  padding-top: 50px; }
-  #contribute-page main h1 {
-    margin-top: 0;
-    padding-top: 30px;
-    padding-bottom: 20px;
-    color: #222;
-    font-weight: 100; }
-  #contribute-page main p {
-    color: #000000;
-    line-height: 1.6;
-    padding-bottom: 30px; }
-  #contribute-page main form {
-    margin-bottom: 60px; }
-  #contribute-page main .form-group {
-    margin-bottom: 30px; }
-  #contribute-page main #inputEmail, #contribute-page main #contribution-type {
-    height: 50px; }
-  #contribute-page main #inputEmail, #contribute-page main #contribution-type, #contribute-page main #description {
-    border: 1px solid transparent;
-    background-color: #ffffff;
-    box-shadow: none; }
-  #contribute-page main .form-control {
-    height: 50px; }
-  #contribute-page main #description {
-    height: 200px; }
-  #contribute-page main label {
-    color: #222;
-    font-size: 16px; }
-  #contribute-page main input, #contribute-page main select, #contribute-page main textarea {
-    font-size: 18px;
-    font-weight: 300;
-    padding-left: 15px; }
-  #contribute-page main button[type=submit] {
-    padding: 15px 50px;
-    margin-top: 30px;
-    margin-left: 40%;
-    color: #222;
-    border: 2px solid #222;
-    font-size: 14px;
-    text-transform: uppercase; }
-  #contribute-page main .btn {
-    border-radius: 0;
-    border: 2px solid transparent;
-    color: #000000;
-    background: #ffffff;
-    font-size: 18px;
-    font-weight: 300; }
-  #contribute-page main .btn .dropdown-toggle .btn-default:focus {
-    outline-color: transparent; }
-  #contribute-page main .btn .dropdown-toggle .btn-default:active {
-    outline-color: transparent; }
-  #contribute-page main .dropdown-menu {
-    font-size: 18px; }
-    #contribute-page main .dropdown-menu .innner:focus {
-      outline-color: transparent; }
-  #contribute-page main .dropdown-menu > li > a {
-    font-weight: 300; }
-    #contribute-page main .dropdown-menu > li > a:focus {
-      outline-color: #ffffff; }
-  #contribute-page main .dropdown-menu li .selected:focus {
-    outline-color: transparent; }
-  #contribute-page main .bootstrap-select .dropdown-toggle:focus {
-    outline-color: #ffffff !important; }
-
-#about-page main {
-  background: #ffffff;
-  color: #222; }
-#about-page p {
-  line-height: 1.6;
-  margin-top: 10px;
-  margin-bottom: 25px; }
-#about-page h1 {
-  font-weight: 300;
-  margin-bottom: 40px; }
-#about-page h2 {
-  font-weight: 100;
-  margin-bottom: 10px; }
 
 #search-page main {
   background: #fff;

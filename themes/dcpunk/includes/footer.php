@@ -19,7 +19,7 @@
 		<div class="row">
 			<div class="address-block">
 				<p><a href="http://wwww.dclibrary.org"><img src="<?php print $base_path . $directory; ?>/images/logo-dcpl.svg" alt="DC Public Library logo" id="logo"></a></p>
-				<p class="copyright"><small>Copyright &copy; 2015 DC Public Library. All rights reserved.</small></p>
+				<p class="copyright"><small>Copyright &copy; <?php echo date('Y'); ?> DC Public Library. All rights reserved.</small></p>
 				<ul>
 					<li><a href="http://dclibrary.org/"><small>DC Public Library</small></a></li>
 					<li><a href=""><small>Terms &amp; Conditions</small></a></li>

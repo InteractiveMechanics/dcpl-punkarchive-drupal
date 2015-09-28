@@ -1,19 +1,41 @@
 // TYPOGRAPHY
 
 body {
-	color: $white;
+	color: $black;
+
+    &.front { color: $white; }
 }
 
-h1, h2, h3, h4, h5, h6 {
-	font-family: $heading-font-stack;
+h1 {
+    font-family: $display_font_stack;
+    font-size: 54px;
+    margin: 10px 0 20px;
 }
-
+h2 {
+    font-family: $heading_font_stack;
+    margin: 10px 0 20px;
+}
+h3 {
+    font-family: $heading_font_stack;
+    line-height: 1.4;
+}
+h4 {
+    font-family: $display_font_stack;
+}
+h5 {
+    font-family: $p_font_stack;
+}
+h6 {
+    font-family: $p_font_stack;
+}
 
 p {
 	font-family: $p_font_stack;
 	font-size: 18px;
-	line-height: 2;
-	font-weight: 100;
+	line-height: 2.1;
+	font-weight: 300;
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
 a {
 	color: $accent_color;
