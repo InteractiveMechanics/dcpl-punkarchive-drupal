@@ -27,7 +27,7 @@ a {
   padding-bottom: 8em; }
   .jumbotron p {
     color: #fff;
-    font-family: "tablet-gothic-condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "tablet-gothic-compressed", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     font-size: 4.5em;
     font-weight: 700;
@@ -151,7 +151,7 @@ article {
 
 .btn-group-lg > .btn, .btn-lg {
   text-transform: uppercase;
-  font-family: "tablet-gothic-condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "tablet-gothic-compressed", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 24px;
   padding: 12px 24px;
   margin-right: .7em; }
@@ -161,7 +161,7 @@ article {
   border-radius: 0; }
 
 .navbar-brand {
-  font-family: "tablet-gothic-condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "tablet-gothic-compressed", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #fff !important;
   text-transform: uppercase;
   font-size: 36px;
@@ -315,7 +315,7 @@ footer {
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
   #timeline-page h2 {
-    font-family: "tablet-gothic-condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "tablet-gothic-compressed", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
     font-size: 4.5em;
     text-transform: uppercase;
@@ -443,7 +443,7 @@ footer {
 #culture-landing-page body {
   background: #fff; }
 #culture-landing-page h2 {
-  font-family: "tablet-gothic-condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "tablet-gothic-compressed", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #231f20;
   font-weight: 700;
   font-size: 44px;
@@ -499,7 +499,7 @@ footer {
   background: #fff; }
 #culture-detailcomments-page h2 {
   margin-top: 0;
-  font-family: "tablet-gothic-condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "tablet-gothic-compressed", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #231f20;
   font-weight: 700;
   font-size: 44px;
@@ -557,7 +557,7 @@ footer {
       display: inline-block;
       text-transform: uppercase;
       font-size: 18px;
-      font-family: "tablet-gothic-condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-family: "tablet-gothic-compressed", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-weight: 700; }
     #culture-detailcomments-page #comments .comments-header h3 {
       font-weight: 100; }
@@ -723,7 +723,7 @@ footer {
   #venue-detail-page main h1, #venue-detail-page main h2, #venue-detail-page main h3, #venue-detail-page main h4, #venue-detail-page main h5, #venue-detail-page main h6, #venue-detail-page main p {
     color: #231f20; }
   #venue-detail-page main h1 {
-    font-family: "tablet-gothic-condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "tablet-gothic-compressed", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
     font-size: 44px;
     text-transform: uppercase; }
