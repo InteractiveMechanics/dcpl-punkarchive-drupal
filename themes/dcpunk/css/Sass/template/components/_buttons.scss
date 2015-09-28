@@ -6,48 +6,25 @@
 	color: $accent_color;
 	background: transparent;
 
+    & + .btn {
+        margin-left: 10px;
+    }
 }
 
 .btn-primary {
 	border-color: #f1f2f2;
-	&:link {
-		background-color: transparent;
-		border-color: $accent_color;
-		color: $accent_color;
-	}
-	&:hover {
-		background-color: $accent_color;
-		border-color: $accent_color;
-		color: $black;
-	}
-	&:active {
+
+	&:link, &:hover, &:active, &:focus, &:active:focus, &:visited {
 		background-color: $accent_color;
 		border-color: $accent_color;
 		color: $black;
 		box-shadow: none;
 	}
-	&:focus {
-		background-color: $accent_color;
-		border-color: $accent_color;
-		color: $black;
-		outline: 5px auto $accent_color;
-	}
-	&:active:focus {
-		background-color: $accent_color;
-		border-color: $accent_color;
-		color: $black;
-		outline: 5px auto $accent_color;
-	}
-	&:visited {
-		background-color: $accent_color;
-		border-color: $accent_color;
-	}
 }
 
-.btn-group-lg>.btn, .btn-lg {
+.btn-group-lg > .btn, 
+.btn-lg {
 	text-transform: uppercase;
-	//font-family: $display_font_stack;
 	font-size: 18px;
 	padding: 9px 18px;
-	margin-right: .7em;
 }

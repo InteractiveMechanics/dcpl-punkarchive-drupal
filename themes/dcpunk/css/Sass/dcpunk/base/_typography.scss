@@ -15,20 +15,10 @@ p {
 	line-height: 2;
 	font-weight: 100;
 }
-
 a {
 	color: $accent_color;
-	&:link {
-		color: $accent_color;
-	}
-	&:hover {
-		color: $accent_color;
-	}
-	&:active {
-		color: $accent_color;
-	}
-	&:focus {
-		color: $accent_color;
-	}
 
+	&:link, &:hover, &:active, &:focus {
+		color: $accent_color;
+	}
 }

@@ -81,24 +81,26 @@
   global $base_path;
 ?>
 <div class="jumbotron">
+    <div class="video-container">
+        <video width="100%" height="auto" poster="<?php print $directory; ?>/images/videos/homepage_video.jpg" autoplay>
+            <source src="<?php print $directory; ?>/images/videos/homepage_video.mp4" type="video/mp4">
+            <source src="<?php print $directory; ?>/images/videos/homepage_video.webm" type="video/webm">
+        </video>
+    </div>
 	<div class="container">
-		<div class="col-sm-10 col-sm-offset-1">
-		<p>Lorem ipsum dolor sit amet felitis, consectetur adipiscing elit.</p>
+		<h1><?php print $node->field_hero_title['und'][0]['value'];?></h1>
 		<p>
 			<a class="btn btn-primary btn-lg" href="<?php print $base_path; ?>timeline" role="button">Explore the Timeline</a>
 			<a class="btn btn-primary btn-lg" href="<?php print $base_path; ?>about" role="button">About the Archive</a>
 		</p>
-	</div>
 	</div> <!-- END CONTAINER -->
 </div> <!-- END JUMBOTRON -->
 <article>
     <div class="container">
     	<div class="row">
     		<div class="col-sm-8 col-sm-offset-2">
-    			<h2>Introduction to DC Punk Archive</h2>
-    			<p>Cras elit nulla, accumsan eget nibh at, venenatis convallis erat. Morbi eleifend non arcu nec euismod. Nam at rutrum nisl, sit amet scelerisque felis. Vivamus cursus eu elit non egestas. Mauris sagittis porttitor laoreet. <a href="http://digdc.dclibrary.org/">Explore the full collection on DigDC.</a> Cras sagittis imperdiet ultrices. Aliquam rutrum euismod turpis sit amet tempus. Fusce quis felis dignissim, cursus ex sit amet, gravida urna. Pellentesque in nibh id arcu ultrices molestie. Sed ut ligula libero. Suspendisse ex nisi, tristique non eleifend sit amet, accumsan id purus. Aliquam interdum nibh nec finibus auctor.</p>
-    
-    			<p>Nam viverra sagittis venenatis. Aenean mollis sit amet leo sit amet elementum. Aenean eleifend felis nec arcu posuere varius. Donec consequat sapien vitae lectus vestibulum tristique. Quisque congue id odio non interdum. Ut nec consectetur elit. Phasellus fermentum dignissim aliquet.<a href="http://dclibrary.org/"> Check out one of our upcoming Punk shows.</a></p>
+    			<h2><?php print $node->field_intro_title['und'][0]['value'];?></h2>
+    			<p><?php print $node->field_intro_body['und'][0]['value'];?></p>
     		</div>
     	</div> <!-- END ROW -->
     </div> <!-- END CONTAINER -->

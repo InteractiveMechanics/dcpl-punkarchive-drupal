@@ -1,82 +1,60 @@
 // NAVBAR
 
-.navbar {
-	margin-bottom: 0;
-	border-radius: 0;
-}
+header {
+    .navbar-brand {
+    	font-family: $display_font_stack;
+    	color: $white !important;
+    	text-transform: uppercase;
+    	font-size: 48px;
+    	font-weight: 700;
+    	transform: rotate(-2deg);
+    	margin-left: 0px !important;
+    	margin-top: 10px;
+    	margin-bottom: 10px;
+    }
+    .navbar-nav {
+    	li {    
+        	> a {
+                color: $grey;
+                font-family: $p_font_stack;
+                font-weight: 700;
+                transition: $transition;
 
-.navbar-brand {
-	font-family: $display_font_stack;
-	color: $white !important;
-	text-transform: uppercase;
-	font-size: 36px;
-	font-weight: 700;
-	transform: rotate(-2deg);
-	margin-left: 0px !important;
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-
-.navbar-inverse {
-	border-color: $black;
-	max-height: 65px;
-	.navbar-nav>li>a {
-		color: $grey;
-		font-family: $open_sans_font_stack;
-		font-weight: 700;
-	}
-}
-
-.navbar-nav {
-	margin-left: 4em;
-	text-transform: uppercase;
-	li {
-		margin-top: 5px;
-	}
-
-	li>a {
-		&:link {
-			color: $grey;
-		}
-
-		&:hover {
-		position: relative;
-			&:after {
-				content: "";
-				border-bottom: 2px solid $accent_color;
-				position: absolute;
-				width: 72%;
-				left: 15px;
-				margin-left: 1px;
-				bottom: 7px;
-			}
-		}
-		&:visited {
-			color: $grey;
-		}
-
-	}
-
-		svg, #magnifying-glass {
+                &:after {
+    				border-bottom: none;
+                    bottom: 10px;
+                    opacity: 0;
+                    transition: $transition;
+    			}        
+        		&:hover {
+        			&:after {
+        				border-bottom: none;
+                        background: url(../images/accent-underline.svg) no-repeat center center;
+                        background-size: contain;
+                        height: 5px;
+                        left: 0;
+                        width: 100%;
+                        bottom: 20px;
+                        opacity: 1;
+        			}
+        		}
+        	}
+        }
+        svg {
 			fill: $grey;
-			width: 16px;
-			transition: fill 0.25s ease-in-out;
-			&:link {
-				fill: $grey;
-			}
-			&:hover {
-				fill: $soft_black;
-			}
-			
-		}
 
-		#search-link {
 			&:hover {
-				&:after {
-					border-bottom: 2px solid transparent;
-				}
+				fill: white;
 			}
 		}
+        #search-link {
+			&:hover {
+                bottom: 0;
 
-	}
-
+                &:after {
+                    content: none;
+                }
+			}
+		}
+    }
+}

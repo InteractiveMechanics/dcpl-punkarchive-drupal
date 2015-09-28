@@ -22,26 +22,21 @@
                     <?php foreach($main_menu as $menu): ?>
 						<li><a href="<?php print $base_path . drupal_get_path_alias($menu['link_path']) ?>"><?php print $menu['link_title'] ?></a></li>
 					<?php endforeach; ?>
-    				<li><a href="<?php print $base_path . drupal_get_path_alias('/search') ?>" id="search-link">
-                        <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-    					viewBox="0 0 90 90" enable-background="new 0 0 90 90" xml:space="preserve">
-    				<g>
-    					<path d="M87.6,76.3L66.4,55c3.2-5.3,5.1-11.5,5.1-18.1c0-19.1-16.6-35.8-35.9-35.8S0.8,16.6,0.8,35.9s16.6,35.9,35.9,35.9
-    						c6.4,0,12.4-1.7,17.5-4.7l21.4,21.4c2.1,2.1,5.5,2.1,7.5,0l5.3-5.3C90.5,81,89.8,78.4,87.6,76.3z M11.5,35.9
-    						c0-13.3,10.8-24.1,24.1-24.1c13.4,0,25.2,11.8,25.2,25.2c0,13.3-10.8,24.1-24.1,24.1C23.4,61.1,11.5,49.2,11.5,35.9z"/>
-    				</g>
-    				</svg></a></li>
+    				<li>
+                        <a href="<?php print $base_path . drupal_get_path_alias('search') ?>" id="search-link">
+                            <?php include($directory . '/images/icon-search.svg') ?>
+                        </a>
+                    </li>
     	      	</ul>
     	      	<a href="<?php print path_to_theme(); ?>/audioplayer.php" onclick="window.open(this.href, 'mywin','right=20,bottom=20,width=450,height=100, titlebar=no, scrollbars=no, resizable=no, location=no, menubar=no'); return false;">
-    
     		      	<div id="audioplayer">
     		      		<div class="album-cover-placeholder">
                             <div id="nowPlay">
     				        	<div id="npAction"></div>
     				        </div>
     				    </div> <!-- END ALBUM -->
-    		    		<h4>Listen now</h4>
-          				<h3>DC Punk Mix</h3>
+    		    		<h6>Listen now</h6>
+          				<h2>DC Punk Mix</h2>
     		        </div> <!-- END #AUDIOPLAYER -->
     	        </a>
     		</div><!-- /.navbar-collapse -->
