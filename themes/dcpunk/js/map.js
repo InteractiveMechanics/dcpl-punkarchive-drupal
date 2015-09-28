@@ -10,7 +10,6 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 }).addTo(map);
 
 var dataSuccess = function(jsonData) {
-    console.log(jsonData);
     var layerOptions = {
         pointToLayer: function(featureData, latlng) {
 
@@ -21,9 +20,9 @@ var dataSuccess = function(jsonData) {
 		    shadowUrl: 'images/star-marker-shadow.png',
 
 		    iconSize:     [20, 20], // size of the icon
-		    shadowSize:   [25, 25], // size of the shadow
+		    shadowSize:   [20, 20], // size of the shadow
 		    iconAnchor:   [10, 10], // point of the icon which will correspond to marker's location
-		    shadowAnchor: [12, 612],  // the same for the shadow
+		    //shadowAnchor: [12, 12],  // the same for the shadow
 		    popupAnchor:  [0, 0] // point from which the popup should open relative to the iconAnchor
 			});
 
@@ -32,9 +31,9 @@ var dataSuccess = function(jsonData) {
 		    shadowUrl: 'images/star-marker-shadow.png',
 
 		    iconSize:     [20, 20], // size of the icon
-		    shadowSize:   [25, 25], // size of the shadow
+		    shadowSize:   [20, 20], // size of the shadow
 		    iconAnchor:   [10, 10], // point of the icon which will correspond to marker's location
-		    shadowAnchor: [12, 612],  // the same for the shadow
+		    //shadowAnchor: [12, 12],  // the same for the shadow
 		    popupAnchor:  [0, 0] // point from which the popup should open relative to the iconAnchor
 			});
 
@@ -43,9 +42,9 @@ var dataSuccess = function(jsonData) {
 		    shadowUrl: 'images/star-marker-shadow.png',
 
 		    iconSize:     [20, 20], // size of the icon
-		    shadowSize:   [25, 25], // size of the shadow
+		    shadowSize:   [20, 20], // size of the shadow
 		    iconAnchor:   [10, 10], // point of the icon which will correspond to marker's location
-		    shadowAnchor: [12, 612],  // the same for the shadow
+		    //shadowAnchor: [12, 12],  // the same for the shadow
 		    popupAnchor:  [0, 0] // point from which the popup should open relative to the iconAnchor
 			});
 
@@ -54,9 +53,9 @@ var dataSuccess = function(jsonData) {
 		    shadowUrl: 'images/star-marker-shadow.png',
 
 		    iconSize:     [20, 20], // size of the icon
-		    shadowSize:   [25, 25], // size of the shadow
+		    shadowSize:   [20, 20], // size of the shadow
 		    iconAnchor:   [10, 10], // point of the icon which will correspond to marker's location
-		    shadowAnchor: [12, 612],  // the same for the shadow
+		    //shadowAnchor: [12, 12],  // the same for the shadow
 		    popupAnchor:  [0, 0] // point from which the popup should open relative to the iconAnchor
 			});
 
@@ -87,7 +86,7 @@ var dataSuccess = function(jsonData) {
 				maxWidth: 220,
 			};
 
-			var popupContent = "<span class='org-name'><a href='" + (featureData.properties.website) + "'>" + (featureData.properties.name);
+			var popupContent = "<span class='org-name'><a href='" + (featureData.properties.website) + "' target='_blank'>" + (featureData.properties.name);
 
 
 			return L.marker(latlng, markerOptions).bindPopup(popupContent, popupOptions);
@@ -99,7 +98,27 @@ var dataSuccess = function(jsonData) {
 
 }; 
 
-$.getJSON('data/spaces_data.json', dataSuccess);
+$.getJSON('themes/dcpunk/data/spaces_data.json', dataSuccess);
+
+/* MAP MODAL */
+/*
+var map = L.map('overlayMap').setView([38.9, -77.015], 13);
+
+L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+    maxZoom: 18,
+    id: 'cahdeemer.n4p0ijc0',
+    accessToken: 'pk.eyJ1IjoiY2FoZGVlbWVyIiwiYSI6ImIwYzM3OGYyZTBmYmZlMWJmMzQ5OTNmZWRjMTA3NjNmIn0.4lMKKySybu846ym7-BNbYA'
+}).addTo(map);
+
+
+$('#myModal').on('shown.bs.modal', function(){
+  setTimeout(function() {
+    map.invalidateSize();
+    //alert("Hey, your function is working!");
+  }, 10);
+ });*/
+
 
 
 });

@@ -96,13 +96,13 @@
                         loadTrack(id);
                         audio.play();
                     };
-                    if(audio.canPlayType('audio/ogg')) {
+                   /* if(audio.canPlayType('audio/ogg')) {
                         extension = '.ogg';
                     }
                     if(audio.canPlayType('audio/mpeg')) {
                         extension = '.mp3';
                     }
-                    loadTrack(index);
+                    loadTrack(index);*/
                 }
                 });
 

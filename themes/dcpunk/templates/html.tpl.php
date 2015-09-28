@@ -79,17 +79,47 @@
     <meta property="og:site_name" content="<?php print $head_title_array['name']; ?>"/>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.1/isotope.pkgd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="<?php print path_to_theme(); ?>/js/audiplayer.js"></script>
-    <script type="text/javascript" src="<?php print path_to_theme(); ?>/js/main.js"></script>
+    <script type="text/javascript" src="<?php  print $directory; ?>/js/audioplayer.js"></script>
+    <script type="text/javascript" src="<?php print $directory; ?>/js/main.js"></script>
     
     <!-- TYPEKIT FONTS -->
-	<script src="//use.typekit.net/jcy8suf.js"></script>
+    <script src="https://use.typekit.net/zby8kfw.js"></script>
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+	
+	<style type="text/css" media="screen">
+		body.toolbar-drawer {
+			padding-top: 2.2em;
+		}
+		
+		.grid-item {
+			cursor: pointer;
+		}
+		
+		.overlay-content {
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: rgba(0, 178, 238, .8);
+			width: 100%;
+			height: 100%;
+			display: none;
+		}
+		
+		.grid-item:hover .overlay-content {
+			display: block;
+		}
+		
+		#spaces-landing-page .map-container {
+		    position: relative;
+		}
+	</style>
 </head>
 <body class="<?php print $classes; ?>">
     <?php include($directory . '/includes/header.php'); ?>
-
+    
     <main>
         <?php print $page_top; ?>
         <?php print $page; ?>

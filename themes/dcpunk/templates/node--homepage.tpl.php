@@ -77,14 +77,16 @@
  * @see template_preprocess_node()
  * @see template_process()
  */
+ 
+  global $base_path;
 ?>
 <div class="jumbotron">
 	<div class="container">
 		<div class="col-sm-10 col-sm-offset-1">
 		<p>Lorem ipsum dolor sit amet felitis, consectetur adipiscing elit.</p>
 		<p>
-			<a class="btn btn-primary btn-lg" href="timeline.html" role="button">Explore the Timeline</a>
-			<a class="btn btn-primary btn-lg" href="about.html" role="button">About the Archive</a>
+			<a class="btn btn-primary btn-lg" href="<?php print $base_path; ?>timeline" role="button">Explore the Timeline</a>
+			<a class="btn btn-primary btn-lg" href="<?php print $base_path; ?>about" role="button">About the Archive</a>
 		</p>
 	</div>
 	</div> <!-- END CONTAINER -->

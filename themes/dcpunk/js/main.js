@@ -14,26 +14,6 @@ $( document ).ready(function() {
 	  $grid.isotope({ filter: filterValue });
 	});
 
-	/* DOT NAV */
-
-$(window).bind('scroll',function(e){
-
-	var main_container_offset = $("#mainContainer").offset().top - 5;
-	var scroll_ = $(window).scrollTop();
-
-	if ( !$('#dotNav').is(':visible') ) {
-		if(scroll_ >= main_container_offset) { 
-			$('#dotNav').show();
-		}
-	}
-
-	if ( $('#dotNav').is(':visible') ) {
-		if(scroll_ < main_container_offset) { 
-			$('#dotNav').hide();
-		}
-	}
- // redrawDotNav();
-});
 
 function redrawDotNav(){
   
@@ -97,7 +77,7 @@ $('#dotNav li').click(function(){
 /* MAP can be found in map.js */
 
 /* MAP MODAL */
-
+/*
 var map = L.map('overlayMap').setView([38.9, -77.015], 13);
 
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
@@ -114,6 +94,6 @@ $('#myModal').on('shown.bs.modal', function(){
     //alert("Hey, your function is working!");
   }, 10);
  });
-
+*/
 
 });
