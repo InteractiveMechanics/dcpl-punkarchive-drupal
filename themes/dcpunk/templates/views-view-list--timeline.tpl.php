@@ -20,7 +20,7 @@
                 		<div class="col-sm-10 col-sm-offset-1">
 	                		<div class="col-sm-10 col-sm-offset-1">
 								<h2><?php print $n->field_date['und'][0]['from']['year']; ?>-<?php print $n->field_date['und'][0]['to']['year']; ?></h2>
-								<h4><?php print $n->title ?></h4>
+								<h5><?php print $n->title ?></h5>
 								<p><?php print $n->body['und'][0]['value']; ?></p>
 							</div>
                 		</div>
@@ -42,16 +42,10 @@
 										
     										<div class="overlay-content">
 												<div class="year">
-													<p>
-														<?php 
-															
-															print $event->field_date['und'][0]['from']['year']; ?>-<?php print $event->field_date['und'][0]['to']['year']; 
-															
-														?>
-													</p>
+													<?php print $event->field_date['und'][0]['from']['year']; ?>-<?php print $event->field_date['und'][0]['to']['year']; ?>
 												</div>
 												<div class="caption">
-													<p><?php print $event->title; ?></p>
+													<?php print $event->title; ?>
 												</div>
 											</div>
                                          </a>
