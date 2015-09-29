@@ -36,18 +36,24 @@
 	                		<div class="grid">
 	                			<?php foreach ($events as $event): ?>
 									<div class="grid-item <?php print $event->field_block_size['und'][0]['value']?>">
-										<a href="javascript: void(0);" title=""> <img 
+										<a href="<?php print url('node/'.$event->field_reference['und'][0]['target_id']); ?>"> <img 
 											src="<?php print file_create_url($event->field_image['und'][0]['uri']); ?>" 
 											alt="<?php print $event->field_image['und'][0]['field_file_image_alt_text']['und'][0]['value']; ?>" />
 										
     										<div class="overlay-content">
-    											<div class="year">
-    												<p>2012</p>
-    											</div>
-    											<div class="caption">
-    												<p>This is a sample caption.</p>
-    											</div>
-    										</div>
+												<div class="year">
+													<p>
+														<?php 
+															
+															print $event->field_date['und'][0]['from']['year']; ?>-<?php print $event->field_date['und'][0]['to']['year']; 
+															
+														?>
+													</p>
+												</div>
+												<div class="caption">
+													<p><?php print $event->title; ?></p>
+												</div>
+											</div>
                                          </a>
 									</div>
 									
@@ -61,8 +67,8 @@
 		<?php endif; ?>
 	</div>
 
-	<div data-spy="affix" data-offset-top="100" id="dotNav" class="pull-right">
-		<ul>
+	<div data-spy="affix" data-offset-top="-10" data-offset-bottom="200" id="dotNav" class="pull-right">
+		<ul class="nav">
 			<?php if ($view->result): ?>
 				<?php foreach ($view->result as $delta => $item): ?>
 					<?php $n = $view->result[$delta]->_field_data['nid']['entity'];  ?>
@@ -71,7 +77,8 @@
 							data-trigger="hover" 
 							title="<?php print $n->field_date['und'][0]['from']['year']; ?>-<?php print $n->field_date['und'][0]['to']['year']; ?>" 
 							data-content="<?php print $n->title; ?>" 
-							data-placement="right">
+							data-placement="right"
+                            data-container="body">
 							
 								<a href="#timeline-section-<?php print $n->field_date['und'][0]['from']['year']; ?>"></a>
 							

@@ -56,6 +56,7 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
 	<?php print $styles; ?>
 	
     <!-- Favicon -->
@@ -82,8 +83,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.1/isotope.pkgd.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="<?php  print $directory; ?>/js/audioplayer.js"></script>
-    <script type="text/javascript" src="<?php print $directory; ?>/js/main.js"></script>
+    <script type="text/javascript" src="<?php print $base_path; ?>themes/dcpunk/js/audioplayer.js"></script>
+    <script type="text/javascript" src="<?php print $base_path; ?>themes/dcpunk/js/main.js"></script>
     
     <!-- TYPEKIT FONTS -->
     <script src="https://use.typekit.net/zby8kfw.js"></script>
@@ -94,30 +95,12 @@
 			padding-top: 2.2em;
 		}
 		
-		.grid-item {
-			cursor: pointer;
-		}
-		
-		.overlay-content {
-			position: absolute;
-			top: 0;
-			left: 0;
-			background-color: rgba(0, 178, 238, .8);
-			width: 100%;
-			height: 100%;
-			display: none;
-		}
-		
-		.grid-item:hover .overlay-content {
-			display: block;
-		}
-		
 		#spaces-landing-page .map-container {
 		    position: relative;
 		}
 	</style>
 </head>
-<body class="<?php print $classes; ?>">
+<body class="<?php print $classes; ?>" data-spy="scroll" data-target="#dotNav" data-offset="380">
     <?php include($directory . '/includes/header.php'); ?>
     
     <main>

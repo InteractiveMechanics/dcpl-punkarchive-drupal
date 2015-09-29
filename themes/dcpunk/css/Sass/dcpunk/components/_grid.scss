@@ -1,88 +1,34 @@
-
-	.grid {
-		margin-left: 70px;
-		margin-right: 70px;
-		img {
-			width: 105%;
-		}
-
-		.zoomed-in-150 {
-			width: 150%;
-
-		}
-
-		.zoomed-in-175 {
-			width: 175%;
-			margin-left: -80px;
-		}
-	}
-
+.grid {
 	.grid-item {
-		width: 225px;
-	  	height: 225px;
-	  	position: relative;
-	  	overflow: hidden;
-	  	float: left;
-		//background: $white;
-		border: 2px solid transparent;
-		//border-color: hsla(0, 0, 0, 0.5);
-		margin: 15px;
-		.lyrics {
-			position: absolute;
-			bottom: 30px;
-			left: 15%;
-			p {
-				color: #333;
-				font-weight: 100;
-				font-size: 28px;
-				&:nth-of-type(even) {
-					padding-left: 35px;
-				}
-			}
-		}
-		
-		
+        &:nth-child(2n) {
+            .overlay-content {
+    			background-color: rgba($yellow , 0.8);
+            }
+        }
+        &:nth-child(3n) {
+            .overlay-content {
+    			background-color: rgba($pink , 0.8);
+            }
+        }
+        &:nth-child(4n) {
+            .overlay-content {
+    			background-color: rgba($accent_color , 0.8);
+            }
+        }
+        &:nth-child(5n) {
+            .overlay-content {
+    			background-color: rgba($blue , 0.8);
+            }
+        }
 
+        .overlay-content {
+			background-color: rgba($blue , 0.8);
+        }
 		.year {
-			position: absolute;
-			top: 25px;
-			left: 5%;
-			p {
-				font-size: 18px;
-				color: $white;
-				font-weight: 600;
-			}
+            
 		}
-
 		.caption {
-			position: absolute;
-			top: 65px;
-			right: 20%;
-			left: 5%;
-			p {
-				font-family: $heading_font_stack;
-				color: $white;
-				font-size: 28px;
-				font-weight: 100;
-				line-height: 1.4;
-			}
+			font-family: $heading_font_stack;
 		}
 	}
-
-	.grid-item--poster { // cannot be used with other grid-item types
-		height: 325px;
-	}
-
-	.grid-item--rectangle {
-		width: 480px;
-	}
-
-	.grid-item--lg-square {
-		width: 480px;
-		height: 480px;
-	}
-
-	.grid-item--horizontal {
-		width: 225px;
-		height: 480px;	
-	}
+}

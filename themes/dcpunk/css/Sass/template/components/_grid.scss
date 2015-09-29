@@ -1,10 +1,6 @@
-
-	.grid {
-		margin-left: 70px;
-		margin-right: 70px;
-	}
-
-
+.grid {
+    margin-left: 70px;
+	margin-right: 70px;
 
 	.grid-item {
 		width: 225px;
@@ -12,58 +8,67 @@
 	  	position: relative;
 	  	float: left;
 		background: $white;
-		border: 2px solid #333;
-		border-color: hsla(0, 0, 0, 0.5);
+		border: none;
 		margin: 15px;
-		.lyrics {
-			position: absolute;
-			bottom: 30px;
-			left: 15%;
-			p {
-				color: #333;
-				font-weight: 100;
-				font-size: 28px;
-				&:nth-of-type(even) {
-					padding-left: 35px;
-				}
-			}
-		}
+        overflow: hidden;
 
+		&:hover {
+            .overlay-content { opacity: 1; }
+		}   
+        img {
+            width: 105%;
+            height: auto;
+        }
+
+        .overlay-content {
+            position: absolute;
+			top: 0;
+			left: 0;
+			background-color: rgba($accent_color, .8);
+			width: 100%;
+			height: 100%;
+			display: block;
+            padding: 25px;
+            opacity: 0;
+            transition: $transition;
+        }
 		.year {
-			position: absolute;
-			bottom: 15px;
-			left: 40%;
-			p {
-				font-size: 18px;
-				color: #333;
-				font-weight: 600;
-			}
+			position: relative;
+			font-size: 18px;
+			color: $white;
+			font-weight: 600;
+            letter-spacing: 1px;
+		}
+		.caption {
+			position: relative;
+			color: $white;
+			font-size: 30px;
+			font-weight: 100;
+			line-height: 1.4;
 		}
 
-		.caption {
-			position: absolute;
-			top: 15px;
-			right: 45%;
-			left: 5%;
-			p {
-				color: #333;
-				font-size: 24px;
-				font-weight: 100;
-				line-height: 1.4;
-			}
-		}
+        a {  
+            display: block;
+        }
 	}
 
 	.grid-item--rectangle {
 		width: 480px;
 	}
-
 	.grid-item--lg-square {
 		width: 480px;
 		height: 480px;
-	}
 
-	.grid-item--portrait-rectangle {
-		width: 225px;
-		height: 480px;	
+        .overlay-content {
+            padding: 30px;
+
+            .caption {
+                font-size: 42px;
+            }
+        }
 	}
+	.grid-item--horizontal {
+		width: 225px;
+		height: 480px;
+	}
+}

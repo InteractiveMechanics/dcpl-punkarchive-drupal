@@ -19,7 +19,7 @@
 ?>
 
 <div id="spaces-landing-page">
-		
+	<main>	
 		<div class="jumbotron">
 				<div class="container">
 					<div class="row">
@@ -37,7 +37,7 @@
 					</div> <!-- END ROW -->
 				</div> <!-- END CONTAINER -->
 		</div> <!-- END JUMBOTRON -->
-		<!--<section>
+		<section>
 			<div class="container">
 				<div class="row map-container">
 					<div id="map"></div>
@@ -73,9 +73,9 @@
 							</li>
 						</ul>
 					</div>
-				</div> <!--END ROW ->
+				</div> <!--END ROW -->
 			</div>
-		</section>-->
+		</section>
 		<section>
 			<div class="container">
 				<div class="row">
@@ -97,7 +97,7 @@
 				</div> <!-- END ROW -->
 			</div> <!-- END CONTAINER -->
 		</section>
-
+</main>
 </div>
 
-<script type="text/javascript" src="<?php print $directory; ?>/js/map.js"></script>
+<script type="text/javascript" src="<?php print $base_path; ?>themes/dcpunk/js/map.js"></script>

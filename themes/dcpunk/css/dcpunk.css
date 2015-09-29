@@ -39,10 +39,12 @@ a {
     color: #acd156; }
 
 .jumbotron {
-  height: 600px;
-  padding-top: 120px;
   overflow: hidden !important;
-  color: #ffffff; }
+  color: #ffffff;
+  padding-bottom: 60px; }
+  body.front .jumbotron {
+    height: 600px;
+    padding-top: 120px; }
   .jumbotron h1 {
     color: #ffffff;
     text-transform: uppercase;
@@ -75,68 +77,18 @@ article,
 section {
   padding: 80px 0; }
 
-.grid {
-  margin-left: 70px;
-  margin-right: 70px; }
-  .grid img {
-    width: 105%; }
-  .grid .zoomed-in-150 {
-    width: 150%; }
-  .grid .zoomed-in-175 {
-    width: 175%;
-    margin-left: -80px; }
-
-.grid-item {
-  width: 225px;
-  height: 225px;
-  position: relative;
-  overflow: hidden;
-  float: left;
-  border: 2px solid transparent;
-  margin: 15px; }
-  .grid-item .lyrics {
-    position: absolute;
-    bottom: 30px;
-    left: 15%; }
-    .grid-item .lyrics p {
-      color: #333;
-      font-weight: 100;
-      font-size: 28px; }
-      .grid-item .lyrics p:nth-of-type(even) {
-        padding-left: 35px; }
-  .grid-item .year {
-    position: absolute;
-    top: 25px;
-    left: 5%; }
-    .grid-item .year p {
-      font-size: 18px;
-      color: #ffffff;
-      font-weight: 600; }
-  .grid-item .caption {
-    position: absolute;
-    top: 65px;
-    right: 20%;
-    left: 5%; }
-    .grid-item .caption p {
-      font-family: "Courier New", Courier, "Lucinda Sans Typewriter", monospace;
-      color: #ffffff;
-      font-size: 28px;
-      font-weight: 100;
-      line-height: 1.4; }
-
-.grid-item--poster {
-  height: 325px; }
-
-.grid-item--rectangle {
-  width: 480px; }
-
-.grid-item--lg-square {
-  width: 480px;
-  height: 480px; }
-
-.grid-item--horizontal {
-  width: 225px;
-  height: 480px; }
+.grid .grid-item:nth-child(2n) .overlay-content {
+  background-color: rgba(237, 190, 57, 0.8); }
+.grid .grid-item:nth-child(3n) .overlay-content {
+  background-color: rgba(238, 42, 118, 0.8); }
+.grid .grid-item:nth-child(4n) .overlay-content {
+  background-color: rgba(172, 209, 86, 0.8); }
+.grid .grid-item:nth-child(5n) .overlay-content {
+  background-color: rgba(38, 169, 224, 0.8); }
+.grid .grid-item .overlay-content {
+  background-color: rgba(38, 169, 224, 0.8); }
+.grid .grid-item .caption {
+  font-family: "Courier New", Courier, "Lucinda Sans Typewriter", monospace; }
 
 .btn {
   border-radius: 0;
@@ -251,6 +203,12 @@ footer {
 #timeline-page .jumbotron {
   background: #000000 url(../images/timeline-background.jpg) no-repeat center center;
   background-size: cover; }
+#timeline-page #dotNav ul li {
+  background: none repeat scroll 0 0 #BBBCBE; }
+  #timeline-page #dotNav ul li.active, #timeline-page #dotNav ul li.active:hover {
+    background-color: #acd156; }
+  #timeline-page #dotNav ul li:hover {
+    background: none repeat scroll 0 0 #ffffff; }
 
 #culture-landing-page body {
   background: #ffffff; }

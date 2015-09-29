@@ -14,6 +14,9 @@ a {
   a:link, a:hover, a:active, a:focus {
     color: #FF0000; }
 
+body {
+  position: relative; }
+
 main {
   background: #28282A; }
 
@@ -35,58 +38,83 @@ article {
     font-size: 54px;
     line-height: 1.6; }
 
+.popover {
+  border-radius: 0;
+  background: #000;
+  left: 15px;
+  transition: opacity 0.5s ease-in-out; }
+  .popover.right {
+    margin-left: 20px; }
+    .popover.right .arrow:after {
+      border-right-color: #000; }
+  .popover .popover-title {
+    background: none;
+    color: white;
+    border: none;
+    font-weight: 100;
+    font-size: 18px;
+    padding: 8px 14px 0px 14px; }
+  .popover .popover-content {
+    color: white;
+    font-size: 11px;
+    margin-top: 0;
+    padding-top: 0px;
+    font-weight: 500; }
+
 .grid {
   margin-left: 70px;
   margin-right: 70px; }
-
-.grid-item {
-  width: 225px;
-  height: 225px;
-  position: relative;
-  float: left;
-  background: #FFFFFF;
-  border: 2px solid #333;
-  border-color: rgba(0, 0, 0, 0.5);
-  margin: 15px; }
-  .grid-item .lyrics {
-    position: absolute;
-    bottom: 30px;
-    left: 15%; }
-    .grid-item .lyrics p {
-      color: #333;
-      font-weight: 100;
-      font-size: 28px; }
-      .grid-item .lyrics p:nth-of-type(even) {
-        padding-left: 35px; }
-  .grid-item .year {
-    position: absolute;
-    bottom: 15px;
-    left: 40%; }
-    .grid-item .year p {
+  .grid .grid-item {
+    width: 225px;
+    height: 225px;
+    position: relative;
+    float: left;
+    background: #FFFFFF;
+    border: none;
+    margin: 15px;
+    overflow: hidden; }
+    .grid .grid-item:hover .overlay-content {
+      opacity: 1; }
+    .grid .grid-item img {
+      width: 105%;
+      height: auto; }
+    .grid .grid-item .overlay-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(255, 0, 0, 0.8);
+      width: 100%;
+      height: 100%;
+      display: block;
+      padding: 25px;
+      opacity: 0;
+      transition: 0.5s all; }
+    .grid .grid-item .year {
+      position: relative;
       font-size: 18px;
-      color: #333;
-      font-weight: 600; }
-  .grid-item .caption {
-    position: absolute;
-    top: 15px;
-    right: 45%;
-    left: 5%; }
-    .grid-item .caption p {
-      color: #333;
-      font-size: 24px;
+      color: #FFFFFF;
+      font-weight: 600;
+      letter-spacing: 1px; }
+    .grid .grid-item .caption {
+      position: relative;
+      color: #FFFFFF;
+      font-size: 30px;
       font-weight: 100;
       line-height: 1.4; }
-
-.grid-item--rectangle {
-  width: 480px; }
-
-.grid-item--lg-square {
-  width: 480px;
-  height: 480px; }
-
-.grid-item--portrait-rectangle {
-  width: 225px;
-  height: 480px; }
+    .grid .grid-item a {
+      display: block; }
+  .grid .grid-item--rectangle {
+    width: 480px; }
+  .grid .grid-item--lg-square {
+    width: 480px;
+    height: 480px; }
+    .grid .grid-item--lg-square .overlay-content {
+      padding: 30px; }
+      .grid .grid-item--lg-square .overlay-content .caption {
+        font-size: 42px; }
+  .grid .grid-item--horizontal {
+    width: 225px;
+    height: 480px; }
 
 .btn {
   border-radius: 0;
@@ -272,109 +300,76 @@ footer {
 #npBand {
   color: #222; }
 
-#timeline-page {
-  /* popovers */
-  /* end popover styles */ }
-  #timeline-page h2 {
-    font-size: 4.5em;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-    text-align: center; }
-  #timeline-page h4 {
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 2;
-    text-align: center; }
-  #timeline-page p {
-    font-size: 24px;
-    font-weight: 100;
-    line-height: 1.5; }
-  #timeline-page .star-group {
-    margin-top: 30px;
-    position: relative; }
-  #timeline-page svg {
-    display: inline-block;
-    width: 25px;
-    fill: #FFFFFF; }
-  #timeline-page .jumbotron {
-    text-align: center;
-    margin-bottom: 0;
-    z-index: 1050; }
-    #timeline-page .jumbotron h3 {
-      margin-bottom: 30px; }
-  #timeline-page section {
-    padding-top: 5%;
-    padding-bottom: 7%; }
-    #timeline-page section:nth-of-type(odd) {
-      background: #404040; }
-  #timeline-page html, #timeline-page body {
-    height: 100%; }
-  #timeline-page section {
-    min-height: 100%; }
-  #timeline-page .affix-top {
-    top: 100%;
-    right: 0;
-    position: absolute;
-    z-index: 2; }
-  #timeline-page .affix {
-    top: 50%;
-    right: 0;
-    z-index: 2; }
-  #timeline-page #mainContainer {
-    height: 100%; }
-  #timeline-page #dotNav {
-    z-index: 5;
-    left: 1%;
-    padding: 7px;
-    padding-top: 12px;
-    display: none; }
+#timeline-page h2 {
+  font-size: 4.8em;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: -5px;
+  margin-bottom: 0; }
+#timeline-page h5 {
+  font-size: 21px;
+  font-weight: 700;
+  text-align: center; }
+#timeline-page p {
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 1.8; }
+#timeline-page .jumbotron {
+  text-align: center;
+  margin-bottom: 0;
+  z-index: 1050; }
+  #timeline-page .jumbotron h3 {
+    margin-bottom: 30px; }
+#timeline-page section {
+  padding-top: 5%;
+  padding-bottom: 7%;
+  color: white; }
+  #timeline-page section:nth-of-type(odd) {
+    background: #343437; }
+  #timeline-page section:nth-of-type(even) {
+    background: #28282A; }
+#timeline-page .affix-top {
+  top: 100%;
+  right: 0;
+  position: absolute;
+  z-index: 2; }
+#timeline-page .affix {
+  top: 45%;
+  right: 0;
+  z-index: 2; }
+#timeline-page #mainContainer {
+  height: 100%; }
+#timeline-page #dotNav {
+  z-index: 5;
+  left: 30px;
+  padding: 0;
+  width: 12px; }
   #timeline-page #dotNav ul {
     list-style: none;
-    margin: 0; }
-  #timeline-page #dotNav li {
-    position: relative;
-    background: none repeat scroll 0 0 #cccccc;
-    border: 1px solid #aaaaaa;
-    border-radius: 15px 15px 15px 15px;
-    cursor: pointer;
-    height: 12px;
-    margin: 10px 10px 0px 0px;
-    width: 12px;
-    vertical-align: bottom; }
-  #timeline-page #dotNav li.active {
-    background-color: #ffffff;
-    background-image: -moz-linear-gradient(center top, #FFFFFF, #EEEEEE);
-    background-repeat: repeat-x; }
-  #timeline-page #dotNav li:hover {
-    background: none repeat scroll 0 0 #EEEEEE; }
-  #timeline-page #dotNav a {
-    outline: 0;
-    vertical-align: top;
-    margin: 0px 0px 0px 25px;
-    position: relative;
-    top: -5px; }
-  #timeline-page .popover {
-    border-radius: 0;
-    background: #000;
-    left: 15px;
-    transition: opacity 0.5s ease-in-out; }
-  #timeline-page .popover.right .arrow:after {
-    border-right-color: #000; }
-  #timeline-page .popover.right {
-    margin-left: 20px; }
-  #timeline-page .popover-title {
-    background: #000;
-    color: #999;
-    border: none;
-    font-weight: 100;
-    font-size: 18px;
-    padding: 8px 14px 0px 14px; }
-  #timeline-page .popover-content {
-    background: #000;
-    font-size: 11px;
-    margin-top: 0;
-    padding-top: 0px;
-    font-weight: 500; }
+    margin: 0;
+    padding: 0; }
+    #timeline-page #dotNav ul li {
+      position: relative;
+      background: none repeat scroll 0 0 #BBBCBE;
+      border: none;
+      border-radius: 99px;
+      cursor: pointer;
+      height: 12px;
+      margin: 10px 10px 0px 0px;
+      width: 12px;
+      vertical-align: bottom; }
+      #timeline-page #dotNav ul li.active, #timeline-page #dotNav ul li.active:hover {
+        background-color: #FF0000; }
+      #timeline-page #dotNav ul li:hover {
+        background: none repeat scroll 0 0 #FFFFFF; }
+    #timeline-page #dotNav ul a, #timeline-page #dotNav ul a:hover, #timeline-page #dotNav ul a:focus {
+      outline: 0;
+      vertical-align: top;
+      margin: 0px 0px 0px 25px;
+      position: relative;
+      top: -5px;
+      padding: 0;
+      background: none; }
 
 #culture-landing-page body {
   background: #FFFFFF; }

@@ -1,10 +1,14 @@
 // LAYOUT
 
 .jumbotron {
-    height: 600px;	
-	padding-top: 120px;
     overflow: hidden !important;
     color: $white;
+    padding-bottom: 60px;
+
+    body.front & {
+        height: 600px;	
+        padding-top: 120px;
+    }
 
     h1 {
 		color: $white;

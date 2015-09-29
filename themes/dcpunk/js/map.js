@@ -16,8 +16,8 @@ var dataSuccess = function(jsonData) {
         	var category = (featureData.properties.category);
         	
         	var greenIcon = L.icon({
-		    iconUrl: 'images/star-marker-green.png',
-		    shadowUrl: 'images/star-marker-shadow.png',
+		    iconUrl: 'themes/dcpunk/images/star-marker-green.png',
+		    shadowUrl: 'themes/dcpunk/images/star-marker-shadow.png',
 
 		    iconSize:     [20, 20], // size of the icon
 		    shadowSize:   [20, 20], // size of the shadow
@@ -27,8 +27,8 @@ var dataSuccess = function(jsonData) {
 			});
 
 			var blueIcon = L.icon({
-		    iconUrl: 'images/star-marker-blue.png',
-		    shadowUrl: 'images/star-marker-shadow.png',
+		    iconUrl: 'themes/dcpunk/images/star-marker-blue.png',
+		    shadowUrl: 'themes/dcpunk/images/star-marker-shadow.png',
 
 		    iconSize:     [20, 20], // size of the icon
 		    shadowSize:   [20, 20], // size of the shadow
@@ -38,8 +38,8 @@ var dataSuccess = function(jsonData) {
 			});
 
 			var pinkIcon = L.icon({
-		    iconUrl: 'images/star-marker-pink.png',
-		    shadowUrl: 'images/star-marker-shadow.png',
+		    iconUrl: 'themes/dcpunk/images/star-marker-pink.png',
+		    shadowUrl: 'themes/dcpunk/images/star-marker-shadow.png',
 
 		    iconSize:     [20, 20], // size of the icon
 		    shadowSize:   [20, 20], // size of the shadow
@@ -49,8 +49,8 @@ var dataSuccess = function(jsonData) {
 			});
 
 			var yellowIcon = L.icon({
-		    iconUrl: 'images/star-marker-yellow.png',
-		    shadowUrl: 'images/star-marker-shadow.png',
+		    iconUrl: 'themes/dcpunk/images/star-marker-yellow.png',
+		    shadowUrl: 'themes/dcpunk/images/star-marker-shadow.png',
 
 		    iconSize:     [20, 20], // size of the icon
 		    shadowSize:   [20, 20], // size of the shadow
