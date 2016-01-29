@@ -6,12 +6,11 @@ header {
     	border-radius: 0;
         position: fixed;
         width: 100%;
-        z-index: 100;
+        z-index: 999999999;
         border: none;
         max-height: 80px;
         height: 80px;
     }
-    
     .navbar-brand {
     	color: $white !important;
     	text-transform: uppercase;

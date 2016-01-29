@@ -3,10 +3,10 @@
 .jumbotron {
     overflow: hidden !important;
     color: $white;
-    padding-bottom: 60px;
+    padding-bottom: 10px;
 
     body.front & {
-        height: 600px;	
+        height: 650px;	
         padding-top: 120px;
     }
 
@@ -38,7 +38,7 @@
 
 main {
 	background: white;
-    padding-top: 80px;
+    padding-top: 15px;
 
     body.front & {
         background: $soft_black;
@@ -47,5 +47,14 @@ main {
 
 article,
 section {
-	padding: 80px 0;
+	padding: 10px 0;
+}
+
+p {
+	.breadcrumbs {
+		font-size: 14px;
+		text-transform: uppercase;
+		color: #BFB9B6;
+		font-weight: 700;
+	}
 }

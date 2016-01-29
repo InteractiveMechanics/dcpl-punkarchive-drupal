@@ -82,6 +82,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.1/isotope.pkgd.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="http://staging.interactivemechanics.com/rememberinglincoln/themes/lincoln/assets/js/salvattore.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="<?php print $base_path; ?>themes/dcpunk/js/audioplayer.js"></script>
     <script type="text/javascript" src="<?php print $base_path; ?>themes/dcpunk/js/main.js"></script>
@@ -98,6 +100,146 @@
 		#spaces-landing-page .map-container {
 		    position: relative;
 		}
+		
+		.views-exposed-form {
+			display: none !important;
+		}
+		
+		@media screen and (max-width: 768px) {
+			header .navbar-nav li > a:hover:after {
+	            background: none;
+	        }
+	        
+	        header .navbar-nav li > a:after {
+	            background: none;
+	        }
+		}
+		
+		p.breadcrumbs {
+			font-size: 13px;
+			text-transform: uppercase;
+			color: #BFB9B6;
+			font-weight: 700;
+		}
+		
+		
+.form-item {
+  margin: 0 0 20px; }
+  .form-item label:not(.option) {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #BFB9B6;
+    display: block; }
+  .form-item label.option {
+    margin-left: 6px;
+    top: 4px;
+    position: relative;
+    font-size: 16px; }
+  .form-item input[type="password"],
+  .form-item input[type="text"],
+  .form-item input[type="email"],
+  .form-item textarea {
+    height: 44px;
+    background: #f1f2f2;
+    border: 1px solid #e4e6e6;
+    border-radius: 6px;
+    padding: 6px 14px 8px;
+    box-shadow: none;
+    width: 100%;
+    transition: all 0.25s;
+    font-size: 16px;
+    font-weight: 300; }
+    .form-item input[type="password"]:focus, .form-item input[type="password"]:hover, .form-item input[type="password"]:active,
+    .form-item input[type="text"]:focus,
+    .form-item input[type="text"]:hover,
+    .form-item input[type="text"]:active,
+    .form-item input[type="email"]:focus,
+    .form-item input[type="email"]:hover,
+    .form-item input[type="email"]:active,
+    .form-item textarea:focus,
+    .form-item textarea:hover,
+    .form-item textarea:active {
+      box-shadow: 0 0 8px rgba(26, 135, 200, 0.45);
+      outline: none; }
+  .form-item textarea {
+    height: auto; }
+
+.webform-submit {
+  margin: 0 auto;
+  display: block; }
+  
+.webform-submit {
+    background: white;
+    border: 3px solid #acd156;
+    font-weight: 600;
+    font-size: 18px;
+    font-style: italic;
+    padding: 12px 30px 14px;
+    color: #acd156;
+    transition: all 0.25s;
+}
+
+.webform-submit:hover {
+	color:white;
+	background: #acd156;
+}
+
+#search-page label {
+	font-size: 14px;
+    text-transform: uppercase;
+    color: #BFB9B6;
+    display: block;
+}
+  	@media screen and (max-width: 768px){
+    	.grid-item {
+	    	width:100% !important;
+    	}
+	}
+	
+	@media screen and (max-width: 640px){
+    	#spaces-landing-page .table_letter_border {
+	    	text-align: center;
+	    	border: none;
+    	}
+    	
+    	.space-text {
+	    	text-align: center;
+	    	margin: 15px 0;
+    	}
+	}
+	
+	.touch-device .grid .grid-item .overlay-content {
+		opacity: 1 !important;
+	}
+	
+	a.navbar-brand span {
+		background: url(<?php print $base_path; ?>themes/dcpunk/images/grunge-texture.jpg)repeat;
+		color: transparent;
+    	-webkit-background-clip: text;
+    	-moz-background-clip: text;
+    	
+    	-webkit-text-fill-color: transparent;
+    	-moz-text-fill-color: transparent;
+    	background-position-y: -230px;
+	}
+	
+.hero-unit.error  .jumbotron{
+    margin: 0;
+    border: none;
+    background: url(../themes/dcpunk/images/404.jpg) !important;
+    height:650px;
+    background-position-y:200px;
+}
+
+.digdc-link {
+	padding-left: 10px;
+}
+
+@media screen and (max-width: 1074px){
+    .audio-player-area {
+	    display: none;
+    }
+}
 	</style>
 </head>
 <body class="<?php print $classes; ?>" data-spy="scroll" data-target="#dotNav" data-offset="380">
@@ -109,5 +251,38 @@
     </main>
 		
     <?php include($directory . '/includes/footer.php'); ?>
+    
+    <script>
+    	$(document).ready(function(){
+	    	var current_index = localStorage.getItem('current_music_index');
+	    	var music_files = localStorage.getItem('music_data');
+	    	
+	    	if(current_index) {
+		    	var data = JSON.parse(music_files);
+		    	
+		    	if(current_index == 3) {
+			    	current_index -=1;
+		    	}
+		    	
+		    	$('.album-cover-placeholder').html('<img src="' + data[current_index].album_cover  + '" width="60" height="60" />')
+	    	}
+	    	
+	    	if(Modernizr.touch) {
+		    	$('body').addClass('touch-device');
+	    	}
+    	});
+    </script>
+    
+    <script>
+
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		
+		ga('create', 'UA-4879095-3', 'auto');
+		ga('send', 'pageview');
+	
+	</script>
 </body>
 </html>

@@ -12,19 +12,28 @@ header {
     	margin-top: 10px;
     	margin-bottom: 10px;
     }
+    
+    
+	
+	.navbar-inverse {
+	
+		.navbar-collapse {
+			background-color:#222;
+		}
+		
+	}
+    
     .navbar-nav {
     	li {    
         	> a {
                 color: $grey;
                 font-family: $p_font_stack;
                 font-weight: 700;
-                transition: $transition;
 
                 &:after {
     				border-bottom: none;
                     bottom: 10px;
                     opacity: 0;
-                    transition: $transition;
     			}
         		&:hover {
                     background: transparent;

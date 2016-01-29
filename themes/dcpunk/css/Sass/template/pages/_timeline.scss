@@ -30,13 +30,17 @@
 	section {
 		padding-top: 5%;
 		padding-bottom: 7%;
-        color: white;
+        color:white;
 
 		&:nth-of-type(odd) {
 			background: lighten($soft_black, 5%);
 		}
         &:nth-of-type(even) {
             background: $soft_black;
+        }
+        
+        p {
+	      color: #bbb;  
         }
 	}
 	

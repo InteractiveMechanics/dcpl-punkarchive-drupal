@@ -90,12 +90,12 @@
 	<div class="container">
 		<h1><?php print $node->field_hero_title['und'][0]['value'];?></h1>
 		<p>
-			<a class="btn btn-primary btn-lg" href="<?php print $base_path; ?>timeline" role="button">Explore the Timeline</a>
-			<a class="btn btn-primary btn-lg" href="<?php print $base_path; ?>about" role="button">About the Archive</a>
+			<a class="btn btn-primary btn-lg" href="<?php print $base_path; ?>timeline" role="button">Explore Timeline</a>
+			<a class="btn btn-primary btn-lg" href="<?php print $base_path; ?>culture?category_id=4" role="button">Explore Collections</a>
 		</p>
 	</div> <!-- END CONTAINER -->
 </div> <!-- END JUMBOTRON -->
-<section>
+<section style="padding: 80px 0;">
     <div class="container">
     	<div class="row">
     		<div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">

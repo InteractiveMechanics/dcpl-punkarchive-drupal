@@ -40,7 +40,7 @@
 
 #nowPlay {
 	position: absolute;
-	bottom: 25%;
+	bottom: 15%;
 	left: 25%;
 }
 
@@ -64,10 +64,21 @@
 	color: #222;
 
 	h3 {
-	    font-weight: 100;
+	    font-weight: 300;
+	    white-space: nowrap;
+	    text-overflow: ellipsis;
+	    width: 230px;
+	    display: block;
+	    overflow: hidden;
+	    margin:0px;
 	}
 }
 
 #npBand {
 	color: #222;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	width: 250px;
+	display: block;
+	overflow: hidden;
 }
