@@ -28,14 +28,18 @@ article {
   article a {
     font-weight: 700;
     text-decoration: underline; }
-
-.front .jumbotron {
-	height: 650px;
+    
+p.breadcrumbs {
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #BFB9B6;
+	font-weight: 700;
 }
+
 .jumbotron {
   background: #000000;
   padding-top: 120px;
-  }
+  height: 650px; }
   .jumbotron h1 {
     color: #FFFFFF;
     text-transform: uppercase;
@@ -52,7 +56,6 @@ article {
   .jumbotron .container {
     position: relative;
     z-index: 2; }
-
 .popover {
   border-radius: 0;
   background: #000;
@@ -84,6 +87,7 @@ article {
     height: 225px;
     position: relative;
     float: left;
+    background: #FFFFFF;
     border: none;
     margin: 15px;
     overflow: hidden; }
@@ -200,7 +204,6 @@ header .navbar-nav {
   header .navbar-nav svg {
     fill: #BBBCBE;
     width: 16px;
-    height:16px;
     transition: fill 0.25s ease-in-out; }
   header .navbar-nav #search-link:hover {
     bottom: 0; }
@@ -268,14 +271,11 @@ footer {
     margin-left: 15px;
     float: left; }
   #audioplayer h2 {
-    font-weight: 300;
+    font-weight: 100;
     margin-top: 3px;
     margin-bottom: 0;
     float: left;
-    margin-left: 15px;
-    text-overflow: clip;
-	text-overflow: ellipsis;
-	text-overflow: "…"  }
+    margin-left: 15px; }
 
 .album-cover-placeholder {
   width: 60px;
@@ -293,7 +293,7 @@ footer {
 
 #nowPlay {
   position: absolute;
-  bottom: 15%;
+  bottom: 25%;
   left: 25%; }
 
 #playButton, #pauseButton {
@@ -313,25 +313,10 @@ footer {
 #npTitle {
   color: #222; }
   #npTitle h3 {
-    font-weight: 300;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    width: 230px;
-    display: block;
-    overflow: hidden;
-    margin:0px; }
-    
-.divider {
-	border-bottom: 1px solid #323133;
-}
+    font-weight: 100; }
 
 #npBand {
-  color: #222;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  width: 250px;
-  display: block; 
-  overflow: hidden; }
+  color: #222; }
 
 #timeline-page h2 {
   font-size: 4.8em;
@@ -357,13 +342,10 @@ footer {
   padding-top: 5%;
   padding-bottom: 7%;
   color: white; }
-  
   #timeline-page section:nth-of-type(odd) {
     background: #343437; }
   #timeline-page section:nth-of-type(even) {
     background: #28282A; }
-    #timeline-page section p {
-	  color: #bbb; }
 #timeline-page .affix-top {
   top: 100%;
   right: 0;
@@ -453,14 +435,15 @@ footer {
   background: #FFFFFF; }
 #culture-detailcomments-page h2 {
   margin-top: 0;
+  padding-top: 80px;
   padding-bottom: 15px;
   font-weight: 100;
   font-size: 36px;
   color: #222; }
 #culture-detailcomments-page h4 {
-  color: #222;
+  color: #000000;
   font-size: 20px;
-  font-weight: 200;
+  font-weight: 100;
   line-height: 1.6;
   margin-right: 20px; }
 #culture-detailcomments-page .grid {
@@ -572,7 +555,7 @@ footer {
   background: #FFFFFF;
   padding-bottom: 6.5em; }
 #spaces-landing-page table {
-  margin: 10px 0px; }
+  margin: 10px 30px; }
   #spaces-landing-page table td, #spaces-landing-page table a {
     color: #222;
     font-size: 20px;
@@ -586,7 +569,6 @@ footer {
 #spaces-landing-page .table > tbody > tr > td {
   padding: 40px 5px; }
 #spaces-landing-page .table > tbody > tr > .table_letter {
-  font-family: "sketchnote-square",sans-serif;
   font-size: 48px;
   font-weight: 100;
   padding: 20px 10px; }
@@ -598,50 +580,11 @@ footer {
   #spaces-landing-page p a {
     color: #222;
     font-weight: 700; }
-    
 #spaces-landing-page #map {
   height: 600px; }
-#spaces-landing-page .marker-star {
-  content: url(../images/filled-star.svg);
-  width: 5px;
-  position: absolute;
-  bottom: 0; }
-#spaces-landing-page #legend {
-  position: absolute;
-  bottom: 35px;
-  left: 35px;
-  z-index: 999;
-  width: auto;
-  height: 110px;
-  background: #ffffff;
-  box-shadow: 0 0 10px rgba(120, 120, 120, 0.5); }
-  #spaces-landing-page #legend ul {
-    margin-top: 15px !important;
-    padding-left: 15px !important;
-    padding-right: 15px !important; }
-  #spaces-landing-page #legend svg {
-    width: 15px; }
-  #spaces-landing-page #legend #venue_marker {
-    fill: #000000; }
-  #spaces-landing-page #legend #record_store_marker {
-    fill: #000000; }
-  #spaces-landing-page #legend #studios_marker {
-    fill: #000000; }
-  #spaces-landing-page #legend #houses_marker {
-    fill: #000000; }
-  #spaces-landing-page #legend > ul > li {
-    list-style-type: none;
-    color: #000000;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 700; }
-#spaces-landing-page .copyright small {
-  font-size: 12px;
-  font-style: initial; }
 
 #venue-detail-page main {
   background: #FFFFFF; }
-  #venue-detail-page main .breadcrumbs a {
-	  color: #999; }
   #venue-detail-page main h1, #venue-detail-page main h2, #venue-detail-page main h3, #venue-detail-page main h4, #venue-detail-page main h5, #venue-detail-page main h6, #venue-detail-page main p {
     color: #222; }
   #venue-detail-page main article {
@@ -654,9 +597,9 @@ footer {
     background: #000000;
     margin: 10px 10px 30px 10px; }
   #venue-detail-page main #map {
-    margin-top: 10px;
+    margin: 10px;
     height: 300px;
-    width: 360px; }
+    width: 300px; }
   #venue-detail-page main .map-container {
     position: relative; }
   #venue-detail-page main aside {
@@ -665,11 +608,6 @@ footer {
       text-transform: uppercase;
       font-size: 14px;
       font-weight: 700; }
-    #venue-detail-page main aside .profile-caption {
-		font-size: 14px;
-	    font-style: italic;
-	    color: #666;
-	}
     #venue-detail-page main aside ul {
       list-style-type: disc; }
       #venue-detail-page main aside ul li {
@@ -807,8 +745,6 @@ footer {
 #search-page h3 {
   font-weight: 100;
   display: inline-block; }
-#search-page h3 a:hover{
-  text-decoration: none; }
 #search-page h4 {
   margin-top: 40px; }
 #search-page p {
@@ -824,20 +760,16 @@ footer {
     fill: #222; }
 #search-page .form-control {
   height: 50px;
-    background: #f1f2f2;
-    border: 1px solid #e4e6e6;
-    border-radius: 6px;
-    padding: 6px 14px 8px;
-    box-shadow: none;
-    width: 100%;
-    transition: all 0.25s;
-    font-size: 16px;
-    font-weight: 300; }
+  border: 1px solid transparent;
+  box-shadow: none;
+  background: #FFFFFF;
+  font-size: 20px;
+  font-weight: 100;
+  padding-left: 20px; }
 #search-page .btn {
   background: #FFFFFF;
   height: 50px;
-  border: 2px solid #585956;
-  border-left: none; }
+  border: 1px solid transparent; }
 #search-page button {
   margin-bottom: 40px; }
 #search-page .search-result-heading h5 {

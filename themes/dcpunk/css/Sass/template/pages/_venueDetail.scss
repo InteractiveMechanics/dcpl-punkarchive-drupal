@@ -20,15 +20,15 @@
 		}
 
 		#map {
-			margin: 10px;
+			margin-top: 20px;
 			height: 300px;
-			width: 300px;
+			width: 360px;
 		}
 
 		.map-container {
 			position: relative;
 		}
-
+		
 		aside {
 			color: #222;
 			h4 {
@@ -44,6 +44,12 @@
 				a {
 					color: #222;
 				}
+			}
+			
+			.profile-caption {
+				font-size: 14px;
+			    font-style: italic;
+			    color: #666;
 			}
 		}
 

@@ -2,6 +2,11 @@
 	 $spaces = array();
 	 
 	 
+	 $vocabulary = taxonomy_vocabulary_machine_name_load('spaces_subcategories');
+	 $terms = entity_load('taxonomy_term', FALSE, array('vid' => $vocabulary->vid));	
+	 
+	 $term_id = $_GET['category_id'];
+	 
 	 foreach($view->result as $delta => $item) {
 		 $str = $view->result[$delta]->node_title;
 		 
@@ -26,18 +31,25 @@
 						<div class="col-sm-10 col-sm-offset-1">
 		  				<div class="subnav">
 		  					<ul>
-		  						<li><a href="" id="active-page">All Spaces</a></li>
-		  						<li><a href="">Venues</a></li>
-		  						<li><a href="">Record Stores</a></li>
-		  						<li><a href="">Studios</a></li>
-		  						<li><a href="">Houses</a></li>
+		  						<li><a href="<?php print urldecode(url('spaces')); ?>">All Spaces</a></li>
+		  						<?php foreach($terms as $term): ?>
+			  						<?php   $result = taxonomy_select_nodes($term->tid) ?>
+			  							<?php if($result): ?>
+					  						<li>
+					  							<a data-termid="<?php print $term->tid; ?>" href="<?php print urldecode(url('spaces?category_id=' . $term->tid)); ?>">
+						  							<?php print $term->name; ?>
+						  						</a>
+						  					</li>
+						  				<?php endif; ?>
+					  					
+			  					<?php endforeach; ?>
 		  					</ul>
 		  				</div>
 	  				</div> <!-- END SUBNAV -->
 					</div> <!-- END ROW -->
 				</div> <!-- END CONTAINER -->
 		</div> <!-- END JUMBOTRON -->
-		<section>
+		<section class="hidden-xs">
 			<div class="container">
 				<div class="row map-container">
 					<div id="map"></div>
@@ -77,27 +89,65 @@
 			</div>
 		</section>
 		<section>
+			
 			<div class="container">
-				<div class="row">
-					<div class="col-sm-12">
-						<table class="table">
+				<?php foreach ($spaces as $delta => $item): ?>
+					<div class="space-row">
+						<div class="row">
+							<div class="col-md-1 col-sm-12 col-xs-12 space-text">
+								<span class="table_letter_border"><?php print $delta; ?></span>
+							</div>
 							
-							
-							<?php foreach ($spaces as $delta => $item): ?>
-								<tr>
-									<td class="table_letter"><span class="table_letter_border"><?php print $delta; ?></span></td>
-									<?php foreach($spaces[$delta] as $s): ?>
-										<td><a href="<?php print url('node/'.$s['id'], array('absolute' => TRUE)); ?>"><?php print $s['title'] ?></a></td>
-									<?php endforeach; ?>
-								</tr>
-							<?php endforeach; ?>
-						</table>
-						<p><small>Missing information about your favorite venue? <a href="">Contribute to the archive &raquo;</a></small></p>
+							<div class="col-md-10 col-sm-12 col-xs-12 spaces-link" style="padding: 10px;">
+								<div class="row" style="margin:0px;">
+								<?php foreach($spaces[$delta] as $s): ?>
+									<div class="col-md-3">
+										<a href="<?php print url('node/'.$s['id'], array('absolute' => TRUE)); ?>">
+											<?php print $s['title'] ?>
+										</a>
+									</div>
+								<?php endforeach; ?>
+								</div>
+							</div>
+						</div>
 					</div>
-				</div> <!-- END ROW -->
-			</div> <!-- END CONTAINER -->
+
+				<?php endforeach; ?>
+			</div>
+			
 		</section>
 </main>
 </div>
 
 <script type="text/javascript" src="<?php print $base_path; ?>themes/dcpunk/js/map.js"></script>
+
+<script type="text/javascript">
+	
+	$(document).ready(function(){
+		var term_id = getParameterByName('category_id');
+		
+		if(term_id) {
+			$('.subnav ul li a[data-termid="' + term_id + '"]').attr("id","active-page");
+		} else {
+			$('.subnav ul li:eq(0) a').attr("id","active-page");
+		}
+		
+		var jsonurl = '' + term_id;
+		callJson('json/map?category_id=' + term_id);
+	});
+	
+	
+	function getParameterByName(name) {
+	    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+	    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+	        results = regex.exec(location.search);
+	    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+	}
+</script>
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		
+	});
+</script>

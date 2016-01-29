@@ -22,7 +22,7 @@
 	.jumbotron {
 		background: $white;
 		margin-bottom: 0;
-		padding-bottom: 4em;
+		padding-bottom: 10px;
 	}
 
 	.subnav {
@@ -74,7 +74,7 @@
 
 
 table {
-	margin: 10px 30px;
+	margin: 10px 0px;
 	td, a {
 	font-family: $p_font_stack;
 	color: $black;
@@ -98,17 +98,32 @@ table {
 }
 
 .table>tbody>tr>.table_letter {
-		font-family: "flood-std",sans-serif;
+		font-family: "sketchnote-square",sans-serif;
 		font-size: 6em;
 		font-weight: 100;
 		padding: 20px 10px;
 		transform: rotate(3deg);
 	}
 
+.spaces-link a {
+	color: #222;
+	font-weight: 700;
+	font-size:15px;
+}
+
+.space-row {
+	margin-bottom: 60px;
+}
+
 .table_letter_border {
 	padding-left: 5px;
 	border-top: 1px solid $light_grey;
 	border-left: 1px solid $light_grey;
+	font-family: "sketchnote-square",sans-serif;
+    font-size: 6em;
+    font-weight: 100;
+    padding: 20px 10px;
+    transform: rotate(3deg);
 }	
 
 p {
@@ -144,13 +159,14 @@ p {
 	bottom: 35px;
 	left: 35px;
 	z-index: 999;
-	width: 135px;
+	width: auto;
 	height: 110px;
 	background: $white;
 	box-shadow: 0 0 10px rgba(120, 120, 120, 0.5);
 	ul {
 		margin-top: 15px !important;
 		padding-left: 15px !important;
+		padding-right: 15px !important;
 	}
 	svg {
 		width: 15px;

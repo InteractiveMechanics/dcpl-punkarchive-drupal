@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+//$( document ).ready(function() {
 
 var map = L.map('map').setView([38.9, -77.015], 13);
 
@@ -12,12 +12,12 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 var dataSuccess = function(jsonData) {
     var layerOptions = {
         pointToLayer: function(featureData, latlng) {
-
+			console.log(latlng);
         	var category = (featureData.properties.category);
         	
         	var greenIcon = L.icon({
-		    iconUrl: 'themes/dcpunk/images/star-marker-green.png',
-		    shadowUrl: 'themes/dcpunk/images/star-marker-shadow.png',
+		    iconUrl: 'http://staging.interactivemechanics.com/dcpunk/themes/dcpunk/images/star-marker-green.png',
+		    shadowUrl: 'http://staging.interactivemechanics.com/dcpunk/themes/dcpunk/images/star-marker-shadow.png',
 
 		    iconSize:     [20, 20], // size of the icon
 		    shadowSize:   [20, 20], // size of the shadow
@@ -27,8 +27,8 @@ var dataSuccess = function(jsonData) {
 			});
 
 			var blueIcon = L.icon({
-		    iconUrl: 'themes/dcpunk/images/star-marker-blue.png',
-		    shadowUrl: 'themes/dcpunk/images/star-marker-shadow.png',
+		    iconUrl: 'http://staging.interactivemechanics.com/dcpunk/themes/dcpunk/images/star-marker-blue.png',
+		    shadowUrl: 'http://staging.interactivemechanics.com/dcpunk/themes/dcpunk/images/star-marker-shadow.png',
 
 		    iconSize:     [20, 20], // size of the icon
 		    shadowSize:   [20, 20], // size of the shadow
@@ -38,8 +38,8 @@ var dataSuccess = function(jsonData) {
 			});
 
 			var pinkIcon = L.icon({
-		    iconUrl: 'themes/dcpunk/images/star-marker-pink.png',
-		    shadowUrl: 'themes/dcpunk/images/star-marker-shadow.png',
+		    iconUrl: 'http://staging.interactivemechanics.com/dcpunk/themes/dcpunk/images/star-marker-pink.png',
+		    shadowUrl: 'http://staging.interactivemechanics.com/dcpunk/themes/dcpunk/images/star-marker-shadow.png',
 
 		    iconSize:     [20, 20], // size of the icon
 		    shadowSize:   [20, 20], // size of the shadow
@@ -49,8 +49,8 @@ var dataSuccess = function(jsonData) {
 			});
 
 			var yellowIcon = L.icon({
-		    iconUrl: 'themes/dcpunk/images/star-marker-yellow.png',
-		    shadowUrl: 'themes/dcpunk/images/star-marker-shadow.png',
+		    iconUrl: 'http://staging.interactivemechanics.com/dcpunk/themes/dcpunk/images/star-marker-yellow.png',
+		    shadowUrl: 'http://staging.interactivemechanics.com/dcpunk/themes/dcpunk/images/star-marker-shadow.png',
 
 		    iconSize:     [20, 20], // size of the icon
 		    shadowSize:   [20, 20], // size of the shadow
@@ -62,19 +62,19 @@ var dataSuccess = function(jsonData) {
 
 
             var getColor = function(x) {
-            var icon = greenIcon;
+	            x = x.toLowerCase();
+				var icon = greenIcon;
+				if (x == 'studios') {
+					icon = yellowIcon;
+				} else if (x == 'venues') {
+					icon = greenIcon;
+				} else if (x == 'record stores') {
+					icon = blueIcon;
+				} else if (x == 'houses') {
+					icon = pinkIcon;
+				}
 
-			if (x == 'studio') {
-			icon = yellowIcon;
-			} else if (x == 'venue') {
-			  icon = greenIcon;
-			} else if (x == 'record store') {
-			  icon = blueIcon;
-			} else if (x == 'house') {
-			  icon = pinkIcon;
-			}
-
-			return icon;
+				return icon;
 			},
 
 			
@@ -83,10 +83,14 @@ var dataSuccess = function(jsonData) {
 			}
 
 			var popupOptions = {
+				minWidth: 80,
 				maxWidth: 220,
 			};
-
-			var popupContent = "<span class='org-name'><a href='" + (featureData.properties.website) + "' target='_blank'>" + (featureData.properties.name);
+			
+			var popupContent = "<span style='' class='org-name'>" + 
+								"<h5 style='margin:0 0 -4px 0; color:black; font-size:21px'><strong>"+ (featureData.properties.title) +"</strong></h5>" +
+								"<span style='color:#222; font-size:16px'>" + featureData.properties.category + "</span><br />" +
+								"<a style='font-size:14px; color:#acd156;' href='" + (featureData.properties.url) + "' target='_blank'>View More &raquo;</a>";
 
 
 			return L.marker(latlng, markerOptions).bindPopup(popupContent, popupOptions);
@@ -95,11 +99,16 @@ var dataSuccess = function(jsonData) {
 
 	var inventoryLayer = L.geoJson(jsonData, layerOptions);
 	map.addLayer(inventoryLayer);
+	
+	if(jsonData){
+		if(jsonData.length == 1) {
+			var mapItem = jsonData[0];
+			console.log(mapItem.geometry.coordinates);
+			map.setView([mapItem.geometry.coordinates[1], mapItem.geometry.coordinates[0]], 13);	
+		}
+	}
 
 }; 
-
-$.getJSON('themes/dcpunk/data/spaces_data.json', dataSuccess);
-
 /* MAP MODAL */
 /*
 var map = L.map('overlayMap').setView([38.9, -77.015], 13);
@@ -121,4 +130,11 @@ $('#myModal').on('shown.bs.modal', function(){
 
 
 
-});
+//});
+
+
+function callJson(jsonurl) {
+	
+	$.getJSON(jsonurl, dataSuccess);
+	//$.getJSON('themes/dcpunk/data/spaces_data.json', dataSuccess);
+}

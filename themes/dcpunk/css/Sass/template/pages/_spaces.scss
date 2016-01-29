@@ -62,7 +62,7 @@
 
 
 table {
-	margin: 10px 30px;
+	margin: 10px 0px;
 	td, a {
 	color: #222;
 	font-size: 20px;
@@ -106,6 +106,61 @@ p {
 #map {
 	height: 600px;
 }
+
+
+.marker-star {
+	content: url(../images/filled-star.svg);
+	width: 5px;
+	position: absolute;
+	bottom: 0;
+
+
+}
+
+#legend {
+	position: absolute;
+	bottom: 35px;
+	left: 35px;
+	z-index: 999;
+	width: auto;
+	height: 110px;
+	background: $white;
+	box-shadow: 0 0 10px rgba(120, 120, 120, 0.5);
+	ul {
+		margin-top: 15px !important;
+		padding-left: 15px !important;
+		padding-right: 15px !important;
+	}
+	svg {
+		width: 15px;
+	}
+	#venue_marker {
+		fill: $black;
+	}
+	#record_store_marker {
+		fill: $black;
+	}
+	#studios_marker {
+		fill: $black;
+	}
+	#houses_marker {
+		fill: $black;
+	}
+
+
+	>ul>li {
+		list-style-type: none;
+		color: $black;
+		font-family: $p_font_stack;
+		font-weight: 700;
+	}
+}
+
+.copyright small{
+	font-size: 12px;
+	font-style: initial;
+}
+
 
 }
 
