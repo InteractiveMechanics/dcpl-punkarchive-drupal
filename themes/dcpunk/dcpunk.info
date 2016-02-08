@@ -5,7 +5,7 @@ package = Core
 version = 1.0
 core = 7.x
 
-screenshot  = images/screenshot.png
+screenshot = screenshot.png
 
 stylesheets[all][] = css/main.css
 stylesheets[all][] = css/dcpunk.css
