@@ -14,7 +14,7 @@
 	<?php if ($view->result): ?>
 	<?php foreach ($view->result as $delta => $item): ?>
         <?php $n = $view->result[$delta]->_field_data['nid']['entity'];  ?>
-        	<section id="timeline-section-<?php print $n->field_date['und'][0]['from']['year']; ?>" class="sec pull-center">
+        	<section id="timeline-section-<?php print $n->nid; ?>" class="sec pull-center">
             	<div class="container">
                 	<div class="row">
                 		<div class="col-sm-10 col-sm-offset-1">
@@ -104,7 +104,7 @@
 							data-placement="right"
                             data-container="body">
 							
-								<a href="#timeline-section-<?php print $n->field_date['und'][0]['from']['year']; ?>"></a>
+								<a href="#timeline-section-<?php print $n->nid; ?>"></a>
 							
 						</li>
 				<?php endforeach; ?>
