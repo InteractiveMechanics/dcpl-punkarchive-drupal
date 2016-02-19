@@ -39,6 +39,16 @@ a {
   color: #acd156; }
   a:link, a:hover, a:active, a:focus {
     color: #acd156; }
+    
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+	a.navbar-brand span {
+		background: url(../images/grunge-texture.jpg)repeat;
+		color: transparent;
+    	-webkit-background-clip: text;
+    	-webkit-text-fill-color: transparent;
+    	background-position-y: -230px;
+	}	
+}
 
 .jumbotron {
   overflow: hidden !important;
@@ -55,8 +65,9 @@ a {
     line-height: 1.2;
     margin-bottom: 30px; }
     body.front .jumbotron h1 {
-      font-size: 96px;
-      margin-bottom: 50px; }
+      font-size: 140px;
+      margin-bottom: 50px;
+      line-height: 1; }
   .jumbotron .container {
     position: relative;
     z-index: 2; }

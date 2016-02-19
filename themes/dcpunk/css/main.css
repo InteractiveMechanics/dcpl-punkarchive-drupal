@@ -32,6 +32,12 @@ article {
 .front .jumbotron {
 	height: 650px;
 }
+
+.front .jumbotron h1{
+	font-size: 140px;
+	margin-bottom: 50px;
+	line-height: 1;
+}
 .jumbotron {
   background: #000000;
   padding-top: 120px;

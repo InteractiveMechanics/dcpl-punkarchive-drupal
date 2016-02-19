@@ -212,17 +212,6 @@
 		opacity: 1 !important;
 	}
 	
-	a.navbar-brand span {
-		background: url(<?php print $base_path; ?>themes/dcpunk/images/grunge-texture.jpg)repeat;
-		color: transparent;
-    	-webkit-background-clip: text;
-    	-moz-background-clip: text;
-    	
-    	-webkit-text-fill-color: transparent;
-    	-moz-text-fill-color: transparent;
-    	background-position-y: -230px;
-	}
-	
 .hero-unit.error  .jumbotron{
     margin: 0;
     border: none;
@@ -248,6 +237,7 @@
     <main>
         <?php print $page_top; ?>
         <?php print $page; ?>
+        
     </main>
 		
     <?php include($directory . '/includes/footer.php'); ?>
