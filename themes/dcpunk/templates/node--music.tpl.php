@@ -1,3 +1,8 @@
+<?php
+	global $base_path;		
+	$url = "http://digdc.dclibrary.org/cdm/search/collection/myfirst/searchterm/" . urlencode($node->title) . "/field/all/mode/all/";
+?>
+
 <div id="venue-detail-page" style="padding:80px 0 100px;">
 <main>
 			<div class="container">
@@ -63,6 +68,7 @@
 		
 		<?php
     		$events = $node->field_events['und'];
+    		$objects = $node->field_objects['und'];
     	?>
     	
     	<?php if($event): ?>
@@ -180,7 +186,7 @@
 						    ?>
 					    
 							<div class="item ">
-								<a href="<?php print url('node/'.$event->field_reference['und'][0]['target_id']); ?>"> <img 
+								<a href="<?php print $event->field_digdc_url['und'][0]['value']; ?>"> <img 
 									src="<?php print file_create_url($src); ?>" 
 									alt="<?php print $event->field_image['und'][0]['field_file_image_alt_text']['und'][0]['value']; ?>" />
 								
