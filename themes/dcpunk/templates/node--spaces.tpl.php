@@ -123,8 +123,9 @@
 							
 					<?php endforeach; ?>
 					
-					<?php foreach ($objects as $e): ?>
+				    <?php foreach ($objects as $e): ?>
 	                	<?php $event = $e["entity"]; ?>
+	                	
 	            			<?php
 					           	$preset = 'grid-square-225';
 					           	
@@ -146,7 +147,14 @@
 						    ?>
 					    
 							<div class="item ">
-								<a href="<?php print url('node/'.$event->field_reference['und'][0]['target_id']); ?>"> <img 
+								<?php
+									$object_url = $event->field_digdc_url['und'][0]['value'];
+									
+									if(!$object_url) {
+										$object_url = 'javascript:void(0);';
+									}
+								?>
+								<a target="_blank" href="<?php print $object_url; ?>"> <img 
 									src="<?php print file_create_url($src); ?>" 
 									alt="<?php print $event->field_image['und'][0]['field_file_image_alt_text']['und'][0]['value']; ?>" />
 								
