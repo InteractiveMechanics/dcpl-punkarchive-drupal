@@ -5,7 +5,6 @@
     			<h1>The History of DC Punk</h1>
     			<h3>As America celebrated its bicentennial, a new revolution was brewing in the nation's capital. Over the next several years, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tellus ante, auctor eget feugiat here are a few more words.
     			</h3>
-                <img src="<?php print $base_path . $directory; ?>/images/accent-stars.svg" />
             </div>
 		</div> <!-- END CONTAINER -->
 	</div> <!-- END JUMBOTRON -->
