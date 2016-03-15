@@ -18,7 +18,8 @@ body {
   position: relative; }
 
 main {
-  background: #28282A; }
+  background: #FFFFFF;
+  color: #000000; }
 
 article {
   padding-top: 5em;
