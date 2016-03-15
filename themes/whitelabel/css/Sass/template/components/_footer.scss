@@ -1,10 +1,10 @@
 // FOOTER
 
 footer {
-	background: $black;
+	background: $white;
 
     .divider {
-    	border-bottom: 1px solid $soft_black;
+    	border-bottom: 1px solid $grey;
     }
     
     .footer-nav {
@@ -17,7 +17,7 @@ footer {
             margin: 0 15px;
 
             > a {
-        		color: $grey;
+        		color: $soft_black;
         		font-weight: 700;
                 padding: 22px 0;
                 display: block;
@@ -26,7 +26,7 @@ footer {
                 transition: $transition;
 
                 &:hover, &:focus, &:active {
-                    color: white;
+                    color: $black;
                     text-decoration: none;
                 }
         	}
@@ -54,7 +54,7 @@ footer {
         	margin: 0px 12px;
         }
     	a {
-    		color: $white;
+    		color: $black;
     		font-weight: 500;
     	}
     }
@@ -64,7 +64,7 @@ footer {
     	margin-bottom: 0;
 
     	small {
-    		color: $grey;
+    		color: $soft_black;
     		font-weight: 300;
     	}
     }

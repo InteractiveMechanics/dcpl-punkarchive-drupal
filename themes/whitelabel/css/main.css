@@ -414,9 +414,9 @@ header {
   header .navbar-nav li > a:after {
     background: none; } }
 footer {
-  background: #000000; }
+  background: #FFFFFF; }
   footer .divider {
-    border-bottom: 1px solid #28282A; }
+    border-bottom: 1px solid #BBBCBE; }
   footer .footer-nav {
     margin: 0;
     padding: 0;
@@ -425,7 +425,7 @@ footer {
       display: inline-block;
       margin: 0 15px; }
       footer .footer-nav li > a {
-        color: #BBBCBE;
+        color: #28282A;
         font-weight: 700;
         padding: 22px 0;
         display: block;
@@ -433,7 +433,7 @@ footer {
         font-size: 14px;
         transition: 0.5s all; }
         footer .footer-nav li > a:hover, footer .footer-nav li > a:focus, footer .footer-nav li > a:active {
-          color: white;
+          color: #000000;
           text-decoration: none; }
   footer #logo {
     opacity: 0.7;
@@ -452,13 +452,13 @@ footer {
       display: inline-block;
       margin: 0px 12px; }
     footer .address-block a {
-      color: #FFFFFF;
+      color: #000000;
       font-weight: 500; }
   footer .copyright {
     font-size: 16px;
     margin-bottom: 0; }
     footer .copyright small {
-      color: #BBBCBE;
+      color: #28282A;
       font-weight: 300; }
 
 #audioplayer {
@@ -476,6 +476,7 @@ footer {
   #audioplayer h2 {
     font-weight: 100;
     margin-bottom: 0;
+    margin-top: 0;
     float: left;
     margin-left: 15px;
     font-size: 22px; }
