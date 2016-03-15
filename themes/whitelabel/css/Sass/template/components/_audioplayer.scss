@@ -82,3 +82,9 @@
 	display: block;
 	overflow: hidden;
 }
+
+@media screen and (max-width: 1074px){
+    .audio-player-area {
+	    display: none;
+    }
+}

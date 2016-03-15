@@ -76,6 +76,7 @@ article {
     }
 }
 
+/*
 p {
 	.breadcrumbs {
 		font-size: 14px;
@@ -84,3 +85,93 @@ p {
 		font-weight: 700;
 	}
 }
+*/
+
+body.toolbar-drawer {
+	padding-top: 2.2em;
+}
+
+.views-exposed-form {
+	display: none !important;
+}
+
+p.breadcrumbs {
+			font-size: 13px;
+			text-transform: uppercase;
+			color: #BFB9B6;
+			font-weight: 700;
+		}
+
+.hero-unit.error  .jumbotron{
+    margin: 0;
+    border: none;
+    background: url(../themes/dcpunk/images/404.jpg) !important;
+    height:650px;
+    background-position-y:200px;
+}
+
+.digdc-link {
+	padding-left: 10px;
+}
+
+.form-item {
+  margin: 0 0 20px; }
+  .form-item label:not(.option) {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #BFB9B6;
+    display: block; }
+  .form-item label.option {
+    margin-left: 6px;
+    top: 4px;
+    position: relative;
+    font-size: 16px; }
+  .form-item input[type="password"],
+  .form-item input[type="text"],
+  .form-item input[type="email"],
+  .form-item textarea {
+    height: 44px;
+    background: #f1f2f2;
+    border: 1px solid #e4e6e6;
+    border-radius: 6px;
+    padding: 6px 14px 8px;
+    box-shadow: none;
+    width: 100%;
+    transition: all 0.25s;
+    font-size: 16px;
+    font-weight: 300; }
+    .form-item input[type="password"]:focus, .form-item input[type="password"]:hover, .form-item input[type="password"]:active,
+    .form-item input[type="text"]:focus,
+    .form-item input[type="text"]:hover,
+    .form-item input[type="text"]:active,
+    .form-item input[type="email"]:focus,
+    .form-item input[type="email"]:hover,
+    .form-item input[type="email"]:active,
+    .form-item textarea:focus,
+    .form-item textarea:hover,
+    .form-item textarea:active {
+      box-shadow: 0 0 8px rgba(26, 135, 200, 0.45);
+      outline: none; }
+  .form-item textarea {
+    height: auto; }
+
+.webform-submit {
+  margin: 0 auto;
+  display: block; }
+  
+.webform-submit {
+    background: white;
+    border: 3px solid #acd156;
+    font-weight: 600;
+    font-size: 18px;
+    font-style: italic;
+    padding: 12px 30px 14px;
+    color: #acd156;
+    transition: all 0.25s;
+}
+
+.webform-submit:hover {
+	color:white;
+	background: #acd156;
+}
+
