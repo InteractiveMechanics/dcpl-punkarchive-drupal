@@ -1,6 +1,7 @@
 <?php
 	global $base_path;		
 	$term = $node->field_culture_category['und'][0]['taxonomy_term'];
+	$url = "http://digdc.dclibrary.org/cdm/search/collection/myfirst/searchterm/" . urlencode($node->title) . "/field/all/mode/all/";
 ?>
 
 
@@ -49,7 +50,8 @@
 			</div> <!-- END CONTAINER -->
 		
 		<?php
-    		$events = $node->field_objects['und'];
+    		$events = $node->field_events['und'];
+    		$objects = $node->field_objects['und'];
     	?>
     	
 <?php if($events || $objects): ?>
@@ -109,6 +111,7 @@
 					
 					<?php foreach ($objects as $e): ?>
 	                	<?php $event = $e["entity"]; ?>
+	                		
 	            			<?php
 					           	$preset = 'grid-square-225';
 					           	
@@ -130,7 +133,7 @@
 						    ?>
 					    
 							<div class="item ">
-								<a href="<?php print url('node/'.$event->field_reference['und'][0]['target_id']); ?>"> <img 
+								<a href="<?php print $event->field_digdc_url['und'][0]['value']; ?>"> <img 
 									src="<?php print file_create_url($src); ?>" 
 									alt="<?php print $event->field_image['und'][0]['field_file_image_alt_text']['und'][0]['value']; ?>" />
 								
