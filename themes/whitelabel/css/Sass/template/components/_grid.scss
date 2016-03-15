@@ -1,0 +1,84 @@
+.grid {
+    margin-left: 70px;
+	margin-right: 70px;
+
+	.grid-item {
+		width: 225px;
+	  	height: 225px;
+	  	position: relative;
+	  	float: left;
+		border: none;
+		margin: 15px;
+        overflow: hidden;
+
+		&:hover {
+            .overlay-content { opacity: 1; }
+		}   
+        img {
+            width: 105%;
+            height: auto;
+        }
+
+        .overlay-content {
+            position: absolute;
+			top: 0;
+			left: 0;
+			background-color: rgba($accent_color, .8);
+			width: 100%;
+			height: 100%;
+			display: block;
+            padding: 25px;
+            opacity: 0;
+            transition: $transition;
+        }
+		.year {
+			position: relative;
+			font-size: 18px;
+			color: $white;
+			font-weight: 600;
+            letter-spacing: 1px;
+		}
+		.caption {
+			position: relative;
+			color: $white;
+			font-size: 24px;
+			font-weight: 100;
+			line-height: 1.4;
+		}
+
+        a {  
+            display: block;
+        }
+	}
+
+	.grid-item--rectangle {
+		width: 480px;
+	}
+	.grid-item--lg-square {
+		width: 480px;
+		height: 480px;
+
+        .overlay-content {
+            padding: 30px;
+
+            .caption {
+                font-size: 42px;
+            }
+        }
+	}
+	.grid-item--horizontal {
+		width: 225px;
+		height: 480px;
+	}
+}
+
+.touch-device .grid .grid-item .overlay-content {
+		opacity: 1 !important;
+}
+
+
+@media screen and (max-width: 768px){
+    	.grid-item {
+	    	width:100% !important;
+    	}
+}

@@ -1,0 +1,24 @@
+
+name = White Label Theme
+description = A flexible, reusable theme for DC Public Library's digital projects.
+package = Core
+version = 1.0
+core = 7.x
+
+screenshot  = images/screenshot.png
+
+stylesheets[all][] = css/main.css
+
+regions[header]         = Header
+regions[navigation]     = Navigation bar
+regions[highlighted]    = Highlighted
+regions[help]           = Help
+regions[content]        = Content
+regions[sidebar_first]  = First sidebar
+regions[sidebar_second] = Second sidebar
+regions[footer]         = Footer
+regions[bottom]         = Page bottom
+regions[page_top]       = Page top
+regions[page_bottom]    = Page bottom
+
+settings[shortcut_module_link] = 0
