@@ -339,66 +339,73 @@ p.breadcrumbs {
   font-size: 18px;
   padding: 9px 18px; }
 
-header .navbar {
-  margin-bottom: 0;
-  border-radius: 0;
-  position: fixed;
-  width: 100%;
-  z-index: 999999999;
-  border: none;
-  max-height: 80px;
-  height: 80px; }
-header .navbar-brand {
-  color: #FFFFFF !important;
-  text-transform: uppercase;
-  font-size: 36px;
-  margin-left: 0px !important;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  opacity: 1;
-  transition: 0.5s all; }
-  header .navbar-brand:hover {
-    opacity: 0.65; }
-header a.navbar-brand span {
-  color: transparent;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-  background-position-y: -230px; }
-header .navbar-nav {
-  margin-left: 50px;
-  text-transform: uppercase; }
-  header .navbar-nav li {
-    margin: 0 15px; }
-    header .navbar-nav li > a {
-      padding: 28px 0 32px;
-      color: #BBBCBE;
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-weight: 700;
-      position: relative;
-      transition: 0.5s all;
+header {
+  /*
+      a.navbar-brand span {
+  		//background: url(<?php print $base_path; ?>themes/dcpunk/images/grunge-texture.jpg)repeat;
+  		color: transparent;
+      	-webkit-background-clip: text;
+      	-moz-background-clip: text;
+      	
+      	-webkit-text-fill-color: transparent;
+      	-moz-text-fill-color: transparent;
+      	background-position-y: -230px;
+  	}
+  */ }
+  header .navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 999999999;
+    border: none;
+    max-height: 80px;
+    height: 80px; }
+  header .navbar-brand {
+    color: #000000 !important;
+    text-transform: uppercase;
+    font-size: 36px;
+    margin-left: 0px !important;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    opacity: 1;
+    transition: 0.5s all; }
+    header .navbar-brand:hover {
+      opacity: 0.65; }
+  header .navbar-nav {
+    margin-left: 50px;
+    text-transform: uppercase; }
+    header .navbar-nav li {
+      margin: 0 15px; }
+      header .navbar-nav li > a {
+        padding: 28px 0 32px;
+        color: #BBBCBE;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: 700;
+        position: relative;
+        transition: 0.5s all;
+        bottom: 0; }
+        header .navbar-nav li > a:after {
+          content: '';
+          border-bottom: 2px solid transparent;
+          position: absolute;
+          width: 100%;
+          left: 0; }
+        header .navbar-nav li > a:hover {
+          bottom: 10px; }
+          header .navbar-nav li > a:hover:after {
+            border-bottom: 2px solid #FF0000; }
+          header .navbar-nav li > a:hover svg {
+            fill: #FF0000; }
+    header .navbar-nav svg {
+      fill: #000000;
+      width: 16px;
+      transition: fill 0.25s ease-in-out; }
+    header .navbar-nav #search-link:hover {
       bottom: 0; }
-      header .navbar-nav li > a:after {
+      header .navbar-nav #search-link:hover:after {
         content: '';
-        border-bottom: 2px solid transparent;
-        position: absolute;
-        width: 100%;
-        left: 0; }
-      header .navbar-nav li > a:hover {
-        bottom: 10px; }
-        header .navbar-nav li > a:hover:after {
-          border-bottom: 2px solid #FF0000; }
-        header .navbar-nav li > a:hover svg {
-          fill: white; }
-  header .navbar-nav svg {
-    fill: #BBBCBE;
-    width: 16px;
-    transition: fill 0.25s ease-in-out; }
-  header .navbar-nav #search-link:hover {
-    bottom: 0; }
-    header .navbar-nav #search-link:hover:after {
-      content: ''; }
+        border-bottom: none; }
 
 @media screen and (max-width: 768px) {
   header .navbar-nav li > a:hover:after {
@@ -468,10 +475,10 @@ footer {
     float: left; }
   #audioplayer h2 {
     font-weight: 100;
-    margin-top: 3px;
     margin-bottom: 0;
     float: left;
-    margin-left: 15px; }
+    margin-left: 15px;
+    font-size: 22px; }
 
 .album-cover-placeholder {
   width: 60px;
