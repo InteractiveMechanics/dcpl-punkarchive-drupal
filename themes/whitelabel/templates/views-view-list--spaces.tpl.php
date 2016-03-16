@@ -119,7 +119,7 @@
 </main>
 </div>
 
-<script type="text/javascript" src="<?php print $base_path; ?>themes/dcpunk/js/map.js"></script>
+<script type="text/javascript" src="<?php print $base_path; ?>themes/whitelabel/js/map.js"></script>
 
 <script type="text/javascript">
 	
