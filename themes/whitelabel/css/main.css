@@ -157,17 +157,16 @@ p.breadcrumbs {
 
 .webform-submit {
   background: white;
-  border: 3px solid #acd156;
-  font-weight: 600;
+  border: 2px solid #FF0000;
   font-size: 18px;
-  font-style: italic;
+  text-transform: uppercase;
   padding: 12px 30px 14px;
-  color: #acd156;
+  color: #FF0000;
   transition: all 0.25s; }
 
 .webform-submit:hover {
-  color: white;
-  background: #acd156; }
+  color: #FFFFFF;
+  background: #FF0000; }
 
 .grid {
   margin-left: 70px;
@@ -320,18 +319,18 @@ p.breadcrumbs {
     column-count: 3; } }
 .btn {
   border-radius: 0;
-  border: 4px solid #FF0000;
+  border: 2px solid #FF0000;
   color: #FF0000;
   background: transparent; }
   .btn + .btn {
     margin-left: 15px; }
 
 .btn-primary {
-  border-color: #f1f2f2; }
+  border-color: #accent_color; }
   .btn-primary:hover, .btn-primary:active, .btn-primary:focus, .btn-primary:active:focus {
     background-color: #FF0000;
     border-color: #FF0000;
-    color: #000000;
+    color: #FFFFFF;
     box-shadow: none; }
 
 .btn-group-lg > .btn,

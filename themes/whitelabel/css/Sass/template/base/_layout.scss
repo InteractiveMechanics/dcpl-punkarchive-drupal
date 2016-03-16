@@ -162,17 +162,16 @@ p.breadcrumbs {
   
 .webform-submit {
     background: white;
-    border: 3px solid #acd156;
-    font-weight: 600;
+    border: 2px solid $accent_color;
     font-size: 18px;
-    font-style: italic;
+    text-transform: uppercase;
     padding: 12px 30px 14px;
-    color: #acd156;
+    color: $accent_color;
     transition: all 0.25s;
 }
 
 .webform-submit:hover {
-	color:white;
-	background: #acd156;
+	color: $white;
+	background: $accent_color;
 }
 
