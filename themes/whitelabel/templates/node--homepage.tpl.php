@@ -91,7 +91,7 @@
 		<h1><?php print $node->field_hero_title['und'][0]['value'];?></h1>
 		<p>
 			<a class="btn btn-primary btn-lg" href="<?php print $base_path; ?>timeline" role="button">Explore Timeline</a>
-			<a class="btn btn-primary btn-lg" href="<?php print $base_path; ?>culture?category_id=4" role="button">Explore Collections</a>
+			<a class="btn btn-primary btn-lg" href="<?php print $base_path; ?>collections" role="button">Explore Collections</a>
 		</p>
 	</div> <!-- END CONTAINER -->
 </div> <!-- END JUMBOTRON -->
