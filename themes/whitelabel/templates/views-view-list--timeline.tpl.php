@@ -2,9 +2,8 @@
 	<div class="jumbotron">
 		<div class="container">
 			<div class="col-sm-8 col-sm-offset-2">
-    			<h1>The History of DC Punk</h1>
-    			<h3>As America celebrated its bicentennial, a new revolution was brewing in the nation's capital. Over the next several years, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tellus ante, auctor eget feugiat here are a few more words.
-    			</h3>
+    			<h1 class="timeline-heading">Lorem Ipsum</h1>
+    			<h3 class="timeline-subheading">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisl sapien, aliquam quis efficitur sed, vestibulum id nulla. Integer congue porta mi, nec ultrices tellus auctor eget.</h3>
             </div>
 		</div> <!-- END CONTAINER -->
 	</div> <!-- END JUMBOTRON -->
@@ -132,6 +131,5 @@
 				$('#dotNav').hide();
 			}
 		}
-	 // redrawDotNav();
 	});
 </script>

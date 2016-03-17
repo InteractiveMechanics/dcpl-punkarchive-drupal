@@ -18,6 +18,7 @@
     
         	<!-- Collect the nav links, forms, and other content for toggling -->
     	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	    	    
     	      	<ul class="nav navbar-nav">
                     <?php foreach($main_menu as $menu): ?>
                         <?php 
@@ -36,12 +37,8 @@
 								c0-13.3,10.8-24.1,24.1-24.1c13.4,0,25.2,11.8,25.2,25.2c0,13.3-10.8,24.1-24.1,24.1C23.4,61.1,11.5,49.2,11.5,35.9z"/>
 						</g>
 						</svg></a></li>
-    				<!--<li>
-                        <a href="<?php print $base_path . drupal_get_path_alias('search') ?>" id="search-link">
-                            <?php include($directory . '/images/icon-search.svg') ?>
-                        </a>
-                    </li>-->
-    	      	</ul>
+    			 </ul>
+    			 
     	      	<a class="hidden-sm hidden-xs audio-player-area" href="<?php print path_to_theme(); ?>/audioplayer.php" onclick="window.open(this.href, 'mywin','right=20,bottom=20,width=450,height=100, titlebar=no, scrollbars=no, resizable=no, location=no, menubar=no'); return false;">
     		      	<div id="audioplayer">
     		      		<div class="album-cover-placeholder">

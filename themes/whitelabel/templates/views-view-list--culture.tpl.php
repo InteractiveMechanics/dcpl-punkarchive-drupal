@@ -45,7 +45,7 @@
 		  				</h4>
 		  			<?php else: ?>
 		  				<h2>
-		  					DC PUNK COLLECTIONS
+		  					DCPL COLLECTIONS
 	  					</h2>
 		  				<h4>
 			  				<p>

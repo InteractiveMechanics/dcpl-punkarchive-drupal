@@ -1,10 +1,6 @@
 $( document ).ready(function() {
 
 	/* GRID / ISOTOPE */
-
-	
-
-
 	$('.filter-button-group').on( 'click', 'button', function() {
 	  var filterValue = $(this).attr('data-filter');
 	  $grid.isotope({ filter: filterValue });
@@ -65,31 +61,7 @@ $('#dotNav li').click(function(){
 
 
 /* POPOVER */ 
-
-//$(function () {
-  $('[data-toggle="popover"]').popover()
-//})
+$('[data-toggle="popover"]').popover()
 
 /* MAP can be found in map.js */
 
-/* MAP MODAL */
-/*
-var map = L.map('overlayMap').setView([38.9, -77.015], 13);
-
-L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-    maxZoom: 18,
-    id: 'cahdeemer.n4p0ijc0',
-    accessToken: 'pk.eyJ1IjoiY2FoZGVlbWVyIiwiYSI6ImIwYzM3OGYyZTBmYmZlMWJmMzQ5OTNmZWRjMTA3NjNmIn0.4lMKKySybu846ym7-BNbYA'
-}).addTo(map);
-
-
-$('#myModal').on('shown.bs.modal', function(){
-  setTimeout(function() {
-    map.invalidateSize();
-    //alert("Hey, your function is working!");
-  }, 10);
- });
-*/
-
-});

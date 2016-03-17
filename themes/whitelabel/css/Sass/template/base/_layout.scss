@@ -3,6 +3,8 @@
 body {
     position: relative;
 }
+
+
 main {
 	background: $white;
 	color: $black;
@@ -22,27 +24,46 @@ article {
 }
 
 .jumbotron {
-	background: $black;
-	padding-top: 120px;
+	overflow: hidden !important;
+	color: $white;
+	padding-bottom: 10px;
+	
+	body.front & {
+		height: 650px;
+		padding-top: 120px;
+	}
 
     h1 {
 		color: $white;
 		text-transform: uppercase;
 		font-size: 54px;
-		line-height: 1.6;
+		line-height: 1.2;
+		margin-bottom: 30px;
+		
+		// for Drupal
+		body.front & {
+			font-size: 96px;
+			margin-bottom: 50px;
+		}
 	}
 	
-	.container { position: relative; z-index: 2; }
+	.container { 
+		position: relative; 
+		z-index: 2; 
+	}
+	
     .video-container {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        height: 720px;
+        height: 650px;
         overflow: hidden;
         z-index: 1;
     }
 }
+
+
 
 .popover {
 	border-radius: 0;
@@ -77,17 +98,6 @@ article {
     }
 }
 
-/*
-p {
-	.breadcrumbs {
-		font-size: 14px;
-		text-transform: uppercase;
-		color: #BFB9B6;
-		font-weight: 700;
-	}
-}
-*/
-
 body.toolbar-drawer {
 	padding-top: 2.2em;
 }
@@ -97,13 +107,13 @@ body.toolbar-drawer {
 }
 
 p.breadcrumbs {
-			font-size: 13px;
-			text-transform: uppercase;
-			color: #BFB9B6;
-			font-weight: 700;
-		}
+	font-size: 13px;
+	text-transform: uppercase;
+	color: #BFB9B6;
+	font-weight: 700;
+}
 
-.hero-unit.error  .jumbotron{
+.hero-unit.error  .jumbotron {
     margin: 0;
     border: none;
     background: url(../themes/dcpunk/images/404.jpg) !important;
@@ -116,21 +126,27 @@ p.breadcrumbs {
 }
 
 .form-item {
-  margin: 0 0 20px; }
-  .form-item label:not(.option) {
+    margin: 0 0 20px; 
+}
+
+.form-item label:not(.option) {
     font-size: 14px;
     text-transform: uppercase;
     color: #BFB9B6;
-    display: block; }
-  .form-item label.option {
+    display: block; 
+}
+
+.form-item label.option {
     margin-left: 6px;
     top: 4px;
     position: relative;
-    font-size: 16px; }
-  .form-item input[type="password"],
-  .form-item input[type="text"],
-  .form-item input[type="email"],
-  .form-item textarea {
+    font-size: 16px; 
+}
+
+.form-item input[type="password"],
+.form-item input[type="text"],
+.form-item input[type="email"],
+.form-item textarea {
     height: 44px;
     background: #f1f2f2;
     border: 1px solid #e4e6e6;
@@ -140,25 +156,31 @@ p.breadcrumbs {
     width: 100%;
     transition: all 0.25s;
     font-size: 16px;
-    font-weight: 300; }
-    .form-item input[type="password"]:focus, .form-item input[type="password"]:hover, .form-item input[type="password"]:active,
-    .form-item input[type="text"]:focus,
-    .form-item input[type="text"]:hover,
-    .form-item input[type="text"]:active,
-    .form-item input[type="email"]:focus,
-    .form-item input[type="email"]:hover,
-    .form-item input[type="email"]:active,
-    .form-item textarea:focus,
-    .form-item textarea:hover,
-    .form-item textarea:active {
+    font-weight: 300; 
+}
+
+.form-item input[type="password"]:focus, .form-item input[type="password"]:hover, .form-item input[type="password"]:active,
+.form-item input[type="text"]:focus,
+.form-item input[type="text"]:hover,
+.form-item input[type="text"]:active,
+.form-item input[type="email"]:focus,
+.form-item input[type="email"]:hover,
+.form-item input[type="email"]:active,
+.form-item textarea:focus,
+.form-item textarea:hover,
+.form-item textarea:active {
       box-shadow: 0 0 8px rgba(26, 135, 200, 0.45);
-      outline: none; }
-  .form-item textarea {
-    height: auto; }
+      outline: none;
+}
+
+.form-item textarea {
+    height: auto; 
+}
 
 .webform-submit {
   margin: 0 auto;
-  display: block; }
+  display: block; 
+}
   
 .webform-submit {
     background: white;

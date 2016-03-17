@@ -131,27 +131,32 @@ p {
 	height: 110px;
 	background: $white;
 	box-shadow: 0 0 10px rgba(120, 120, 120, 0.5);
+	
 	ul {
 		margin-top: 15px !important;
 		padding-left: 15px !important;
 		padding-right: 15px !important;
 	}
+	
 	svg {
 		width: 15px;
 	}
+	
 	#venue_marker {
 		fill: $black;
 	}
+	
 	#record_store_marker {
 		fill: $black;
 	}
+	
 	#studios_marker {
 		fill: $black;
 	}
+	
 	#houses_marker {
 		fill: $black;
 	}
-
 
 	>ul>li {
 		list-style-type: none;
@@ -170,14 +175,14 @@ p {
 }
 
 @media screen and (max-width: 640px){
-    	#spaces-landing-page .table_letter_border {
-	    	text-align: center;
-	    	border: none;
-    	}
+    #spaces-landing-page .table_letter_border {
+	    text-align: center;
+	    border: none;
+    }
     	
-    	.space-text {
-	    	text-align: center;
-	    	margin: 15px 0;
-    	}
-	}
+    .space-text {
+	    text-align: center;
+	    margin: 15px 0;
+    }
+}
 

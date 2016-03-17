@@ -76,7 +76,7 @@
 					</div>
 
 				<?php endforeach; ?>
-				<p><small>Missing information about your favorite music? <a href="">Contribute to the archive &raquo;</a></small></p>
+				<p><small>Missing information about your favorite music? <a href="<?php print url('contribute-to-the-archive'); ?>">Contribute to the archive &raquo;</a></small></p>
 			</div>
 		</section>
 </main>

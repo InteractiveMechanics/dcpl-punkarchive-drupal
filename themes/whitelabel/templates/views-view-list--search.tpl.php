@@ -22,8 +22,8 @@
 					<label>Search by Keywords</label>
 						
 					  	<div class="input-group col-sm-12">
-					      	<input type="text" class="form-control search-control" name="query" placeholder="Fugazi">
-       					 </div> <!-- END INPUT GROUP BTN -->
+					      	<input type="text" class="form-control search-control" name="query" placeholder="Type your search term here">
+       					 </div> 
        					 
        					</div>
        					

@@ -111,51 +111,72 @@
 }
 
 .masonry .item:hover .overlay-content {
-      opacity: 1; }
-    .masonry .item img {
-      width: 100%;
-      height: auto; }
-    .masonry .item .overlay-content {
-      position: absolute;
-      top: 0;
-      left: 0;
-      background-color: rgba(255, 0, 0, 0.8);
-      display: block;
-      padding: 25px;
-      opacity: 0;
-      transition: 0.5s all;
-      width: 100%;
-      height: 100%; }
-    .masonry .item .year {
-      position: relative;
-      font-size: 18px;
-      color: #FFFFFF;
-      font-weight: 600;
-      letter-spacing: 1px; }
-    .masonry .item .caption {
-      position: relative;
-      color: #FFFFFF;
-      font-size: 24px;
-      font-weight: 100;
-      line-height: 1.4;
-      height: inherit;
-      overflow: hidden; }
-    .masonry .item a {
-      display: block; }
-      
+    opacity: 1; 
+}
 
-.masonry .item:nth-child(2n) .overlay-content {
-  background-color: rgba(237, 190, 57, 0.8); }
-.masonry .item:nth-child(3n) .overlay-content {
-  background-color: rgba(238, 42, 118, 0.8); }
-.masonry .item:nth-child(4n) .overlay-content {
-  background-color: rgba(172, 209, 86, 0.8); }
-.masonry .item:nth-child(5n) .overlay-content {
-  background-color: rgba(38, 169, 224, 0.8); }
+.masonry .item img {
+    width: 100%;
+    height: auto; 
+}
+
 .masonry .item .overlay-content {
-  background-color: rgba(38, 169, 224, 0.8); }
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 0, 0, 0.8);
+	display: block;
+    padding: 25px;
+    opacity: 0;
+    transition: 0.5s all;
+    width: 100%;
+    height: 100%; 
+}
+
+.masonry .item .year {
+    position: relative;
+    font-size: 18px;
+    color: #FFFFFF;
+    font-weight: 600;
+    letter-spacing: 1px; 
+}
+        
 .masonry .item .caption {
-  font-family: "Courier New", Courier, "Lucinda Sans Typewriter", monospace; }
+    position: relative;
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: 100;
+    line-height: 1.4;
+    height: inherit;
+    overflow: hidden; 
+}
+
+.masonry .item a {
+    display: block; 
+}
+     
+.masonry .item:nth-child(2n) .overlay-content {
+    background-color: rgba(237, 190, 57, 0.8); 
+}
+  
+.masonry .item:nth-child(3n) .overlay-content {
+    background-color: rgba(238, 42, 118, 0.8); 
+}
+
+.masonry .item:nth-child(4n) .overlay-content {
+    background-color: rgba(172, 209, 86, 0.8); 
+}
+
+.masonry .item:nth-child(5n) .overlay-content {
+    background-color: rgba(38, 169, 224, 0.8); 
+}
+
+.masonry .item .overlay-content {
+    background-color: rgba(38, 169, 224, 0.8); 
+}
+
+.masonry .item .caption {
+    font-family: "Courier New", Courier, "Lucinda Sans Typewriter", monospace; 
+}
   
 @media only screen and (min-width: 400px) {
     .masonry {
