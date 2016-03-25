@@ -3,13 +3,18 @@ $white:                 #FFFFFF;
 $black:                 #000000;
 $soft_black:            #28282A;
 $grey:                  #BBBCBE;
-$accent_color:          #FF0000;
+//$accent_color:          #FF0000; moved to custom.scss
+$grid_overlay_color_1:  rgba(38, 169, 224, 0.8);
+$grid_overlay_color_2n: rgba(237, 190, 57, 0.8);
+$grid_overlay_color_3n: rgba(238, 42, 118, 0.8);
+$grid_overlay_color_4n: rgba(172, 209, 86, 0.8);
+$grid_overlay_color_5n: rgba(38, 169, 224, 0.8);
 
 
-// FONTS
-$heading-font-stack:    'Helvetica Neue', Helvetica, Arial, sans-serif;
-$p_font_stack:          'Helvetica Neue', Helvetica, Arial, sans-serif;
-$display_font_stack:    'Helvetica Neue', Helvetica, Arial, sans-serif;
+// FONTS all moved to custom.scss
+//$heading-font-stack:    'Helvetica Neue', Helvetica, Arial, sans-serif;
+//$p_font_stack:          'Helvetica Neue', Helvetica, Arial, sans-serif;
+//$display_font_stack:    'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 
 // TRANSITIONS

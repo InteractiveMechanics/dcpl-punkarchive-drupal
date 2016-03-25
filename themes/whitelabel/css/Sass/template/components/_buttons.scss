@@ -12,7 +12,7 @@
 }
 
 .btn-primary {
-	border-color: #accent_color;
+	border-color: $accent_color;
 
 	&:hover, &:active, &:focus, &:active:focus {
 		background-color: $accent_color;

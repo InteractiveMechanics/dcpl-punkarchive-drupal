@@ -26,7 +26,7 @@
 .album-cover-placeholder {
     width: 60px;
     height: 60px;
-	background: red;
+	background: $accent_color;
 	float: left;
 	position: relative;
 }
@@ -34,7 +34,7 @@
 .album-cover-placeholder-big {
 	width: 100px;
 	height: 100px;
-	background: red;
+	background: $accent_color;
 	float: left;
 	position: relative;
 }

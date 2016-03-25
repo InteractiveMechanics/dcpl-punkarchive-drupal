@@ -1,0 +1,158 @@
+/***********************************
+************************************
+
+Customize the DCPL Whitelabel Theme
+
+do not edit other files 
+
+***********************************	
+***********************************/
+
+/***********************************
+
+~~~ IMPORTANT NOTE ~~~
+
+VARIABLES begin with dollar-sign symbols ($)
+
+DO NOT edit variable names
+
+Editing a variable will break your theme
+
+Example:
+do not change $accent_color to $red
+do not change $heading_font_stack to $open_sans
+do not change $any_of_the_variables to $something_else
+
+/**********************************
+
+~~~ COLOR PICKER: theme accent color ~~~
+
+changes the accent color throughout the theme
+default is red (#ff0000)
+
+You can use hex codes, rgb, or hsl, or color names
+Visit http://www.w3schools.com/colors/colors_picker.asp to choose a color
+
+you can have only one accent color; if you copy and past the $accent_color variable, the second one will override the the first
+
+Examples:
+$accent_color: #ff9900;
+$accent_color: #cc99ff; 
+
+In the example above, the browser will ignore #ff9900 and the accent color will be #cc99ff (a pale lavender)
+
+***********************************/
+
+$accent_color:          #FF0000;
+
+
+/**********************************
+
+~~~ COLOR PICKER: timeline grid overlay colors ~~~
+
+changes the background color of the caption overlay on timeline objects; this overlay is visible when a user hovers on the object
+
+original palette is
+$grid_overlay_color_1:  rgba(38, 169, 224, 0.8); - lime green
+$grid_overlay_color_2n: rgba(237, 190, 57, 0.8); - goldenrod
+$grid_overlay_color_3n: rgba(238, 42, 118, 0.8); - fuschia
+$grid_overlay_color_4n: rgba(172, 209, 86, 0.8); - chartreuse
+
+the last channel, alpha, is the opacity value. A value of 0.0 is completely transparent (invisible) and a value of 1.0 is fully opaque.  We recommend that you do not change the alpha value. 
+
+For these variables, we recommend that you use rgb values
+Visit http://www.w3schools.com/colors/colors_picker.asp to choose a color
+
+***********************************/
+
+$grid_overlay_color_1:  rgba(38, 169, 224, 0.8); 
+$grid_overlay_color_2n: rgba(237, 190, 57, 0.8);
+$grid_overlay_color_3n: rgba(238, 42, 118, 0.8);
+$grid_overlay_color_4n: rgba(172, 209, 86, 0.8);
+$grid_overlay_color_5n: rgba(38, 169, 224, 0.8);
+
+
+
+
+
+/**********************************
+
+~~~ FONT PICKER, step 1:2: editing @import statement ~~~
+
+changes the fonts throughout the theme
+different fonts can be used for headings, display headings, and pagragraphs
+
+to choose another font: 
+
+visit https://www.google.com/fonts
+
+select your fonts (recommend no more than 2 fonts)
+
+in the code below (begins @import), replace the word 'Lato' with the name of your new font
+
+if the font name includes multiple words (example: Open Sans), separate the words with a plus sign (+)
+
+if you want to use more than one font, copy and past the @import statement so that there are two separate @import statements; the second @import statement should start on a new line
+
+editing the @import statement alone will not affect the fonts in your theme. you must also edit the font_stack variables in part 2
+
+Examples:
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+***********************************/
+
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+
+
+
+/**********************************
+
+~~~ FONT PICKER, part 2:2: editing font_stack variables ~~~
+
+changes the fonts throughout the theme
+different fonts can be used for headings, display headings, and pagragraphs
+
+the fonts listed after 'Helvetica Nueue' are called fallback fonts. The browser will render text in a fallback font if it cannot use the first font listed. DO NOT remove the fallback fonts.
+
+the default is 'Helvetica Nueue'
+
+delete Helvetica Neue from the variable you would like to edit
+
+do not remove the single quotes from either side of Helvetica Neue
+
+insert the name of the Google font you added to your @import statement in step 1.
+
+you do not have to use the same font for all three variables
+
+editing the font_stack variables alone may not affect the fonts in your theme. you must also edit the @import line in step 1
+
+Examples:
+$heading-font-stack:    'Roboto', Helvetica, Arial, sans-serif;
+$p_font_stack:          'Open Sans', Helvetica, Arial, sans-serif;
+
+***********************************/
+
+$heading-font-stack:    'Helvetica Neue', Helvetica, Arial, sans-serif;
+$p_font_stack:          'Helvetica Neue', Helvetica, Arial, sans-serif;
+$display_font_stack:    'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+
+
+/**********************************
+
+Paragraph font-size
+
+changes the default size of paragraph text 
+
+Best Practice for the size of body copy on the web is at least 16px. It is the text size browsers display by default.  Given the typical distance between the user and the screen, is is about the same as 12pt type in a magazine or book.
+
+We have chosen 18px as a default font-size for paragraphs, but you may want to adjust it slightly if you choose a new value for the $p_font_stack variable.
+
+***********************************/
+
+p {
+	font-size: 18px;
+}
+
