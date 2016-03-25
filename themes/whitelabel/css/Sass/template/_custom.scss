@@ -3,7 +3,8 @@
 
 Customize the DCPL Whitelabel Theme
 
-do not edit other files 
+do not edit other files
+remember to save this file after you make changes - changes will not save automatically 
 
 ***********************************	
 ***********************************/
@@ -22,6 +23,11 @@ Example:
 do not change $accent_color to $red
 do not change $heading_font_stack to $open_sans
 do not change $any_of_the_variables to $something_else
+
+
+
+
+
 
 /**********************************
 
@@ -44,6 +50,11 @@ In the example above, the browser will ignore #ff9900 and the accent color will 
 ***********************************/
 
 $accent_color:          #FF0000;
+
+
+
+
+
 
 
 /**********************************
@@ -70,6 +81,8 @@ $grid_overlay_color_2n: rgba(237, 190, 57, 0.8);
 $grid_overlay_color_3n: rgba(238, 42, 118, 0.8);
 $grid_overlay_color_4n: rgba(172, 209, 86, 0.8);
 $grid_overlay_color_5n: rgba(38, 169, 224, 0.8);
+
+
 
 
 
@@ -107,6 +120,8 @@ Examples:
 
 
 
+
+
 /**********************************
 
 ~~~ FONT PICKER, part 2:2: editing font_stack variables ~~~
@@ -140,9 +155,12 @@ $display_font_stack:    'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 
 
+
+
+
 /**********************************
 
-Paragraph font-size
+~~~ PARAGRAPH FONT SIZE ~~~
 
 changes the default size of paragraph text 
 
@@ -155,4 +173,55 @@ We have chosen 18px as a default font-size for paragraphs, but you may want to a
 p {
 	font-size: 18px;
 }
+
+
+
+
+
+/**********************************
+
+~~~~ SPACES MAP ~~~~
+
+Before you take any begin to edit the Spaces base map, you will need to create an account (it's free!) at https://www.mapbox.com/
+
+1. Login to your Mapbox account
+
+2. In the navigation menu at the top of the page, click Studio
+
+3. Under Styles, click New Style
+
+4. Choose a template and click the Create button
+
+5. At the top of the left sidebar panel, to the right of the publish button, there is an arrow pointing up and to the right. Click on that icon. 
+
+6. The Edit window should open.  In the Edit window, under the heading "Develop with this style," copy the text that begins with the word mapbox to your clipboard.
+
+7. In your theme directory, navigate to the "js" folder and open the "map.js" file
+
+8. Line 12 of map.js reads 
+		id: 'mapbox.streets',
+   Delete mapbox.streets, but keep the single quotes and the comma after the single quotes, so the line reads id: '',
+
+9. Paste the copies text from mapbox into the spot in between the single quotes.  Line 12 should look something like this:
+		id: 'mapbox://styles/yourusername/cim852tsm004aadlz44f9fpqf',
+
+10. Delete mapbox://styles/ from line 12 so that it reads:
+		id: 'yourusername/cim852tsm004aadlz44f9fpqf',
+
+11. Go back to Mapbox. Click on the home icon.
+
+12. On the home screen, in the right sidebar, there is a heading called Access Token.  It is a string of letters and numbers that begins 'pk' (stands for public key). Copy that access token to your clipboard.
+
+13. Line 13 of map.js reads
+	 accessToken: 'pk.eyJ1IjoiaW50ZXJhY3RpdmVtZWNoIiwiYSI6InJlcUtqSk0ifQ.RUwHuEkBbXoJ6SgOnXmYFg'
+	Delete the string of letters and numbers that begins with pk. Do not delete the single quotes
+14. Paste your access token between the single quotes
+
+15. Save map.js
+
+16. Refresh your Spaces page to see the changes!
+
+Note: map.js automatically centers the map on Washington, D.C.
+
+***************************************************************/
 
