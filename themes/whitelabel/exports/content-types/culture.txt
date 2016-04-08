@@ -1,0 +1,1578 @@
+$data = array(
+  'bundles' => array(
+    'culture' => (object) array(
+      'type' => 'culture',
+      'name' => 'Culture',
+      'base' => 'node_content',
+      'module' => 'node',
+      'description' => 'Stories that make up "The Culture" section of the site.',
+      'help' => '',
+      'has_title' => '1',
+      'title_label' => 'Title',
+      'custom' => '1',
+      'modified' => '1',
+      'locked' => '0',
+      'disabled' => '0',
+      'orig_type' => 'culture',
+      'disabled_changed' => FALSE,
+      'bc_entity_type' => 'node',
+    ),
+  ),
+  'fields' => array(
+    'body' => array(
+      'entity_types' => array(
+        0 => 'node',
+      ),
+      'translatable' => '0',
+      'settings' => array(),
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+        'module' => 'field_sql_storage',
+        'active' => '1',
+        'details' => array(
+          'sql' => array(
+            'FIELD_LOAD_CURRENT' => array(
+              'field_data_body' => array(
+                'value' => 'body_value',
+                'summary' => 'body_summary',
+                'format' => 'body_format',
+              ),
+            ),
+            'FIELD_LOAD_REVISION' => array(
+              'field_revision_body' => array(
+                'value' => 'body_value',
+                'summary' => 'body_summary',
+                'format' => 'body_format',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'foreign keys' => array(
+        'format' => array(
+          'table' => 'filter_format',
+          'columns' => array(
+            'format' => 'format',
+          ),
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'field_name' => 'body',
+      'type' => 'text_with_summary',
+      'module' => 'text',
+      'active' => '1',
+      'locked' => '0',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'columns' => array(
+        'value' => array(
+          'type' => 'text',
+          'size' => 'big',
+          'not null' => FALSE,
+        ),
+        'summary' => array(
+          'type' => 'text',
+          'size' => 'big',
+          'not null' => FALSE,
+        ),
+        'format' => array(
+          'type' => 'varchar',
+          'length' => 255,
+          'not null' => FALSE,
+        ),
+      ),
+      'bundles' => array(
+        'node' => array(
+          0 => 'homepage',
+          1 => 'timeline_eras',
+          2 => 'events',
+          3 => 'culture',
+          4 => 'music',
+          5 => 'spaces',
+          6 => 'objects',
+          7 => 'page',
+          8 => 'music_file',
+        ),
+      ),
+    ),
+    'field_caption' => array(
+      'translatable' => '0',
+      'entity_types' => array(),
+      'settings' => array(
+        'max_length' => '255',
+      ),
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+        'module' => 'field_sql_storage',
+        'active' => '1',
+        'details' => array(
+          'sql' => array(
+            'FIELD_LOAD_CURRENT' => array(
+              'field_data_field_caption' => array(
+                'value' => 'field_caption_value',
+                'format' => 'field_caption_format',
+              ),
+            ),
+            'FIELD_LOAD_REVISION' => array(
+              'field_revision_field_caption' => array(
+                'value' => 'field_caption_value',
+                'format' => 'field_caption_format',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'foreign keys' => array(
+        'format' => array(
+          'table' => 'filter_format',
+          'columns' => array(
+            'format' => 'format',
+          ),
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'field_name' => 'field_caption',
+      'type' => 'text',
+      'module' => 'text',
+      'active' => '1',
+      'locked' => '0',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'columns' => array(
+        'value' => array(
+          'type' => 'varchar',
+          'length' => '255',
+          'not null' => FALSE,
+        ),
+        'format' => array(
+          'type' => 'varchar',
+          'length' => 255,
+          'not null' => FALSE,
+        ),
+      ),
+      'bundles' => array(
+        'node' => array(
+          0 => 'music',
+          1 => 'spaces',
+          2 => 'culture',
+        ),
+      ),
+    ),
+    'field_culture_category' => array(
+      'translatable' => '0',
+      'entity_types' => array(),
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'culture_subcategories',
+            'parent' => '0',
+          ),
+        ),
+      ),
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+        'module' => 'field_sql_storage',
+        'active' => '1',
+        'details' => array(
+          'sql' => array(
+            'FIELD_LOAD_CURRENT' => array(
+              'field_data_field_culture_category' => array(
+                'tid' => 'field_culture_category_tid',
+              ),
+            ),
+            'FIELD_LOAD_REVISION' => array(
+              'field_revision_field_culture_category' => array(
+                'tid' => 'field_culture_category_tid',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'foreign keys' => array(
+        'tid' => array(
+          'table' => 'taxonomy_term_data',
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'field_name' => 'field_culture_category',
+      'type' => 'taxonomy_term_reference',
+      'module' => 'taxonomy',
+      'active' => '1',
+      'locked' => '0',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'columns' => array(
+        'tid' => array(
+          'type' => 'int',
+          'unsigned' => TRUE,
+          'not null' => FALSE,
+        ),
+      ),
+      'bundles' => array(
+        'node' => array(
+          0 => 'culture',
+        ),
+      ),
+    ),
+    'field_date' => array(
+      'translatable' => '0',
+      'entity_types' => array(),
+      'settings' => array(
+        'estimates' => array(
+          'year' => array(
+            '-60000|1600' => 'Pre-colonial',
+            '1500|1599' => '16th century',
+            '1600|1699' => '17th century',
+            '1700|1799' => '18th century',
+            '1800|1899' => '19th century',
+            '1900|1999' => '20th century',
+            '2000|2099' => '21st century',
+          ),
+          'month' => array(
+            '11|1' => 'Winter',
+            '2|4' => 'Spring',
+            '5|7' => 'Summer',
+            '8|10' => 'Autumn',
+          ),
+          'day' => array(
+            '0|12' => 'The start of the month',
+            '10|20' => 'The middle of the month',
+            '18|31' => 'The end of the month',
+          ),
+          'hour' => array(
+            '6|18' => 'Day time',
+            '6|12' => 'Morning',
+            '12|13' => 'Noon',
+            '12|18' => 'Afternoon',
+            '18|22' => 'Evening',
+            '0|1' => 'Midnight',
+            '18|6' => 'Night',
+          ),
+          'minute' => array(),
+          'second' => array(),
+        ),
+        'minimum_components' => array(
+          'from_granularity_year' => 1,
+          'from_granularity_month' => 0,
+          'from_granularity_day' => 0,
+          'from_granularity_hour' => 0,
+          'from_granularity_minute' => 0,
+          'from_granularity_second' => 0,
+          'from_granularity_timezone' => 0,
+          'from_estimates_year' => 0,
+          'from_estimates_month' => 0,
+          'from_estimates_day' => 0,
+          'from_estimates_hour' => 0,
+          'from_estimates_minute' => 0,
+          'from_estimates_second' => 0,
+          'to_granularity_year' => 0,
+          'to_granularity_month' => 0,
+          'to_granularity_day' => 0,
+          'to_granularity_hour' => 0,
+          'to_granularity_minute' => 0,
+          'to_granularity_second' => 0,
+          'to_granularity_timezone' => 0,
+          'to_estimates_year' => 0,
+          'to_estimates_month' => 0,
+          'to_estimates_day' => 0,
+          'to_estimates_hour' => 0,
+          'to_estimates_minute' => 0,
+          'to_estimates_second' => 0,
+          'txt_short' => 0,
+          'txt_long' => 0,
+        ),
+      ),
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+        'module' => 'field_sql_storage',
+        'active' => '1',
+        'details' => array(
+          'sql' => array(
+            'FIELD_LOAD_CURRENT' => array(
+              'field_data_field_date' => array(
+                'timestamp' => 'field_date_timestamp',
+                'txt_short' => 'field_date_txt_short',
+                'txt_long' => 'field_date_txt_long',
+                'data' => 'field_date_data',
+                'timestamp_to' => 'field_date_timestamp_to',
+                'year' => 'field_date_year',
+                'year_to' => 'field_date_year_to',
+                'month' => 'field_date_month',
+                'month_to' => 'field_date_month_to',
+                'day' => 'field_date_day',
+                'day_to' => 'field_date_day_to',
+                'hour' => 'field_date_hour',
+                'hour_to' => 'field_date_hour_to',
+                'minute' => 'field_date_minute',
+                'minute_to' => 'field_date_minute_to',
+                'second' => 'field_date_second',
+                'second_to' => 'field_date_second_to',
+                'timezone' => 'field_date_timezone',
+                'timezone_to' => 'field_date_timezone_to',
+              ),
+            ),
+            'FIELD_LOAD_REVISION' => array(
+              'field_revision_field_date' => array(
+                'timestamp' => 'field_date_timestamp',
+                'txt_short' => 'field_date_txt_short',
+                'txt_long' => 'field_date_txt_long',
+                'data' => 'field_date_data',
+                'timestamp_to' => 'field_date_timestamp_to',
+                'year' => 'field_date_year',
+                'year_to' => 'field_date_year_to',
+                'month' => 'field_date_month',
+                'month_to' => 'field_date_month_to',
+                'day' => 'field_date_day',
+                'day_to' => 'field_date_day_to',
+                'hour' => 'field_date_hour',
+                'hour_to' => 'field_date_hour_to',
+                'minute' => 'field_date_minute',
+                'minute_to' => 'field_date_minute_to',
+                'second' => 'field_date_second',
+                'second_to' => 'field_date_second_to',
+                'timezone' => 'field_date_timezone',
+                'timezone_to' => 'field_date_timezone_to',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'foreign keys' => array(),
+      'indexes' => array(
+        'timestamp' => array(
+          0 => 'timestamp',
+        ),
+        'timestamp_to' => array(
+          0 => 'timestamp_to',
+        ),
+      ),
+      'field_name' => 'field_date',
+      'type' => 'partial_date_range',
+      'module' => 'partial_date',
+      'active' => '1',
+      'locked' => '0',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'columns' => array(
+        'timestamp' => array(
+          'type' => 'float',
+          'size' => 'big',
+          'description' => 'The calculated timestamp for a date stored in UTC as a float for unlimited date range support.',
+          'not null' => TRUE,
+          'default' => 0,
+          'sortable' => TRUE,
+        ),
+        'txt_short' => array(
+          'type' => 'varchar',
+          'length' => 255,
+          'description' => 'A editable display field for this date for the short format.',
+          'not null' => FALSE,
+        ),
+        'txt_long' => array(
+          'type' => 'varchar',
+          'length' => 255,
+          'description' => 'A editable display field for this date for the long format.',
+          'not null' => FALSE,
+          'sortable' => FALSE,
+        ),
+        'data' => array(
+          'description' => 'The configuration data for the effect.',
+          'type' => 'blob',
+          'not null' => FALSE,
+          'size' => 'big',
+          'sortable' => FALSE,
+        ),
+        'timestamp_to' => array(
+          'type' => 'float',
+          'size' => 'big',
+          'description' => 'The calculated timestamp for a date stored in UTC as a float for unlimited date range support.',
+          'not null' => TRUE,
+          'default' => 0,
+          'sortable' => TRUE,
+        ),
+        'year' => array(
+          'type' => 'int',
+          'description' => 'The Year for the starting date component.',
+          'not null' => FALSE,
+          'default' => NULL,
+          'size' => 'big',
+        ),
+        'year_to' => array(
+          'type' => 'int',
+          'description' => 'The Year for the finishing date component.',
+          'not null' => FALSE,
+          'default' => NULL,
+          'size' => 'big',
+        ),
+        'month' => array(
+          'type' => 'int',
+          'description' => 'The Month for the starting date component.',
+          'not null' => FALSE,
+          'default' => NULL,
+          'size' => 'small',
+        ),
+        'month_to' => array(
+          'type' => 'int',
+          'description' => 'The Month for the finishing date component.',
+          'not null' => FALSE,
+          'default' => NULL,
+          'size' => 'small',
+        ),
+        'day' => array(
+          'type' => 'int',
+          'description' => 'The Day for the starting date component.',
+          'not null' => FALSE,
+          'default' => NULL,
+          'size' => 'small',
+        ),
+        'day_to' => array(
+          'type' => 'int',
+          'description' => 'The Day for the finishing date component.',
+          'not null' => FALSE,
+          'default' => NULL,
+          'size' => 'small',
+        ),
+        'hour' => array(
+          'type' => 'int',
+          'description' => 'The Hour for the starting date component.',
+          'not null' => FALSE,
+          'default' => NULL,
+          'size' => 'small',
+        ),
+        'hour_to' => array(
+          'type' => 'int',
+          'description' => 'The Hour for the finishing date component.',
+          'not null' => FALSE,
+          'default' => NULL,
+          'size' => 'small',
+        ),
+        'minute' => array(
+          'type' => 'int',
+          'description' => 'The Minute for the starting date component.',
+          'not null' => FALSE,
+          'default' => NULL,
+          'size' => 'small',
+        ),
+        'minute_to' => array(
+          'type' => 'int',
+          'description' => 'The Minute for the finishing date component.',
+          'not null' => FALSE,
+          'default' => NULL,
+          'size' => 'small',
+        ),
+        'second' => array(
+          'type' => 'int',
+          'description' => 'The Second for the starting date component.',
+          'not null' => FALSE,
+          'default' => NULL,
+          'size' => 'small',
+        ),
+        'second_to' => array(
+          'type' => 'int',
+          'description' => 'The Second for the finishing date component.',
+          'not null' => FALSE,
+          'default' => NULL,
+          'size' => 'small',
+        ),
+        'timezone' => array(
+          'type' => 'varchar',
+          'length' => 50,
+          'description' => 'The Timezone for the starting date component.',
+          'not null' => FALSE,
+          'default' => NULL,
+        ),
+        'timezone_to' => array(
+          'type' => 'varchar',
+          'length' => 50,
+          'description' => 'The Timezone for the finishing date component.',
+          'not null' => FALSE,
+          'default' => NULL,
+        ),
+      ),
+      'bundles' => array(
+        'node' => array(
+          0 => 'timeline_eras',
+          1 => 'events',
+          2 => 'culture',
+          3 => 'music',
+          4 => 'objects',
+          5 => 'spaces',
+        ),
+      ),
+    ),
+    'field_events' => array(
+      'translatable' => '0',
+      'entity_types' => array(),
+      'settings' => array(
+        'target_type' => 'node',
+        'handler' => 'base',
+        'handler_settings' => array(
+          'target_bundles' => array(
+            'events' => 'events',
+          ),
+          'sort' => array(
+            'type' => 'none',
+          ),
+          'behaviors' => array(
+            'views-select-list' => array(
+              'status' => 0,
+            ),
+          ),
+        ),
+      ),
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+        'module' => 'field_sql_storage',
+        'active' => '1',
+        'details' => array(
+          'sql' => array(
+            'FIELD_LOAD_CURRENT' => array(
+              'field_data_field_events' => array(
+                'target_id' => 'field_events_target_id',
+              ),
+            ),
+            'FIELD_LOAD_REVISION' => array(
+              'field_revision_field_events' => array(
+                'target_id' => 'field_events_target_id',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'foreign keys' => array(
+        'node' => array(
+          'table' => 'node',
+          'columns' => array(
+            'target_id' => 'nid',
+          ),
+        ),
+      ),
+      'indexes' => array(
+        'target_id' => array(
+          0 => 'target_id',
+        ),
+      ),
+      'field_name' => 'field_events',
+      'type' => 'entityreference',
+      'module' => 'entityreference',
+      'active' => '1',
+      'locked' => '0',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'columns' => array(
+        'target_id' => array(
+          'description' => 'The id of the target entity.',
+          'type' => 'int',
+          'unsigned' => TRUE,
+          'not null' => TRUE,
+        ),
+      ),
+      'bundles' => array(
+        'node' => array(
+          0 => 'timeline_eras',
+          1 => 'music',
+          2 => 'spaces',
+          3 => 'culture',
+        ),
+      ),
+    ),
+    'field_external_links' => array(
+      'translatable' => '0',
+      'entity_types' => array(),
+      'settings' => array(
+        'hide_blank_items' => 1,
+        'path' => '',
+      ),
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+        'module' => 'field_sql_storage',
+        'active' => '1',
+        'details' => array(
+          'sql' => array(
+            'FIELD_LOAD_CURRENT' => array(
+              'field_data_field_external_links' => array(
+                'value' => 'field_external_links_value',
+                'revision_id' => 'field_external_links_revision_id',
+              ),
+            ),
+            'FIELD_LOAD_REVISION' => array(
+              'field_revision_field_external_links' => array(
+                'value' => 'field_external_links_value',
+                'revision_id' => 'field_external_links_revision_id',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'foreign keys' => array(),
+      'indexes' => array(
+        'revision_id' => array(
+          0 => 'revision_id',
+        ),
+      ),
+      'field_name' => 'field_external_links',
+      'type' => 'field_collection',
+      'module' => 'field_collection',
+      'active' => '1',
+      'locked' => '0',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'columns' => array(
+        'value' => array(
+          'type' => 'int',
+          'not null' => FALSE,
+          'description' => 'The field collection item id.',
+        ),
+        'revision_id' => array(
+          'type' => 'int',
+          'not null' => FALSE,
+          'description' => 'The field collection item revision id.',
+        ),
+      ),
+      'bundles' => array(
+        'node' => array(
+          0 => 'music',
+          1 => 'spaces',
+          2 => 'culture',
+        ),
+      ),
+    ),
+    'field_image' => array(
+      'translatable' => '0',
+      'entity_types' => array(),
+      'settings' => array(
+        'uri_scheme' => 'public',
+        'default_image' => 0,
+      ),
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+        'module' => 'field_sql_storage',
+        'active' => '1',
+        'details' => array(
+          'sql' => array(
+            'FIELD_LOAD_CURRENT' => array(
+              'field_data_field_image' => array(
+                'fid' => 'field_image_fid',
+                'alt' => 'field_image_alt',
+                'title' => 'field_image_title',
+                'width' => 'field_image_width',
+                'height' => 'field_image_height',
+              ),
+            ),
+            'FIELD_LOAD_REVISION' => array(
+              'field_revision_field_image' => array(
+                'fid' => 'field_image_fid',
+                'alt' => 'field_image_alt',
+                'title' => 'field_image_title',
+                'width' => 'field_image_width',
+                'height' => 'field_image_height',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'foreign keys' => array(
+        'fid' => array(
+          'table' => 'file_managed',
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+        ),
+      ),
+      'indexes' => array(
+        'fid' => array(
+          0 => 'fid',
+        ),
+      ),
+      'field_name' => 'field_image',
+      'type' => 'image',
+      'module' => 'image',
+      'active' => '1',
+      'locked' => '0',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'columns' => array(
+        'fid' => array(
+          'description' => 'The {file_managed}.fid being referenced in this field.',
+          'type' => 'int',
+          'not null' => FALSE,
+          'unsigned' => TRUE,
+        ),
+        'alt' => array(
+          'description' => 'Alternative image text, for the image\'s \'alt\' attribute.',
+          'type' => 'varchar',
+          'length' => 512,
+          'not null' => FALSE,
+        ),
+        'title' => array(
+          'description' => 'Image title text, for the image\'s \'title\' attribute.',
+          'type' => 'varchar',
+          'length' => 1024,
+          'not null' => FALSE,
+        ),
+        'width' => array(
+          'description' => 'The width of the image in pixels.',
+          'type' => 'int',
+          'unsigned' => TRUE,
+        ),
+        'height' => array(
+          'description' => 'The height of the image in pixels.',
+          'type' => 'int',
+          'unsigned' => TRUE,
+        ),
+      ),
+      'bundles' => array(
+        'node' => array(
+          0 => 'objects',
+          1 => 'events',
+          2 => 'culture',
+          3 => 'music',
+          4 => 'spaces',
+        ),
+      ),
+    ),
+    'field_music' => array(
+      'translatable' => '0',
+      'entity_types' => array(),
+      'settings' => array(
+        'target_type' => 'node',
+        'handler' => 'base',
+        'handler_settings' => array(
+          'target_bundles' => array(
+            'music' => 'music',
+          ),
+          'sort' => array(
+            'type' => 'none',
+          ),
+          'behaviors' => array(
+            'views-select-list' => array(
+              'status' => 0,
+            ),
+          ),
+        ),
+      ),
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+        'module' => 'field_sql_storage',
+        'active' => '1',
+        'details' => array(
+          'sql' => array(
+            'FIELD_LOAD_CURRENT' => array(
+              'field_data_field_music' => array(
+                'target_id' => 'field_music_target_id',
+              ),
+            ),
+            'FIELD_LOAD_REVISION' => array(
+              'field_revision_field_music' => array(
+                'target_id' => 'field_music_target_id',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'foreign keys' => array(
+        'node' => array(
+          'table' => 'node',
+          'columns' => array(
+            'target_id' => 'nid',
+          ),
+        ),
+      ),
+      'indexes' => array(
+        'target_id' => array(
+          0 => 'target_id',
+        ),
+      ),
+      'field_name' => 'field_music',
+      'type' => 'entityreference',
+      'module' => 'entityreference',
+      'active' => '1',
+      'locked' => '0',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'columns' => array(
+        'target_id' => array(
+          'description' => 'The id of the target entity.',
+          'type' => 'int',
+          'unsigned' => TRUE,
+          'not null' => TRUE,
+        ),
+      ),
+      'bundles' => array(
+        'node' => array(
+          0 => 'culture',
+        ),
+      ),
+    ),
+    'field_objects' => array(
+      'translatable' => '0',
+      'entity_types' => array(),
+      'settings' => array(
+        'target_type' => 'node',
+        'handler' => 'base',
+        'handler_settings' => array(
+          'target_bundles' => array(
+            'objects' => 'objects',
+          ),
+          'sort' => array(
+            'type' => 'none',
+          ),
+          'behaviors' => array(
+            'views-select-list' => array(
+              'status' => 0,
+            ),
+          ),
+        ),
+      ),
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+        'module' => 'field_sql_storage',
+        'active' => '1',
+        'details' => array(
+          'sql' => array(
+            'FIELD_LOAD_CURRENT' => array(
+              'field_data_field_objects' => array(
+                'target_id' => 'field_objects_target_id',
+              ),
+            ),
+            'FIELD_LOAD_REVISION' => array(
+              'field_revision_field_objects' => array(
+                'target_id' => 'field_objects_target_id',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'foreign keys' => array(
+        'node' => array(
+          'table' => 'node',
+          'columns' => array(
+            'target_id' => 'nid',
+          ),
+        ),
+      ),
+      'indexes' => array(
+        'target_id' => array(
+          0 => 'target_id',
+        ),
+      ),
+      'field_name' => 'field_objects',
+      'type' => 'entityreference',
+      'module' => 'entityreference',
+      'active' => '1',
+      'locked' => '0',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'columns' => array(
+        'target_id' => array(
+          'description' => 'The id of the target entity.',
+          'type' => 'int',
+          'unsigned' => TRUE,
+          'not null' => TRUE,
+        ),
+      ),
+      'bundles' => array(
+        'node' => array(
+          0 => 'culture',
+          1 => 'music',
+          2 => 'spaces',
+        ),
+      ),
+    ),
+    'field_spaces' => array(
+      'translatable' => '0',
+      'entity_types' => array(),
+      'settings' => array(
+        'target_type' => 'node',
+        'handler' => 'base',
+        'handler_settings' => array(
+          'target_bundles' => array(
+            'spaces' => 'spaces',
+          ),
+          'sort' => array(
+            'type' => 'none',
+          ),
+          'behaviors' => array(
+            'views-select-list' => array(
+              'status' => 0,
+            ),
+          ),
+        ),
+      ),
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+        'module' => 'field_sql_storage',
+        'active' => '1',
+        'details' => array(
+          'sql' => array(
+            'FIELD_LOAD_CURRENT' => array(
+              'field_data_field_spaces' => array(
+                'target_id' => 'field_spaces_target_id',
+              ),
+            ),
+            'FIELD_LOAD_REVISION' => array(
+              'field_revision_field_spaces' => array(
+                'target_id' => 'field_spaces_target_id',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'foreign keys' => array(
+        'node' => array(
+          'table' => 'node',
+          'columns' => array(
+            'target_id' => 'nid',
+          ),
+        ),
+      ),
+      'indexes' => array(
+        'target_id' => array(
+          0 => 'target_id',
+        ),
+      ),
+      'field_name' => 'field_spaces',
+      'type' => 'entityreference',
+      'module' => 'entityreference',
+      'active' => '1',
+      'locked' => '0',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'columns' => array(
+        'target_id' => array(
+          'description' => 'The id of the target entity.',
+          'type' => 'int',
+          'unsigned' => TRUE,
+          'not null' => TRUE,
+        ),
+      ),
+      'bundles' => array(
+        'node' => array(
+          0 => 'culture',
+        ),
+      ),
+    ),
+    'field_visible' => array(
+      'translatable' => '0',
+      'entity_types' => array(),
+      'settings' => array(
+        'allowed_values' => array(
+          0 => '',
+          1 => '',
+        ),
+        'allowed_values_function' => '',
+      ),
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+        'module' => 'field_sql_storage',
+        'active' => '1',
+        'details' => array(
+          'sql' => array(
+            'FIELD_LOAD_CURRENT' => array(
+              'field_data_field_visible' => array(
+                'value' => 'field_visible_value',
+              ),
+            ),
+            'FIELD_LOAD_REVISION' => array(
+              'field_revision_field_visible' => array(
+                'value' => 'field_visible_value',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'foreign keys' => array(),
+      'indexes' => array(
+        'value' => array(
+          0 => 'value',
+        ),
+      ),
+      'field_name' => 'field_visible',
+      'type' => 'list_boolean',
+      'module' => 'list',
+      'active' => '1',
+      'locked' => '0',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'columns' => array(
+        'value' => array(
+          'type' => 'int',
+          'not null' => FALSE,
+        ),
+      ),
+      'bundles' => array(
+        'node' => array(
+          0 => 'music',
+          1 => 'spaces',
+          2 => 'culture',
+        ),
+      ),
+    ),
+  ),
+  'instances' => array(
+    'body' => array(
+      0 => array(
+        'label' => 'Body',
+        'widget' => array(
+          'type' => 'text_textarea_with_summary',
+          'settings' => array(
+            'rows' => 20,
+            'summary_rows' => 5,
+          ),
+          'weight' => '1',
+          'module' => 'text',
+        ),
+        'settings' => array(
+          'display_summary' => TRUE,
+          'text_processing' => 1,
+          'user_register_form' => FALSE,
+        ),
+        'display' => array(
+          'default' => array(
+            'label' => 'hidden',
+            'type' => 'text_default',
+            'settings' => array(),
+            'module' => 'text',
+            'weight' => 0,
+          ),
+          'teaser' => array(
+            'label' => 'hidden',
+            'type' => 'text_summary_or_trimmed',
+            'settings' => array(
+              'trim_length' => 600,
+            ),
+            'module' => 'text',
+            'weight' => 0,
+          ),
+        ),
+        'required' => FALSE,
+        'description' => '',
+        'field_name' => 'body',
+        'entity_type' => 'node',
+        'bundle' => 'culture',
+        'deleted' => '0',
+        'default_value' => NULL,
+      ),
+    ),
+    'field_caption' => array(
+      0 => array(
+        'label' => 'Caption',
+        'widget' => array(
+          'weight' => '5',
+          'type' => 'text_textfield',
+          'module' => 'text',
+          'active' => 1,
+          'settings' => array(
+            'size' => '60',
+          ),
+        ),
+        'settings' => array(
+          'text_processing' => '0',
+          'user_register_form' => FALSE,
+        ),
+        'display' => array(
+          'default' => array(
+            'label' => 'above',
+            'type' => 'text_default',
+            'settings' => array(),
+            'module' => 'text',
+            'weight' => 8,
+          ),
+          'teaser' => array(
+            'type' => 'hidden',
+            'label' => 'above',
+            'settings' => array(),
+            'weight' => 0,
+          ),
+        ),
+        'required' => 0,
+        'description' => '',
+        'default_value' => NULL,
+        'field_name' => 'field_caption',
+        'entity_type' => 'node',
+        'bundle' => 'culture',
+        'deleted' => '0',
+      ),
+    ),
+    'field_culture_category' => array(
+      0 => array(
+        'label' => 'Culture Category',
+        'widget' => array(
+          'weight' => '6',
+          'type' => 'options_select',
+          'module' => 'options',
+          'active' => 1,
+          'settings' => array(),
+        ),
+        'settings' => array(
+          'user_register_form' => FALSE,
+        ),
+        'display' => array(
+          'default' => array(
+            'label' => 'above',
+            'type' => 'taxonomy_term_reference_link',
+            'settings' => array(),
+            'module' => 'taxonomy',
+            'weight' => 3,
+          ),
+          'teaser' => array(
+            'type' => 'hidden',
+            'label' => 'above',
+            'settings' => array(),
+            'weight' => 0,
+          ),
+        ),
+        'required' => 0,
+        'description' => '',
+        'default_value' => NULL,
+        'field_name' => 'field_culture_category',
+        'entity_type' => 'node',
+        'bundle' => 'culture',
+        'deleted' => '0',
+      ),
+    ),
+    'field_date' => array(
+      0 => array(
+        'label' => 'Date',
+        'widget' => array(
+          'weight' => '3',
+          'type' => 'partial_date',
+          'module' => 'partial_date',
+          'active' => 1,
+          'settings' => array(
+            'granularity' => array(
+              'from' => array(
+                'year' => 'year',
+                'month' => 'month',
+                'day' => 'day',
+                'hour' => 0,
+                'minute' => 0,
+                'second' => 0,
+                'timezone' => 0,
+              ),
+              'to' => array(
+                'year' => 'year',
+                'month' => 'month',
+                'day' => 'day',
+                'hour' => 0,
+                'minute' => 0,
+                'second' => 0,
+                'timezone' => 0,
+              ),
+            ),
+            'estimates' => array(
+              'from' => array(
+                'year' => 0,
+                'month' => 0,
+                'day' => 0,
+                'hour' => 0,
+                'minute' => 0,
+                'second' => 0,
+              ),
+              'to' => array(
+                'year' => 0,
+                'month' => 0,
+                'day' => 0,
+                'hour' => 0,
+                'minute' => 0,
+                'second' => 0,
+              ),
+            ),
+            'tz_handling' => 'none',
+            'increments' => array(
+              'minute' => '1',
+              'second' => '1',
+            ),
+            'theme_overrides' => array(
+              'txt_short' => 0,
+              'txt_long' => 0,
+              'check_approximate' => 0,
+              'range_inline' => 1,
+            ),
+            'hide_remove' => 1,
+            'help_txt' => array(
+              'und' => array(
+                'components' => '',
+                'check_approximate' => '',
+                'txt_short' => 'Short description of date',
+                'txt_long' => 'Longer description of date',
+                '_remove' => '',
+              ),
+            ),
+            0 => FALSE,
+          ),
+        ),
+        'settings' => array(
+          'user_register_form' => FALSE,
+        ),
+        'display' => array(
+          'default' => array(
+            'label' => 'above',
+            'type' => 'partial_date_default',
+            'settings' => array(
+              'format' => 'medium',
+              'use_override' => 'none',
+              'component_settings' => array(),
+            ),
+            'module' => 'partial_date',
+            'weight' => 1,
+          ),
+          'teaser' => array(
+            'type' => 'hidden',
+            'label' => 'above',
+            'settings' => array(),
+            'weight' => 0,
+          ),
+        ),
+        'required' => 0,
+        'description' => '',
+        'default_value' => NULL,
+        'field_name' => 'field_date',
+        'entity_type' => 'node',
+        'bundle' => 'culture',
+        'deleted' => '0',
+      ),
+    ),
+    'field_events' => array(
+      0 => array(
+        'label' => 'Events',
+        'widget' => array(
+          'weight' => '12',
+          'type' => 'entityreference_autocomplete',
+          'module' => 'entityreference',
+          'active' => 1,
+          'settings' => array(
+            'match_operator' => 'CONTAINS',
+            'size' => '60',
+            'path' => '',
+          ),
+        ),
+        'settings' => array(
+          'user_register_form' => FALSE,
+        ),
+        'display' => array(
+          'default' => array(
+            'label' => 'above',
+            'type' => 'entityreference_label',
+            'settings' => array(
+              'link' => FALSE,
+            ),
+            'module' => 'entityreference',
+            'weight' => 11,
+          ),
+          'teaser' => array(
+            'type' => 'hidden',
+            'label' => 'above',
+            'settings' => array(),
+            'weight' => 0,
+          ),
+        ),
+        'required' => 0,
+        'description' => '',
+        'default_value' => NULL,
+        'field_name' => 'field_events',
+        'entity_type' => 'node',
+        'bundle' => 'culture',
+        'deleted' => '0',
+      ),
+    ),
+    'field_external_links' => array(
+      0 => array(
+        'label' => 'External Links',
+        'widget' => array(
+          'weight' => '10',
+          'type' => 'field_collection_embed',
+          'module' => 'field_collection',
+          'active' => 0,
+          'settings' => array(),
+        ),
+        'settings' => array(
+          'user_register_form' => FALSE,
+        ),
+        'display' => array(
+          'default' => array(
+            'label' => 'above',
+            'type' => 'field_collection_view',
+            'settings' => array(
+              'edit' => 'Edit',
+              'delete' => 'Delete',
+              'add' => 'Add',
+              'description' => TRUE,
+              'view_mode' => 'full',
+            ),
+            'module' => 'field_collection',
+            'weight' => 9,
+          ),
+          'teaser' => array(
+            'type' => 'hidden',
+            'label' => 'above',
+            'settings' => array(),
+            'weight' => 0,
+          ),
+        ),
+        'required' => 0,
+        'description' => '',
+        'default_value' => NULL,
+        'field_name' => 'field_external_links',
+        'entity_type' => 'node',
+        'bundle' => 'culture',
+        'deleted' => '0',
+      ),
+    ),
+    'field_image' => array(
+      0 => array(
+        'label' => 'Image',
+        'widget' => array(
+          'weight' => '4',
+          'type' => 'media_generic',
+          'module' => 'media',
+          'active' => 1,
+          'settings' => array(
+            'progress_indicator' => 'throbber',
+            'preview_image_style' => 'thumbnail',
+            'allowed_types' => array(
+              'image' => 'image',
+            ),
+            'browser_plugins' => array(),
+            'allowed_schemes' => array(
+              'public' => 'public',
+            ),
+          ),
+        ),
+        'settings' => array(
+          'file_directory' => '',
+          'file_extensions' => 'png gif jpg jpeg',
+          'max_filesize' => '',
+          'max_resolution' => '',
+          'min_resolution' => '',
+          'alt_field' => 0,
+          'title_field' => 0,
+          'default_image' => 0,
+          'user_register_form' => FALSE,
+        ),
+        'display' => array(
+          'default' => array(
+            'label' => 'above',
+            'type' => 'image',
+            'settings' => array(
+              'image_style' => '',
+              'image_link' => '',
+            ),
+            'module' => 'image',
+            'weight' => 2,
+          ),
+          'teaser' => array(
+            'type' => 'hidden',
+            'label' => 'above',
+            'settings' => array(),
+            'weight' => 0,
+          ),
+        ),
+        'required' => 0,
+        'description' => '',
+        'field_name' => 'field_image',
+        'entity_type' => 'node',
+        'bundle' => 'culture',
+        'deleted' => '0',
+      ),
+    ),
+    'field_music' => array(
+      0 => array(
+        'label' => 'Music',
+        'widget' => array(
+          'weight' => '8',
+          'type' => 'entityreference_autocomplete_tags',
+          'module' => 'entityreference',
+          'active' => 1,
+          'settings' => array(
+            'match_operator' => 'CONTAINS',
+            'size' => '60',
+            'path' => '',
+          ),
+        ),
+        'settings' => array(
+          'user_register_form' => FALSE,
+        ),
+        'display' => array(
+          'default' => array(
+            'label' => 'above',
+            'type' => 'entityreference_label',
+            'settings' => array(
+              'link' => FALSE,
+            ),
+            'module' => 'entityreference',
+            'weight' => 5,
+          ),
+          'teaser' => array(
+            'type' => 'hidden',
+            'label' => 'above',
+            'settings' => array(),
+            'weight' => 0,
+          ),
+        ),
+        'required' => 0,
+        'description' => '',
+        'default_value' => NULL,
+        'field_name' => 'field_music',
+        'entity_type' => 'node',
+        'bundle' => 'culture',
+        'deleted' => '0',
+      ),
+    ),
+    'field_objects' => array(
+      0 => array(
+        'label' => 'Objects',
+        'widget' => array(
+          'weight' => '7',
+          'type' => 'entityreference_autocomplete_tags',
+          'module' => 'entityreference',
+          'active' => 1,
+          'settings' => array(
+            'match_operator' => 'CONTAINS',
+            'size' => '60',
+            'path' => '',
+          ),
+        ),
+        'settings' => array(
+          'user_register_form' => FALSE,
+        ),
+        'display' => array(
+          'default' => array(
+            'label' => 'above',
+            'type' => 'entityreference_label',
+            'settings' => array(
+              'link' => FALSE,
+            ),
+            'module' => 'entityreference',
+            'weight' => 4,
+          ),
+          'teaser' => array(
+            'type' => 'hidden',
+            'label' => 'above',
+            'settings' => array(),
+            'weight' => 0,
+          ),
+        ),
+        'required' => 0,
+        'description' => '',
+        'default_value' => NULL,
+        'field_name' => 'field_objects',
+        'entity_type' => 'node',
+        'bundle' => 'culture',
+        'deleted' => '0',
+      ),
+    ),
+    'field_spaces' => array(
+      0 => array(
+        'label' => 'Spaces',
+        'widget' => array(
+          'weight' => '9',
+          'type' => 'entityreference_autocomplete_tags',
+          'module' => 'entityreference',
+          'active' => 1,
+          'settings' => array(
+            'match_operator' => 'CONTAINS',
+            'size' => '60',
+            'path' => '',
+          ),
+        ),
+        'settings' => array(
+          'user_register_form' => FALSE,
+        ),
+        'display' => array(
+          'default' => array(
+            'label' => 'above',
+            'type' => 'entityreference_label',
+            'settings' => array(
+              'link' => FALSE,
+            ),
+            'module' => 'entityreference',
+            'weight' => 6,
+          ),
+          'teaser' => array(
+            'type' => 'hidden',
+            'label' => 'above',
+            'settings' => array(),
+            'weight' => 0,
+          ),
+        ),
+        'required' => 0,
+        'description' => '',
+        'default_value' => NULL,
+        'field_name' => 'field_spaces',
+        'entity_type' => 'node',
+        'bundle' => 'culture',
+        'deleted' => '0',
+      ),
+    ),
+    'field_visible' => array(
+      0 => array(
+        'label' => 'Visible',
+        'widget' => array(
+          'weight' => '2',
+          'type' => 'options_onoff',
+          'module' => 'options',
+          'active' => 1,
+          'settings' => array(
+            'display_label' => 0,
+          ),
+        ),
+        'settings' => array(
+          'user_register_form' => FALSE,
+        ),
+        'display' => array(
+          'default' => array(
+            'label' => 'above',
+            'type' => 'list_default',
+            'settings' => array(),
+            'module' => 'list',
+            'weight' => 10,
+          ),
+          'teaser' => array(
+            'type' => 'hidden',
+            'label' => 'above',
+            'settings' => array(),
+            'weight' => 0,
+          ),
+        ),
+        'required' => 0,
+        'description' => '',
+        'default_value' => array(
+          0 => array(
+            'value' => 0,
+          ),
+        ),
+        'field_name' => 'field_visible',
+        'entity_type' => 'node',
+        'bundle' => 'culture',
+        'deleted' => '0',
+      ),
+    ),
+  ),
+);

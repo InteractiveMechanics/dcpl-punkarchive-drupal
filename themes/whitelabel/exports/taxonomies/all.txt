@@ -1,0 +1,35 @@
+$data = array(
+  'bundles' => array(
+    'culture_subcategories' => (object) array(
+      'vid' => '1',
+      'name' => 'Collections Subcategories',
+      'machine_name' => 'culture_subcategories',
+      'description' => '',
+      'hierarchy' => '0',
+      'module' => 'taxonomy',
+      'weight' => '0',
+      'bc_entity_type' => 'taxonomy_term',
+    ),
+    'music_subcategories' => (object) array(
+      'vid' => '2',
+      'name' => 'Music Subcategories',
+      'machine_name' => 'music_subcategories',
+      'description' => '',
+      'hierarchy' => '0',
+      'module' => 'taxonomy',
+      'weight' => '0',
+      'bc_entity_type' => 'taxonomy_term',
+    ),
+    'spaces_subcategories' => (object) array(
+      'vid' => '3',
+      'name' => 'Spaces Subcategories',
+      'machine_name' => 'spaces_subcategories',
+      'description' => '',
+      'hierarchy' => '0',
+      'module' => 'taxonomy',
+      'weight' => '0',
+      'bc_entity_type' => 'taxonomy_term',
+    ),
+  ),
+  'instances' => array(),
+);

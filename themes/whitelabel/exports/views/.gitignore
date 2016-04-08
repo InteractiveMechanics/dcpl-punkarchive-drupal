@@ -15,7 +15,6 @@
 /sites/README.txt
 /sites/all/modules/
 /sites/default/uploads/
-/node_modules/
 
 /.htaccess
 /authorize.php

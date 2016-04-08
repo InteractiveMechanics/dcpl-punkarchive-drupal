@@ -49,7 +49,7 @@ In the example above, the browser will ignore #ff9900 and the accent color will 
 
 ***********************************/
 
-$accent_color:          #FF0000;
+$accent_color:          #0000CC;
 
 
 
@@ -224,4 +224,15 @@ Before you take any begin to edit the Spaces base map, you will need to create a
 Note: map.js automatically centers the map on Washington, D.C.
 
 ***************************************************************/
+
+
+// TRANSITIONS
+$transition:            0.5s all;
+
+
+// DEFAULT COLORS
+$white:                 #FFFFFF;
+$black:                 #000000;
+$soft_black:            #28282A;
+$grey:                  #BBBCBE;
 

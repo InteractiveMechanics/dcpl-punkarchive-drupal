@@ -3,7 +3,8 @@
 
 Customize the DCPL Whitelabel Theme
 
-do not edit other files 
+do not edit other files
+remember to save this file after you make changes - changes will not save automatically 
 
 ***********************************	
 ***********************************/
@@ -22,9 +23,14 @@ do not change $accent_color to $red
 do not change $heading_font_stack to $open_sans
 do not change $any_of_the_variables to $something_else
 
+
+
+
+
+
 /**********************************
 
-~~~ COLOR PICKER ~~~
+~~~ COLOR PICKER: theme accent color ~~~
 
 changes the accent color throughout the theme
 default is red (#ff0000)
@@ -39,6 +45,24 @@ $accent_color: #ff9900;
 $accent_color: #cc99ff; 
 
 In the example above, the browser will ignore #ff9900 and the accent color will be #cc99ff (a pale lavender)
+
+***********************************/
+/**********************************
+
+~~~ COLOR PICKER: timeline grid overlay colors ~~~
+
+changes the background color of the caption overlay on timeline objects; this overlay is visible when a user hovers on the object
+
+original palette is
+$grid_overlay_color_1:  rgba(38, 169, 224, 0.8); - lime green
+$grid_overlay_color_2n: rgba(237, 190, 57, 0.8); - goldenrod
+$grid_overlay_color_3n: rgba(238, 42, 118, 0.8); - fuschia
+$grid_overlay_color_4n: rgba(172, 209, 86, 0.8); - chartreuse
+
+the last channel, alpha, is the opacity value. A value of 0.0 is completely transparent (invisible) and a value of 1.0 is fully opaque.  We recommend that you do not change the alpha value. 
+
+For these variables, we recommend that you use rgb values
+Visit http://www.w3schools.com/colors/colors_picker.asp to choose a color
 
 ***********************************/
 /**********************************
@@ -94,6 +118,66 @@ $heading-font-stack:    'Roboto', Helvetica, Arial, sans-serif;
 $p_font_stack:          'Open Sans', Helvetica, Arial, sans-serif;
 
 ***********************************/
+/**********************************
+
+~~~ PARAGRAPH FONT SIZE ~~~
+
+changes the default size of paragraph text 
+
+Best Practice for the size of body copy on the web is at least 16px. It is the text size browsers display by default.  Given the typical distance between the user and the screen, is is about the same as 12pt type in a magazine or book.
+
+We have chosen 18px as a default font-size for paragraphs, but you may want to adjust it slightly if you choose a new value for the $p_font_stack variable.
+
+***********************************/
+p {
+  font-size: 18px; }
+
+/**********************************
+
+~~~~ SPACES MAP ~~~~
+
+Before you take any begin to edit the Spaces base map, you will need to create an account (it's free!) at https://www.mapbox.com/
+
+1. Login to your Mapbox account
+
+2. In the navigation menu at the top of the page, click Studio
+
+3. Under Styles, click New Style
+
+4. Choose a template and click the Create button
+
+5. At the top of the left sidebar panel, to the right of the publish button, there is an arrow pointing up and to the right. Click on that icon. 
+
+6. The Edit window should open.  In the Edit window, under the heading "Develop with this style," copy the text that begins with the word mapbox to your clipboard.
+
+7. In your theme directory, navigate to the "js" folder and open the "map.js" file
+
+8. Line 12 of map.js reads 
+		id: 'mapbox.streets',
+   Delete mapbox.streets, but keep the single quotes and the comma after the single quotes, so the line reads id: '',
+
+9. Paste the copies text from mapbox into the spot in between the single quotes.  Line 12 should look something like this:
+		id: 'mapbox://styles/yourusername/cim852tsm004aadlz44f9fpqf',
+
+10. Delete mapbox://styles/ from line 12 so that it reads:
+		id: 'yourusername/cim852tsm004aadlz44f9fpqf',
+
+11. Go back to Mapbox. Click on the home icon.
+
+12. On the home screen, in the right sidebar, there is a heading called Access Token.  It is a string of letters and numbers that begins 'pk' (stands for public key). Copy that access token to your clipboard.
+
+13. Line 13 of map.js reads
+	 accessToken: 'pk.eyJ1IjoiaW50ZXJhY3RpdmVtZWNoIiwiYSI6InJlcUtqSk0ifQ.RUwHuEkBbXoJ6SgOnXmYFg'
+	Delete the string of letters and numbers that begins with pk. Do not delete the single quotes
+14. Paste your access token between the single quotes
+
+15. Save map.js
+
+16. Refresh your Spaces page to see the changes!
+
+Note: map.js automatically centers the map on Washington, D.C.
+
+***************************************************************/
 body {
   color: #FFFFFF; }
 
@@ -106,9 +190,9 @@ p {
   font-weight: 300; }
 
 a {
-  color: #FF0000; }
+  color: #0000CC; }
   a:link, a:hover, a:active, a:focus {
-    color: #FF0000; }
+    color: #0000CC; }
 
 body {
   position: relative; }
@@ -251,16 +335,16 @@ p.breadcrumbs {
 
 .webform-submit {
   background: white;
-  border: 2px solid #FF0000;
+  border: 2px solid #0000CC;
   font-size: 18px;
   text-transform: uppercase;
   padding: 12px 30px 14px;
-  color: #FF0000;
+  color: #0000CC;
   transition: all 0.25s; }
 
 .webform-submit:hover {
   color: #FFFFFF;
-  background: #FF0000; }
+  background: #0000CC; }
 
 .grid {
   margin-left: 70px;
@@ -282,7 +366,7 @@ p.breadcrumbs {
       position: absolute;
       top: 0;
       left: 0;
-      background-color: rgba(255, 0, 0, 0.8);
+      background-color: rgba(0, 0, 204, 0.8);
       width: 100%;
       height: 100%;
       display: block;
@@ -413,8 +497,8 @@ p.breadcrumbs {
     column-count: 3; } }
 .btn {
   border-radius: 0;
-  border: 2px solid #FF0000;
-  color: #FF0000;
+  border: 2px solid #0000CC;
+  color: #0000CC;
   background: transparent; }
   .btn + .btn {
     margin-left: 15px; }
@@ -422,8 +506,8 @@ p.breadcrumbs {
 .btn-primary {
   border-color: #accent_color; }
   .btn-primary:hover, .btn-primary:active, .btn-primary:focus, .btn-primary:active:focus {
-    background-color: #FF0000;
-    border-color: #FF0000;
+    background-color: #0000CC;
+    border-color: #0000CC;
     color: #FFFFFF;
     box-shadow: none; }
 
@@ -475,9 +559,9 @@ header .navbar-nav {
       header .navbar-nav li > a:hover {
         bottom: 10px; }
         header .navbar-nav li > a:hover:after {
-          border-bottom: 2px solid #FF0000; }
+          border-bottom: 2px solid #0000CC; }
         header .navbar-nav li > a:hover svg {
-          fill: #FF0000; }
+          fill: #0000CC; }
   header .navbar-nav svg {
     fill: #000000;
     width: 16px;
@@ -683,7 +767,7 @@ footer {
       width: 12px;
       vertical-align: bottom; }
       #timeline-page #dotNav ul li.active, #timeline-page #dotNav ul li.active:hover {
-        background-color: #FF0000; }
+        background-color: #0000CC; }
       #timeline-page #dotNav ul li:hover {
         background: none repeat scroll 0 0 #FFFFFF; }
     #timeline-page #dotNav ul a, #timeline-page #dotNav ul a:hover, #timeline-page #dotNav ul a:focus {

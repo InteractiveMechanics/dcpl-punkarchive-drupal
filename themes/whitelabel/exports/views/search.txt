@@ -1,0 +1,161 @@
+$view = new view();
+$view->name = 'search';
+$view->description = '';
+$view->tag = 'default';
+$view->base_table = 'node';
+$view->human_name = 'search';
+$view->core = 7;
+$view->api_version = '3.0';
+$view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+/* Display: Master */
+$handler = $view->new_display('default', 'Master', 'default');
+$handler->display->display_options['title'] = 'search';
+$handler->display->display_options['use_more_always'] = FALSE;
+$handler->display->display_options['access']['type'] = 'perm';
+$handler->display->display_options['cache']['type'] = 'none';
+$handler->display->display_options['query']['type'] = 'views_query';
+$handler->display->display_options['exposed_form']['type'] = 'basic';
+$handler->display->display_options['pager']['type'] = 'some';
+$handler->display->display_options['pager']['options']['items_per_page'] = '500';
+$handler->display->display_options['style_plugin'] = 'list';
+$handler->display->display_options['row_plugin'] = 'fields';
+/* No results behavior: Global: Text area */
+$handler->display->display_options['empty']['area']['id'] = 'area';
+$handler->display->display_options['empty']['area']['table'] = 'views';
+$handler->display->display_options['empty']['area']['field'] = 'area';
+$handler->display->display_options['empty']['area']['label'] = 'Okay';
+$handler->display->display_options['empty']['area']['empty'] = TRUE;
+$handler->display->display_options['empty']['area']['content'] = '
+<div id="search-page">
+	
+	
+	<main>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-8 col-sm-offset-2">
+					<h1>Site Search</h1>
+					<h4>Search by Keywords</h4>
+						
+					  	<div class="input-group">
+					      	<input type="text" class="form-control search-control" name="query" placeholder="Fugazi">
+					      	<span class="input-group-btn">
+       					 	<button class="btn btn-default btn-search" type="submit">
+       					 		<svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 90 90" enable-background="new 0 0 90 90" xml:space="preserve">
+								<g>
+								<path d="M87.6,76.3L66.4,55c3.2-5.3,5.1-11.5,5.1-18.1c0-19.1-16.6-35.8-35.9-35.8S0.8,16.6,0.8,35.9s16.6,35.9,35.9,35.9
+								c6.4,0,12.4-1.7,17.5-4.7l21.4,21.4c2.1,2.1,5.5,2.1,7.5,0l5.3-5.3C90.5,81,89.8,78.4,87.6,76.3z M11.5,35.9
+								c0-13.3,10.8-24.1,24.1-24.1c13.4,0,25.2,11.8,25.2,25.2c0,13.3-10.8,24.1-24.1,24.1C23.4,61.1,11.5,49.2,11.5,35.9z"/>
+								</g>
+								</svg>
+							</button>
+       					 </div> <!-- END INPUT GROUP BTN -->
+       					 
+       					 <div class="divider"></div>
+       					</div>
+       					
+					
+				</div> <!-- END COL-SM-8 COL-SM-OFFSET-2 -->
+			</div> <!-- END ROW -->
+		</div> <!-- END CONTAINER -->		
+	</main>
+	
+</div>
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(\'.btn-search\').click(function(){
+			var search_term = $(\'.search-control\').val();
+			if(search_term) {
+				window.location.href = window.location.origin + window.location.pathname + "?title=" + search_term + "&body=" + search_term;
+			}
+		});
+	});
+</script>';
+$handler->display->display_options['empty']['area']['format'] = 'html';
+/* Field: Content: Title */
+$handler->display->display_options['fields']['title']['id'] = 'title';
+$handler->display->display_options['fields']['title']['table'] = 'node';
+$handler->display->display_options['fields']['title']['field'] = 'title';
+$handler->display->display_options['fields']['title']['label'] = '';
+$handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+$handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+/* Field: Content: Body */
+$handler->display->display_options['fields']['body']['id'] = 'body';
+$handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+$handler->display->display_options['fields']['body']['field'] = 'body';
+$handler->display->display_options['fields']['body']['label'] = '';
+$handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+/* Sort criterion: Content: Post date */
+$handler->display->display_options['sorts']['created']['id'] = 'created';
+$handler->display->display_options['sorts']['created']['table'] = 'node';
+$handler->display->display_options['sorts']['created']['field'] = 'created';
+$handler->display->display_options['sorts']['created']['order'] = 'DESC';
+$handler->display->display_options['filter_groups']['groups'] = array(
+  1 => 'AND',
+  2 => 'OR',
+);
+/* Filter criterion: Content: Published */
+$handler->display->display_options['filters']['status']['id'] = 'status';
+$handler->display->display_options['filters']['status']['table'] = 'node';
+$handler->display->display_options['filters']['status']['field'] = 'status';
+$handler->display->display_options['filters']['status']['value'] = 1;
+$handler->display->display_options['filters']['status']['group'] = 1;
+$handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+/* Filter criterion: Content: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'culture' => 'culture',
+  'music' => 'music',
+  'spaces' => 'spaces',
+);
+$handler->display->display_options['filters']['type']['group'] = 1;
+/* Filter criterion: Content: Body (body) */
+$handler->display->display_options['filters']['body_value']['id'] = 'body_value';
+$handler->display->display_options['filters']['body_value']['table'] = 'field_data_body';
+$handler->display->display_options['filters']['body_value']['field'] = 'body_value';
+$handler->display->display_options['filters']['body_value']['operator'] = 'word';
+$handler->display->display_options['filters']['body_value']['group'] = 2;
+$handler->display->display_options['filters']['body_value']['exposed'] = TRUE;
+$handler->display->display_options['filters']['body_value']['expose']['operator_id'] = 'body_value_op';
+$handler->display->display_options['filters']['body_value']['expose']['label'] = 'Body (body)';
+$handler->display->display_options['filters']['body_value']['expose']['operator'] = 'body_value_op';
+$handler->display->display_options['filters']['body_value']['expose']['identifier'] = 'body';
+$handler->display->display_options['filters']['body_value']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  3 => 0,
+  4 => 0,
+);
+/* Filter criterion: Content: Title */
+$handler->display->display_options['filters']['title']['id'] = 'title';
+$handler->display->display_options['filters']['title']['table'] = 'node';
+$handler->display->display_options['filters']['title']['field'] = 'title';
+$handler->display->display_options['filters']['title']['operator'] = 'word';
+$handler->display->display_options['filters']['title']['group'] = 2;
+$handler->display->display_options['filters']['title']['exposed'] = TRUE;
+$handler->display->display_options['filters']['title']['expose']['operator_id'] = 'title_op';
+$handler->display->display_options['filters']['title']['expose']['label'] = 'Title';
+$handler->display->display_options['filters']['title']['expose']['operator'] = 'title_op';
+$handler->display->display_options['filters']['title']['expose']['identifier'] = 'title';
+$handler->display->display_options['filters']['title']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  3 => 0,
+  4 => 0,
+);
+$handler->display->display_options['filters']['title']['group_info']['label'] = 'Title';
+$handler->display->display_options['filters']['title']['group_info']['identifier'] = 'title';
+$handler->display->display_options['filters']['title']['group_info']['remember'] = FALSE;
+$handler->display->display_options['filters']['title']['group_info']['group_items'] = array(
+  1 => array(),
+  2 => array(),
+  3 => array(),
+);
+
+/* Display: Page */
+$handler = $view->new_display('page', 'Page', 'page');
+$handler->display->display_options['path'] = 'search';
